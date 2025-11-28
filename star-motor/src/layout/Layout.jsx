@@ -5,19 +5,19 @@ import Footer from "../components/Footer";
 
 export default function Layout() {
   return (
-    <div className="min-h-screen flex flex-col">
+       <div className="flex flex-col min-h-screen bg-[#0f0f0f] text-white">
 
-      {/* FIXED HEADER */}
+      {/* FIXED NAVBAR */}
       <Navbar />
 
-      {/* PAGE CONTENT */}
-      <main className="flex-1 px-4 py-6">
+      {/* MAIN CONTENT */}
+      <main className="flex-1 pt-[90px]"> 
+        {/* pt-[90px] = navbar height ka space */}
         <Outlet />
       </main>
 
-      {/* FIXED FOOTER */}
+      {/* FOOTER (NORMAL, BOTTOM ME RAHEGA AUTOMATIC) */}
       <Footer />
-
     </div>
   );
 }

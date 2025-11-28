@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@theme {
+  --font-chakra: "Chakra Petch", sans-serif;
+}
+
+.cursor-follower {
+  width: 18px;
+  height: 18px;
+  background-color: rgba(120, 60, 20, 0.8); /* brown */
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: top 0.06s linear, left 0.06s linear;
+}
+

@@ -1,130 +1,349 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import logo from "../assets/";
+import React, { useState } from "react";
+import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (menu) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
+  React.useEffect(() => {
+  if (mobileMenuOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+}, [mobileMenuOpen]);
 
   return (
-    <div className="w-full fixed top-0 left-0 bg-white shadow-md z-50 backdrop-blur-md bg-opacity-80">
-      <nav className="max-w-[1300px] mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
-        {/* Logo */}
-        <img
-          src="/logo.png"
-          alt="Star Motors Logo"
-          className="h-12 w-auto object-contain cursor-pointer"
-        />
+    <nav className="fixed top-0 w-full z-50 bg-[#0f0f0f] backdrop-blur-sm font-chakra ">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-xl font-bold">
+              ⚙
+            </div>
+            <div className="text-xl font-bold text-white ">
+              STAR<span className="text-[#ff6b35]  ">MOTORS</span>
+            </div>
+          </div>
 
-        {/* Menu */}
-        <ul className="hidden md:flex items-center gap-6 text-gray-800 font-medium text-[16px]">
-          <li className="hover:text-blue-600 transition-all cursor-pointer">
-            Home
-          </li>
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center gap-10">
+            {/* HOME */}
+            <Link
+              to="#home"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+            >
+              HOME
+            </Link>
 
-          {/* About Dropdown */}
-          <li
-            className="relative cursor-pointer"
-            onClick={() => toggleDropdown("about")}
-          >
-            <div className="flex items-center hover:text-blue-600 transition-all">
-              About <ChevronDown size={18} className="ml-1" />
+            {/* ABOUT DROPDOWN */}
+            <div className="relative group">
+              <button className="text-sm text-white hover:text-[#ff6b35] flex items-center gap-1">
+                ABOUT <span className="text-[#ff6b35]">+</span>
+              </button>
+
+              <div
+                className="
+                absolute top-10 left-0 w-48 bg-[#0f0f0f]
+                border border-white
+                opacity-0 overflow-hidden
+                 group-hover:max-h-[500px] group-hover:opacity-100 group-hover:translate-y-0
+      transition-all duration-500 ease-out
+                "
+              >
+                <Link
+                  to="#about-company"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  ABOUT US
+                </Link>
+
+                <Link
+                  to="#team"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  OUR TEAM
+                </Link>
+              </div>
             </div>
 
-            {openDropdown === "about" && (
-              <div className="absolute top-10 left-0 bg-white shadow-lg rounded-md p-3 w-48 animate-fadeIn">
-                <p className="p-2 hover:bg-gray-100 rounded">Who We Are</p>
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Mission & Vision
-                </p>
-                <p className="p-2 hover:bg-gray-100 rounded">History</p>
-              </div>
-            )}
-          </li>
+            {/* MANAGEMENT */}
+            <Link
+              to="#management"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+            >
+              OUR MANAGEMENT
+            </Link>
 
-          {/* Management Dropdown */}
-          <li
-            className="relative cursor-pointer"
-            onClick={() => toggleDropdown("management")}
-          >
-            <div className="flex items-center hover:text-blue-600 transition-all">
-              Our Management <ChevronDown size={18} className="ml-1" />
+            {/* SERVICES DROPDOWN */}
+            <div className="relative group">
+              <button className="text-sm text-white hover:text-[#ff6b35] flex items-center gap-1">
+                SERVICES <span className="text-[#ff6b35]">+</span>
+              </button>
+
+              <div
+                className="
+      absolute top-10 left-0 w-60 bg-[#0f0f0f]
+      border border-white overflow-hidden
+      max-h-0 opacity-0 translate-y-2
+      group-hover:max-h-[500px] group-hover:opacity-100 group-hover:translate-y-0
+      transition-all duration-500 ease-out
+    "
+              >
+                <Link
+                  to="#service1"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  CAR SERVICE/REPARING
+                </Link>
+
+                <Link
+                  to="#service2"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  CAR, BIKE FOAM WASH
+                </Link>
+
+                <Link
+                  to="#single1"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  INTERIOR CLEANING
+                </Link>
+
+                <Link
+                  to="#single2"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  DENTING PAINTING
+                </Link>
+
+                <Link
+                  to="#single2"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  CAR MODIFICATION
+                </Link>
+
+                <Link
+                  to="#single2"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  WHEEL ALIGNMENT
+                </Link>
+
+                <Link
+                  to="#single2"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  WHEEL BALANCING
+                </Link>
+
+                <Link
+                  to="#single2"
+                  className="block px-4 py-3 text-white hover:text-[#ff6b35]"
+                >
+                  TYRE WITH TYRE CHANGING
+                </Link>
+              </div>
             </div>
 
-            {openDropdown === "management" && (
-              <div className="absolute top-10 left-0 bg-white shadow-lg rounded-md p-3 w-52 animate-fadeIn">
-                <p className="p-2 hover:bg-gray-100 rounded">Board Members</p>
-                <p className="p-2 hover:bg-gray-100 rounded">Leadership Team</p>
-                <p className="p-2 hover:bg-gray-100 rounded">Advisors</p>
-              </div>
-            )}
-          </li>
+            {/* BLOG */}
+            <Link
+              to="#blog"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+            >
+              BLOG
+            </Link>
 
-          {/* Services Dropdown */}
-          <li
-            className="relative cursor-pointer"
-            onClick={() => toggleDropdown("services")}
+            {/* GALLERY */}
+            <Link
+              to="#gallery"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+            >
+              GALLERY
+            </Link>
+
+            {/* CONTACT */}
+            <Link
+              to="#contactus"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+            >
+              CONTACT US
+            </Link>
+          </div>
+
+          {/* Contact Number (Desktop) */}
+          <Link
+            to="tel:7526074042"
+            className="
+            hidden 
+            lg:flex
+              font-chakra
+              relative
+              text-white
+              text-[14px]
+              font-semibold
+              px-7
+              py-1.5
+              uppercase
+              tracking-tight
+               items-center
+              border-2 border-[#ff6b35]
+              transition-all duration-300
+              group
+            "
           >
-            <div className="flex items-center hover:text-blue-600 transition-all">
-              Services <ChevronDown size={18} className="ml-1" />
+            <span
+              className="
+                absolute inset-0 bg-[#ff6b35]
+                scale-x-0 origin-center
+                transition-transform duration-300 ease-out
+                group-hover:scale-x-100
+                z-0
+              "
+            ></span>
+
+            <span className="absolute h-7 w-5 bg-[#0f0f0f] rotate-52 -left-2 -top-4 pointer-events-none"></span>
+            <span className="absolute h-7 w-5 bg-[#0f0f0f] rotate-52 -right-2 -bottom-4 pointer-events-none"></span>
+
+            <span className="relative z-10">+91 752 60 74 042</span>
+          </Link>
+
+          {/* Mobile Menu Button */}
+         <button
+  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  className="
+    lg:hidden 
+    text-white 
+    p-1 
+    border border-white
+    rounded-md 
+    w-8 h-8 
+    flex items-center justify-center
+    hover:text-[#ff6b35]
+    transition-all duration-300
+  "
+>
+  {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+</button>
+
+        </div>
+      </div>
+
+  {/* Mobile Sidebar Menu */}
+  
+<div
+  className={`lg:hidden fixed top-0 left-0 min-h-screen w-72 bg-[#0f0f0f]  shadow-2xl transform transition-transform duration-300 ${
+    mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+  }`}
+>
+  <div className="flex gap-2 items-center px-4 py-10 border-b border-gray-700">
+     <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-xl font-bold">
+              ⚙
             </div>
+            <div className="text-xl font-bold text-white ">
+              STAR<span className="text-[#ff6b35]  ">MOTORS</span>
+            </div>
+  </div>
 
-            {openDropdown === "services" && (
-              <div className="absolute top-10 left-0 bg-white shadow-lg rounded-md p-3 w-56 animate-fadeIn">
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Car Service / Reparing
-                </p>
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Car, Bike Foam Wash
-                </p>
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Interior Cleaning
-                </p>
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Denting & Painting
-                </p>
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Car Modification
-                </p>
-                <p className="p-2 hover:bg-gray-100 rounded">Wheel Alignment</p>
-                <p className="p-2 hover:bg-gray-100 rounded">Wheel Balancing</p>
-                <p className="p-2 hover:bg-gray-100 rounded">
-                  Tyre With Tyre Changer
-                </p>
-              </div>
-            )}
-          </li>
+  <div className="px-4 mt-2 bg-[#0f0f0f] text-sm font-semibold">
 
-          <li className="hover:text-blue-600 transition-all cursor-pointer">
-            Career
-          </li>
-          <li className="hover:text-blue-600 transition-all cursor-pointer">
-            Blog
-          </li>
-          <li className="hover:text-blue-600 transition-all cursor-pointer">
-            Gallery
-          </li>
-          <li className="hover:text-blue-600 transition-all cursor-pointer">
-            Contact Us
-          </li>
-        </ul>
+    {/* ---- HOME ---- */}
+    <Link
+      to="#home"
+      onClick={() => setMobileMenuOpen(false)}
+      className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
+    >
+      HOME
+    </Link>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden text-gray-800 text-3xl cursor-pointer">☰</div>
-      </nav>
+    {/* ---- ABOUT DROPDOWN ---- */}
+    <MobileDropdown title="ABOUT">
+      <Link to="#about-company" className="block py-2 hover:text-[#ff6b35] text-gray-300">
+        ABOUT US
+      </Link>
+      <Link to="#team" className="block py-2 hover:text-[#ff6b35] text-gray-300">
+        OUR TEAM
+      </Link>
+    </MobileDropdown>
 
-      {/* Animation Keyframes */}
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn { animation: fadeIn 0.2s ease-in-out; }
-      `}</style>
-    </div>
+    {/* ---- MANAGEMENT ---- */}
+    <Link
+      to="#management"
+      onClick={() => setMobileMenuOpen(false)}
+      className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
+    >
+      MANAGEMENT
+    </Link>
+
+    {/* ---- SERVICES DROPDOWN ---- */}
+    <MobileDropdown title="SERVICES">
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">CSR SERVICE/REPARING</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">CAR, BIKE FOAM WASH</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">INTERIOR CLEANING</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">DENTING PAINTING</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">CAR MODIFICATION</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">WHEEL ALIGNMENT</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">WHEEL BALANCING</Link>
+      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">TYRE WITH TYRE CHANGING</Link>
+    </MobileDropdown>
+
+    {/* ---- BLOG ---- */}
+    <Link
+      to="#blog"
+      onClick={() => setMobileMenuOpen(false)}
+      className="flex justify-between items-center text-white py-2 border-b hover:text-[#ff6b35] border-gray-700"
+    >
+      BLOG
+    </Link>
+
+    {/* ---- GALLERY ---- */}
+    <Link
+      to="#gallery"
+      onClick={() => setMobileMenuOpen(false)}
+      className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
+    >
+      GALLERY
+    </Link>
+
+    {/* ---- CONTACT US ---- */}
+    <Link
+      to="#contactus"
+      onClick={() => setMobileMenuOpen(false)}
+      className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
+    >
+      CONTACT US
+    </Link>
+
+  </div>
+</div>
+
+    </nav>
+    
   );
 }
+const MobileDropdown = ({ title, children }) => {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <div className="border-b border-gray-700 ">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex justify-between items-center hover:text-[#ff6b35] text-white py-2 "
+      >
+        {title}
+        <span className=" text-white hover:text-[#ff6b35]">{open ? <ChevronUp /> : <ChevronDown />}</span>
+      </button>
+
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="pl-4">{children}</div>
+      </div>
+    </div>
+  );
+};
