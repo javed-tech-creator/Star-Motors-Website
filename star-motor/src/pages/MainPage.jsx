@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
+import AboutSection from "../components/AboutSection";
+import OurServices from "../components/ServicesSection";
+import ServicesHeader from "../components/ServicesHeader";
+import AboutUsHeader from "../components/AboutUsHeader";
 
 const MainPage = () => {
   useEffect(() => {
@@ -18,16 +23,20 @@ const MainPage = () => {
   return (
     <>
       {" "}
-      <div id="cursorFollower" className="hidden lg:block cursor-follower"></div>
+      <div
+        id="cursorFollower"
+        className="hidden lg:block cursor-follower"
+      ></div>
       <div>
-        <span className="text-white text-xl font-chakra  ">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta iste
-          ipsa omnis nam dolorem soluta libero suscipit cumque fuga officiis,
-          sunt nesciunt eaque atque! Sit, ex, necessitatibus maxime at dolorum
-          amet officiis recusandae itaque ipsam impedit et? Ad enim at voluptas,
-          dicta suscipit natus quasi recusandae consectetur, ratione eum
-          perspiciatis.
-        </span>
+        <HeroSection />
+
+        {/*  ABOUT HEADING ADDED HERE  */}
+        <AboutUsHeader />
+        <AboutSection />
+
+        {/*  Services HEADING ADDED HERE  */}
+        <ServicesHeader />
+        <OurServices />
       </div>
     </>
   );

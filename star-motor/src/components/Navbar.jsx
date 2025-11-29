@@ -6,12 +6,12 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   React.useEffect(() => {
-  if (mobileMenuOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
-}, [mobileMenuOpen]);
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [mobileMenuOpen]);
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0f0f0f] backdrop-blur-sm font-chakra ">
@@ -47,6 +47,7 @@ export default function Navbar() {
                 className="
                 absolute top-10 left-0 w-48 bg-[#0f0f0f]
                 border border-white
+                max-h-0 
                 opacity-0 overflow-hidden
                  group-hover:max-h-[500px] group-hover:opacity-100 group-hover:translate-y-0
       transition-all duration-500 ease-out
@@ -212,9 +213,9 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Menu Button */}
-         <button
-  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-  className="
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="
     lg:hidden 
     text-white 
     p-1 
@@ -225,103 +226,120 @@ export default function Navbar() {
     hover:text-[#ff6b35]
     transition-all duration-300
   "
->
-  {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-</button>
-
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </div>
 
-  {/* Mobile Sidebar Menu */}
-  
-<div
-  className={`lg:hidden fixed top-0 left-0 min-h-screen w-72 bg-[#0f0f0f]  shadow-2xl transform transition-transform duration-300 ${
-    mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-  }`}
->
-  <div className="flex gap-2 items-center px-4 py-10 border-b border-gray-700">
-     <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-xl font-bold">
-              ⚙
-            </div>
-            <div className="text-xl font-bold text-white ">
-              STAR<span className="text-[#ff6b35]  ">MOTORS</span>
-            </div>
-  </div>
+      {/* Mobile Sidebar Menu */}
 
-  <div className="px-4 mt-2 bg-[#0f0f0f] text-sm font-semibold">
+      <div
+        className={`lg:hidden fixed top-0 left-0 min-h-screen w-72 bg-[#0f0f0f]  shadow-2xl transform transition-transform duration-300 ${
+          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex gap-2 items-center px-4 py-10 border-b border-gray-700">
+          <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-xl font-bold">
+            ⚙
+          </div>
+          <div className="text-xl font-bold text-white ">
+            STAR<span className="text-[#ff6b35]  ">MOTORS</span>
+          </div>
+        </div>
 
-    {/* ---- HOME ---- */}
-    <Link
-      to="#home"
-      onClick={() => setMobileMenuOpen(false)}
-      className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
-    >
-      HOME
-    </Link>
+        <div className="px-4 mt-2 bg-[#0f0f0f] text-sm font-semibold">
+          {/* ---- HOME ---- */}
+          <Link
+            to="#home"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
+          >
+            HOME
+          </Link>
 
-    {/* ---- ABOUT DROPDOWN ---- */}
-    <MobileDropdown title="ABOUT">
-      <Link to="#about-company" className="block py-2 hover:text-[#ff6b35] text-gray-300">
-        ABOUT US
-      </Link>
-      <Link to="#team" className="block py-2 hover:text-[#ff6b35] text-gray-300">
-        OUR TEAM
-      </Link>
-    </MobileDropdown>
+          {/* ---- ABOUT DROPDOWN ---- */}
+          <MobileDropdown title="ABOUT">
+            <Link
+              to="#about-company"
+              className="block py-2 hover:text-[#ff6b35] text-gray-300"
+            >
+              ABOUT US
+            </Link>
+            <Link
+              to="#team"
+              className="block py-2 hover:text-[#ff6b35] text-gray-300"
+            >
+              OUR TEAM
+            </Link>
+          </MobileDropdown>
 
-    {/* ---- MANAGEMENT ---- */}
-    <Link
-      to="#management"
-      onClick={() => setMobileMenuOpen(false)}
-      className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
-    >
-      MANAGEMENT
-    </Link>
+          {/* ---- MANAGEMENT ---- */}
+          <Link
+            to="#management"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
+          >
+            MANAGEMENT
+          </Link>
 
-    {/* ---- SERVICES DROPDOWN ---- */}
-    <MobileDropdown title="SERVICES">
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">CSR SERVICE/REPARING</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">CAR, BIKE FOAM WASH</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">INTERIOR CLEANING</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">DENTING PAINTING</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">CAR MODIFICATION</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">WHEEL ALIGNMENT</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">WHEEL BALANCING</Link>
-      <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">TYRE WITH TYRE CHANGING</Link>
-    </MobileDropdown>
+          {/* ---- SERVICES DROPDOWN ---- */}
+          <MobileDropdown title="SERVICES">
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              CSR SERVICE/REPARING
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              CAR, BIKE FOAM WASH
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              INTERIOR CLEANING
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              DENTING PAINTING
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              CAR MODIFICATION
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              WHEEL ALIGNMENT
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              WHEEL BALANCING
+            </Link>
+            <Link className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+              TYRE WITH TYRE CHANGING
+            </Link>
+          </MobileDropdown>
 
-    {/* ---- BLOG ---- */}
-    <Link
-      to="#blog"
-      onClick={() => setMobileMenuOpen(false)}
-      className="flex justify-between items-center text-white py-2 border-b hover:text-[#ff6b35] border-gray-700"
-    >
-      BLOG
-    </Link>
+          {/* ---- BLOG ---- */}
+          <Link
+            to="#blog"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex justify-between items-center text-white py-2 border-b hover:text-[#ff6b35] border-gray-700"
+          >
+            BLOG
+          </Link>
 
-    {/* ---- GALLERY ---- */}
-    <Link
-      to="#gallery"
-      onClick={() => setMobileMenuOpen(false)}
-      className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
-    >
-      GALLERY
-    </Link>
+          {/* ---- GALLERY ---- */}
+          <Link
+            to="#gallery"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
+          >
+            GALLERY
+          </Link>
 
-    {/* ---- CONTACT US ---- */}
-    <Link
-      to="#contactus"
-      onClick={() => setMobileMenuOpen(false)}
-      className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
-    >
-      CONTACT US
-    </Link>
-
-  </div>
-</div>
-
+          {/* ---- CONTACT US ---- */}
+          <Link
+            to="#contactus"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
+          >
+            CONTACT US
+          </Link>
+        </div>
+      </div>
     </nav>
-    
   );
 }
 const MobileDropdown = ({ title, children }) => {
@@ -334,7 +352,9 @@ const MobileDropdown = ({ title, children }) => {
         className="w-full flex justify-between items-center hover:text-[#ff6b35] text-white py-2 "
       >
         {title}
-        <span className=" text-white hover:text-[#ff6b35]">{open ? <ChevronUp /> : <ChevronDown />}</span>
+        <span className=" text-white hover:text-[#ff6b35]">
+          {open ? <ChevronUp /> : <ChevronDown />}
+        </span>
       </button>
 
       <div

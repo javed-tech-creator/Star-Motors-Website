@@ -15,3 +15,30 @@
   transition: top 0.06s linear, left 0.06s linear;
 }
 
+/* Floating animation */
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Engine wheel rotation WITHOUT translate conflict */
+@keyframes rotateWheel {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Normal rotation (slow) */
+.animate-rotate {
+  animation: rotateWheel 5s linear infinite;   /*  slow & smooth */
+}
+
+/* Fast rotation on hover */
+.animate-rotate-fast {
+  animation: rotateWheel 1s linear infinite;   /*  thoda fast, but smooth */
+}
+
+
