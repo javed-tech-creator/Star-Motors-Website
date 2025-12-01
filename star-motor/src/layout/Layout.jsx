@@ -11,7 +11,7 @@ export default function Layout() {
       <Navbar />
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 pt-[90px] px-6 lg:px-20"> 
+      <main className="flex-1 pt-[90px] "> 
         {/* pt-[90px] = navbar height ka space */}
         <Outlet />
       </main>

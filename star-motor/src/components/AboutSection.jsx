@@ -3,11 +3,11 @@ import aboutImg from "../assets/aboutsection.jpg"; // 👉 apni image ka path ya
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-[#111111] py-10 ">
+    <section className="w-full bg-[#111111] py-10 px-6 lg:px-20">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-12  items-center">
         {/* LEFT SIDE CONTENT */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-chakra font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-chakra font-bold text-white leading-tight">
             WE MAKE AUTO REPAIR <br /> MORE CONVENIENT
           </h2>
 

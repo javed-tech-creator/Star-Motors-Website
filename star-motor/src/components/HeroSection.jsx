@@ -7,18 +7,18 @@ import AnimatedButton from "./AnimatedButton";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full bg-[#111111] text-white overflow-hidden py-20 min-h-[80vh]">
+    <section className="relative w-full bg-[#111111] text-white overflow-hidden py-20 min-h-[80vh] px-6 lg:px-20">
       {/* BACKGROUND OUTLINE TEXT */}
       <h1
         className="
     absolute
-    top-5
+    top-8
     md:-top-5
     lg:top-3
     left-1/2
     -translate-x-1/2
     whitespace-nowrap
-    text-[40px]
+    text-[35px]
     md:text-[80px]
     lg:text-[120px]
     font-extrabold
@@ -40,7 +40,7 @@ const HeroSection = () => {
             LEFT SIDE TEXT CONTENT
         ============================ */}
         <div className="w-full lg:w-[40%] space-y-6 z-20 mt-10 lg:mt-0">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight font-chakra">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight font-chakra">
             MAINTENANCE &<br />
             <span className="text-white">REPAIR SERVICE</span>
           </h1>
@@ -52,18 +52,15 @@ const HeroSection = () => {
             vehicle receives the highest level of attention and expertise.
           </p>
 
-        <AnimatedButton
-  text="Contact Us"
-  width="200px"
-  height="50px"
-  bgColor="#ff6b35"
-  borderColor="#ff6b35"
-  textColor="#ffffff"
-  onClick={() => console.log("Button Clicked!")}
-/>
-
-
-
+          <AnimatedButton
+            text="Contact Us"
+            width="160px"
+            height="40px"
+            bgColor="#ff6b35"
+            borderColor="#ff6b35"
+            textColor="#ffffff"
+            onClick={() => console.log("Button Clicked!")}
+          />
         </div>
 
         {/* =========================

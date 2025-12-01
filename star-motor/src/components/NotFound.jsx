@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Home } from "lucide-react";
 import { motion } from "framer-motion";
-
+import notfound from "../assets/notfound.webp"
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-[#0f0f0f] text-white">
@@ -51,8 +51,8 @@ export default function NotFound() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8 }}
-        src="https://cdni.iconscout.com/illustration/premium/thumb/404-error-illustration-download-in-svg-png-gif-file-formats--website-page-not-found-pack-illustrations-6694972.png"
-        alt="Not Found"
+        src={notfound}
+         alt="Not Found"
         className="w-72 mt-10 drop-shadow-[0_0_20px_rgba(255,180,0,0.4)]"
       />
     </div>

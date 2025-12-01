@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ServicesHeader() {
+export default function ClientTestimonialsHeader() {
   return (
     <div className="relative w-full py-2 md:py-4 overflow-hidden font-chakra">
       {/* Grid pattern overlay */}
@@ -17,8 +17,8 @@ export default function ServicesHeader() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           {/* Main heading with gradient */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-400 to-white tracking-wider mb-4 animate-fade-in">
-            OUR SERVICES
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            What Our <span className="text-orange-500">Clients Say</span>
           </h2>
           {/* Top decorative line */}
           <div className="flex items-center justify-center mb-6">
@@ -28,8 +28,8 @@ export default function ServicesHeader() {
           </div>
 
           {/* Small label */}
-          <p className="text-orange-500 text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
-            What We Offer
+         <p className="text-white text-lg max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied customers have to say about our service
           </p>
         </div>
       </div>

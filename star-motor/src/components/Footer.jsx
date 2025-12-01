@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <>
       {/* MAIN FOOTER */}
-    <footer className="bg-black text-white py-16 md:py-28 px-6 md:px-12 lg:px-24 font-chakra">
+    <footer className="bg-black text-white py-12 md:py-22 px-6 md:px-12 lg:px-24 font-chakra">
   <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14 lg:gap-20">
 
     {/* LEFT SECTION */}
@@ -100,10 +100,11 @@ const Footer = () => {
       <div className="pt-4">
         <AnimatedButton
           text="SUBSCRIBE"
-          width="200px"
-          height="50px"
+          width="170px"
+          height="40px"
           bgColor="#ff6b35"
           borderColor="#ff6b35"
+          cornerColor="#000000"
           textColor="#ffffff"
           onClick={() => console.log('Subscribe Click')}
         />
@@ -127,7 +128,7 @@ const Footer = () => {
               >
                 <img
                   src={cclogo}
-                  className="lg:w-34 md:w-20 w-20 mt-1 md:mt-0 transition transform hover:scale-105"
+                  className="lg:w-28 md:w-20 w-20 mt-1 md:mt-0 transition transform hover:scale-105"
                   alt="CodeCrafter Logo"
                 />
               </Link>

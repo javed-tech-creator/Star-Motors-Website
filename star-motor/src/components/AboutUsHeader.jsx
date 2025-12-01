@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutUsHeader() {
   return (
-    <div className="relative w-full py-1 md:py-2 overflow-hidden font-chakra">
+    <div className="relative w-full py-2 md:py-4 overflow-hidden font-chakra">
       
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-5" style={{

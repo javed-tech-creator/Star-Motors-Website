@@ -7,7 +7,7 @@ const AnimatedButton = ({
   borderColor = "#ff6b35",
   bgColor = "#ff6b35",
   textColor = "#ffffff",
-  cornerColor = "#0f0f0f",
+  cornerColor = "#111111",
 
   // Size & spacing
   width = "30%",
@@ -25,7 +25,7 @@ const AnimatedButton = ({
       onClick={onClick}
       className={`
          group flex font-chakra relative uppercase tracking-tight
-        font-semibold items-center justify-center transition-all duration-500 ease-out
+        font-semibold items-center justify-center transition-all duration-500 ease-out 
         ${paddingX} ${paddingY} ${textSize} ${className}
       `}
       style={{
