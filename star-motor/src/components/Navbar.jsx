@@ -37,7 +37,7 @@ export default function Navbar() {
               HOME
             </Link>
 
-            {/* ABOUT DROPDOWN */}
+            {/* ABOUT DROPDOWN
             <div className="relative group">
               <button className="text-sm text-white hover:text-[#ff6b35] flex items-center gap-1">
                 ABOUT <span className="text-[#ff6b35]">+</span>
@@ -54,7 +54,7 @@ export default function Navbar() {
                 "
               >
                 <Link
-                  to="#about-company"
+                  to="about"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
                   ABOUT US
@@ -81,7 +81,14 @@ export default function Navbar() {
                   FAQ
                 </Link>
               </div>
-            </div>
+            </div> */}
+
+            <Link
+            to="about"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+          >
+            ABOUT US
+          </Link>
 
             {/* MANAGEMENT */}
             <Link
@@ -272,9 +279,9 @@ export default function Navbar() {
           </Link>
 
           {/* ---- ABOUT DROPDOWN ---- */}
-          <MobileDropdown title="ABOUT">
+          {/* <MobileDropdown title="ABOUT">
             <Link
-              to="#about-company"
+              to="about"
               className="block py-2 hover:text-[#ff6b35] text-gray-300"
             >
               ABOUT US
@@ -285,7 +292,13 @@ export default function Navbar() {
             >
               OUR TEAM
             </Link>
-          </MobileDropdown>
+          </MobileDropdown> */}
+             <Link
+            to="about"
+            className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
+          >
+            ABOUT US
+          </Link>
 
           {/* ---- MANAGEMENT ---- */}
           <Link

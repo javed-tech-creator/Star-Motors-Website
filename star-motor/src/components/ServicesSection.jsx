@@ -51,7 +51,7 @@ const images = [ser1, ser2, ser3, ser4, ser5, ser6, ser7, ser8];
 export default function OurServices() {
   const navigate = useNavigate();
   return (
-    <section className="w-full bg-[#111111] py-10">
+    <section className="w-full  bg-[#111111] py-10">
       {/* SERVICES GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 lg:px-20">
         {menuServices.map((service, index) => (

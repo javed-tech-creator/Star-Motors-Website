@@ -523,7 +523,8 @@ export default function ServicePage() {
 </div>
 
 {/* Call To Action */}
-        <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-12 text-center">
+        <div className=" border border-gray-800 rounded-2xl p-12 text-center"
+        >
   <h2 className="text-3xl md:text-4xl font-bold mb-4">
     Enquiry Your <span className="text-orange-500">Service</span> Now
   </h2>

@@ -220,9 +220,9 @@ export default function LatestArticlesSection() {
             <ArrowRight size={20} />
           </button> */}
             <AnimatedButton
-          text=" View All Articles"
-          // width="170px"
-          // height="40px"
+          text=" View Articles"
+          width="170px"
+          height="40px"
           bgColor="#ff6b35"
           borderColor="#ff6b35"
           cornerColor="#111111"

@@ -129,28 +129,28 @@ export default function ManagementPage() {
               key={idx}
               className="group bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
             >
-              <div className="relative h-50 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-center  transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover  transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-2xl font-bold mb-2 group-hover:text-[#ff6b35] transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
                   {member.position}
                 </p>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 mb-4 leading-relaxed">
                   {member.bio}
                 </p>
 
                 {/* Contact Info */}
-                <div className="space-y-3 border-t border-gray-700 pt-4">
+                <div className="space-y-2 border-t border-gray-700 pt-4">
                   <a
                     href={`mailto:${member.email}`}
                     className="flex items-center gap-3 text-gray-300 hover:text-[#ff6b35] transition-colors group/link"
