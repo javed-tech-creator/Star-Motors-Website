@@ -3,22 +3,14 @@ import React from "react";
 export default function ServicesHeader() {
   return (
     <div className="relative w-full py-2 md:py-4 overflow-hidden font-chakra">
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                         linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      ></div>
+    
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           {/* Main heading with gradient */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-400 to-white tracking-wider mb-4 animate-fade-in">
-            OUR SERVICES
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-orange-500 tracking-wider mb-4 animate-fade-in">
+          <span className="text-white">OUR</span>   SERVICES
           </h2>
           {/* Top decorative line */}
           <div className="flex items-center justify-center mb-6">
@@ -28,7 +20,7 @@ export default function ServicesHeader() {
           </div>
 
           {/* Small label */}
-          <p className="text-orange-500 text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
+          <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
             What We Offer
           </p>
         </div>

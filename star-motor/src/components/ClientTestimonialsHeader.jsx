@@ -3,15 +3,6 @@ import React from "react";
 export default function ClientTestimonialsHeader() {
   return (
     <div className="relative w-full py-2 md:py-4 overflow-hidden font-chakra">
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                         linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      ></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">

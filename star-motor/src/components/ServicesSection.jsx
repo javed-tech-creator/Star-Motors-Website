@@ -10,6 +10,7 @@ import ser6 from "../assets/services/service6.jpg";
 import ser7 from "../assets/services/service7.jpg";
 import ser8 from "../assets/services/service8.jpg";
 import AnimatedButton from "./AnimatedButton";
+import { useNavigate } from "react-router-dom";
 
 const menuServices = [
   "CAR SERVICE / REPAIRING",
@@ -33,11 +34,22 @@ const descriptions = [
   "Professional wheel balancing service to eliminate vibrations and ensure smooth, safe driving at all speeds.",
   "Quick and efficient tyre replacement service with a wide range of premium brands to choose from.",
 ];
+const link = [
+  "service1",
+  "service2",
+  "single1",
+  "single2",
+  "single3",
+  "single4",
+  "single5",
+  "single6",
+];
 
 // ---- IMAGES LIST ACCORDING TO SERVICES ----
 const images = [ser1, ser2, ser3, ser4, ser5, ser6, ser7, ser8];
 
 export default function OurServices() {
+  const navigate = useNavigate();
   return (
     <section className="w-full bg-[#111111] py-10">
       {/* SERVICES GRID */}
@@ -76,7 +88,7 @@ export default function OurServices() {
                 borderColor="#ff6b35"
                 textColor="#ffffff"
                 cornerColor="#1a1a1a"
-                onClick={() => console.log("Button Clicked!")}
+                onClick={() => navigate(`/service/${link[index]}`)}
               />
             </div>
           </div>

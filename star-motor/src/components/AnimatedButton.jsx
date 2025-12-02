@@ -25,7 +25,7 @@ const AnimatedButton = ({
       onClick={onClick}
       className={`
          group flex font-chakra relative uppercase tracking-tight
-        font-semibold items-center justify-center transition-all duration-500 ease-out 
+        font-semibold items-center justify-center transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
         ${paddingX} ${paddingY} ${textSize} ${className}
       `}
       style={{

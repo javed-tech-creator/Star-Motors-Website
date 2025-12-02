@@ -1,16 +1,17 @@
 import React from 'react';
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+import AnimatedButton from './AnimatedButton';
 
 export default function LatestArticlesSection() {
   const articles = [
     {
       id: 1,
-      title: "Top 10 Car Maintenance Tips for 2024",
+      title: "Top 10 Car Maintenance Tips for 2026",
       excerpt: "Keep your vehicle running smoothly with these essential maintenance tips that every car owner should know.",
       image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
       category: "Maintenance",
       author: "Rahul Sharma",
-      date: "Dec 15, 2024",
+      date: "Dec 15, 2025",
       readTime: "5 min read",
       tags: ["Tips", "Maintenance"]
     },
@@ -21,7 +22,7 @@ export default function LatestArticlesSection() {
       image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80",
       category: "Guide",
       author: "Priya Patel",
-      date: "Dec 12, 2024",
+      date: "Dec 12, 2025",
       readTime: "7 min read",
       tags: ["Electric", "Hybrid"]
     },
@@ -32,7 +33,7 @@ export default function LatestArticlesSection() {
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
       category: "Safety",
       author: "Amit Kumar",
-      date: "Dec 10, 2024",
+      date: "Dec 10, 2025",
       readTime: "6 min read",
       tags: ["Safety", "Tips"]
     },
@@ -43,7 +44,7 @@ export default function LatestArticlesSection() {
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
       category: "Maintenance",
       author: "Vikram Singh",
-      date: "Dec 8, 2024",
+      date: "Dec 8, 2025",
       readTime: "5 min read",
       tags: ["Tires", "Maintenance"]
     },
@@ -54,7 +55,7 @@ export default function LatestArticlesSection() {
       image: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?w=800&q=80",
       category: "Seasonal",
       author: "Sneha Reddy",
-      date: "Dec 5, 2024",
+      date: "Dec 5, 2025",
       readTime: "6 min read",
       tags: ["Winter", "Tips"]
     },
@@ -65,7 +66,7 @@ export default function LatestArticlesSection() {
       image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
       category: "Safety",
       author: "Rajesh Verma",
-      date: "Dec 2, 2024",
+      date: "Dec 2, 2025",
       readTime: "4 min read",
       tags: ["Brakes", "Safety"]
     }
@@ -75,7 +76,7 @@ export default function LatestArticlesSection() {
   const regularArticles = articles.slice(1);
 
   return (
-    <section className="w-full bg-[#111111] py-20 overflow-hidden">
+    <section className="w-full bg-[#111111] py-20 overflow-hidden font-chakra">
       <div className=" px-6 lg:px-20">
       
         {/* Featured Article */}
@@ -130,10 +131,10 @@ export default function LatestArticlesSection() {
                     </div>
                   </div>
 
-                  <button className="flex items-center gap-2 text-orange-500 font-semibold group-hover:gap-3 transition-all">
+                  {/* <button className="flex items-center gap-2 text-orange-500 font-semibold group-hover:gap-3 transition-all">
                     Read More
                     <ArrowRight size={20} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -203,10 +204,10 @@ export default function LatestArticlesSection() {
                 </div>
 
                 {/* Read More Link */}
-                <button className="mt-4 flex items-center gap-2 text-orange-500 text-sm font-semibold group-hover:gap-3 transition-all">
+                {/* <button className="mt-4 flex items-center gap-2 text-orange-500 text-sm font-semibold group-hover:gap-3 transition-all">
                   Read Article
                   <ArrowRight size={16} />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
@@ -214,10 +215,21 @@ export default function LatestArticlesSection() {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] flex items-center gap-2 mx-auto">
+          {/* <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] flex items-center gap-2 mx-auto">
             View All Articles
             <ArrowRight size={20} />
-          </button>
+          </button> */}
+            <AnimatedButton
+          text=" View All Articles"
+          // width="170px"
+          // height="40px"
+          bgColor="#ff6b35"
+          borderColor="#ff6b35"
+          cornerColor="#111111"
+          textColor="#ffffff"
+          className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 flex items-center gap-2 mx-auto"
+          onClick={() => console.log('Subscribe Click')}
+        />
         </div>
       </div>
     </section>

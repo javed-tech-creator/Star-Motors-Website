@@ -59,6 +59,7 @@ const HeroSection = () => {
             bgColor="#ff6b35"
             borderColor="#ff6b35"
             textColor="#ffffff"
+            className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
             onClick={() => console.log("Button Clicked!")}
           />
         </div>
