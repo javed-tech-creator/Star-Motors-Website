@@ -173,7 +173,7 @@ export default function Navbar() {
 
             {/* BLOG */}
             <Link
-              to="#blog"
+              to="blog"
               className="text-sm hover:text-[#ff6b35] transition-colors text-white"
             >
               BLOG
@@ -181,7 +181,7 @@ export default function Navbar() {
 
             {/* GALLERY */}
             <Link
-              to="#gallery"
+              to="gallery"
               className="text-sm hover:text-[#ff6b35] transition-colors text-white"
             >
               GALLERY
@@ -189,7 +189,7 @@ export default function Navbar() {
 
             {/* CONTACT */}
             <Link
-              to="#contactus"
+              to="contact"
               className="text-sm hover:text-[#ff6b35] transition-colors text-white"
             >
               CONTACT US
@@ -338,8 +338,7 @@ export default function Navbar() {
 
           {/* ---- BLOG ---- */}
           <Link
-            to="#blog"
-            onClick={() => setMobileMenuOpen(false)}
+            to="blog"
             className="flex justify-between items-center text-white py-2 border-b hover:text-[#ff6b35] border-gray-700"
           >
             BLOG
@@ -347,8 +346,7 @@ export default function Navbar() {
 
           {/* ---- GALLERY ---- */}
           <Link
-            to="#gallery"
-            onClick={() => setMobileMenuOpen(false)}
+            to="gallery"
             className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
           >
             GALLERY
@@ -356,8 +354,7 @@ export default function Navbar() {
 
           {/* ---- CONTACT US ---- */}
           <Link
-            to="#contactus"
-            onClick={() => setMobileMenuOpen(false)}
+            to="contact"
             className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
           >
             CONTACT US

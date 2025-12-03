@@ -10,7 +10,7 @@ export default function CTASection() {
         <div className=" order-2 lg:order-1">
           {/* Logo */}
           <div className="flex items-center gap-4 mb-6 animate-fadeIn">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#ff6b35] to-[#f7931e] rounded-xl flex items-center justify-center text-3xl shadow-lg">
+            <div className="w-14 h-14  bg-linear-to-br from-[#ff6b35] to-[#f7931e] rounded-xl flex items-center justify-center text-3xl shadow-lg">
               ⭐
             </div>
             <h3 className="text-3xl font-bold text-white uppercase tracking-wider">
@@ -26,7 +26,7 @@ export default function CTASection() {
           {/* Heading */}
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight animate-fadeIn">
             Your Car Deserves the{" "}
-            <span className="bg-gradient-to-r from-[#ff6b35] to-[#f7931e] bg-clip-text text-transparent">
+            <span className=" bg-linear-to-r from-[#ff6b35] to-[#f7931e] bg-clip-text text-transparent">
               Best Service
             </span>
           </h2>
@@ -134,7 +134,7 @@ export default function CTASection() {
             alt="Luxury Sports Car"
             className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e] via-transparent to-transparent lg:from-[#1a1a2e]/80 lg:via-transparent"></div>
+          <div className="absolute inset-0  bg-linear-to-r from-[#1a1a2e] via-transparent to-transparent lg:from-[#1a1a2e]/80 lg:via-transparent"></div>
         </div>
       </div>
 

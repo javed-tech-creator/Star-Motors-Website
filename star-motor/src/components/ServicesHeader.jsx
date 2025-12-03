@@ -14,9 +14,9 @@ export default function ServicesHeader() {
           </h2>
           {/* Top decorative line */}
           <div className="flex items-center justify-center mb-6">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
             <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
           </div>
 
           {/* Small label */}
@@ -27,7 +27,7 @@ export default function ServicesHeader() {
       </div>
 
       {/* Bottom shadow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
 
       <style jsx>{`
         @keyframes fade-in {

@@ -12,15 +12,17 @@ const HeroSection = () => {
       <h1
         className="
     absolute
-    top-8
-    md:-top-5
-    lg:top-3
-    left-1/2
+    top-10
+    md:top-5
+    lg:top-18
+    -right-35
+    md:-right-65
+    lg:-right-65
     -translate-x-1/2
     whitespace-nowrap
     text-[35px]
-    md:text-[80px]
-    lg:text-[120px]
+    md:text-[70px]
+    lg:text-[80px]
     font-extrabold
     text-white/5
     tracking-[0.2em]
@@ -84,7 +86,7 @@ const HeroSection = () => {
                 absolute 
                 -left-[11%]
                 top-[0%]
-                w-[100%]
+                w-full
                 opacity-0 
                 group-hover:opacity-100 
                 transition-opacity duration-300
@@ -99,7 +101,7 @@ const HeroSection = () => {
                 absolute 
                 -right-[12%]
                 top-[0%]
-                w-[100%]
+                w-full
                 opacity-0 
                 group-hover:opacity-100 
                 transition-opacity duration-300

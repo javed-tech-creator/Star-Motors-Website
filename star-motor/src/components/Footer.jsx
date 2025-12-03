@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <>
       {/* MAIN FOOTER */}
-      <footer className="bg-black text-white py-12 md:py-22 px-6 md:px-12 lg:px-24 font-chakra">
+      <footer className="bg-black text-white py-10 md:py-12 px-6 md:px-12 lg:px-24 font-chakra">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14 lg:gap-20">
           {/* LEFT SECTION */}
           <div className="space-y-6">
@@ -40,7 +40,7 @@ const Footer = () => {
                 ⚙
               </div>
               <h2 className="text-2xl font-bold tracking-wide">
-                PRO<span className="text-orange-600">MOTORS</span>
+                STAR<span className="text-orange-600">MOTORS</span>
               </h2>
             </div>
 

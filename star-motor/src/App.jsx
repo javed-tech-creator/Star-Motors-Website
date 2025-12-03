@@ -7,6 +7,10 @@ import NotFound from './components/NotFound'
 import ServicePage from './pages/ServicesPage'
 import ManagementPage from './pages/ManagementPage'
 import AboutUsPage from './pages/AboutUsPage'
+import BlogPage from './pages/BlogPage'
+import BlogDetail from './pages/BlogDetail'
+import ContactUsPage from './pages/ContactUsPage'
+import GalleryPage from './pages/GalleryPage'
 
 function App() {
 
@@ -18,7 +22,10 @@ function App() {
          <Route path="/service/:serviceId" element={<ServicePage />} />
          <Route path="/management" element={<ManagementPage />} />
          <Route path="/about" element={<AboutUsPage />} />
-        {/* <Route path="contact" element={<Contact />} /> */} 
+         <Route path="/blog" element={<BlogPage />} />
+         <Route path="/blog-detail" element={<BlogDetail />} />
+        <Route path="/contact" element={<ContactUsPage />} /> 
+        <Route path="/gallery" element={<GalleryPage />} /> 
       </Route>
 
       {/* 404 Page */}
