@@ -26,7 +26,7 @@ function BlogPage() {
   const blob2Ref = useRef(null);
 
   // --- API CALL ---
-  const { data: blogData, isLoading, isError } = useGetAllBlogsQuery();
+  const { data: blogData, isLoading } = useGetAllBlogsQuery();
 
   // --- Optimized Background Mouse Effect ---
   useEffect(() => {
@@ -90,21 +90,21 @@ function BlogPage() {
     );
   }
 
-  if (isError) {
-    return (
-      <div className="min-h-screen bg-[#111111] flex flex-col items-center justify-center font-chakra text-white">
-        <div className="text-xl font-bold text-red-500 mb-4 font-chakra">
-          Failed to load blogs
-        </div>
-        <button
-          onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-all font-chakra"
-        >
-          Retry
-        </button>
-      </div>
-    );
-  }
+  // if (isError) {
+  //   return (
+  //     <div className="min-h-screen bg-[#111111] flex flex-col items-center justify-center font-chakra text-white">
+  //       <div className="text-xl font-bold text-red-500 mb-4 font-chakra">
+  //         Failed to load blogs
+  //       </div>
+  //       <button
+  //         onClick={() => window.location.reload()}
+  //         className="px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-all font-chakra"
+  //       >
+  //         Retry
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="relative min-h-screen bg-[#111111] overflow-hidden text-white ">

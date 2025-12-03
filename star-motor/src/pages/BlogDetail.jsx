@@ -26,7 +26,7 @@ const BlogDetail = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Fetch all blogs
-  const { data: blogData, isLoading, isError } = useGetAllBlogsQuery();
+  const { data: blogData, isLoading } = useGetAllBlogsQuery();
 
   // --- Background Mouse Effect ---
   useEffect(() => {
@@ -56,21 +56,21 @@ const BlogDetail = () => {
     );
   }
 
-  if (isError) {
-    return (
-      <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center text-white">
-        <div className="text-xl font-bold text-red-400 mb-4">
-          Failed to load blog.
-        </div>
-        <button
-          onClick={() => navigate("/blog")}
-          className="px-6 py-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-        >
-          Return to Blog
-        </button>
-      </div>
-    );
-  }
+  // if (isError) {
+  //   return (
+  //     <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center text-white">
+  //       <div className="text-xl font-bold text-red-400 mb-4">
+  //         Failed to load blog.
+  //       </div>
+  //       <button
+  //         onClick={() => navigate("/blog")}
+  //         className="px-6 py-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
+  //       >
+  //         Return to Blog
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   const blog = blogData?.data?.find((item) => item.slug === slug);
   const relatedBlogs = blogData?.data?.filter(

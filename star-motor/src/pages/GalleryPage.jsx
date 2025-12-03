@@ -31,7 +31,7 @@ const GalleryPage = () => {
   const blob2Ref = useRef(null);
 
   // --- API CALL ---
-  const { data: productData, isLoading, isError } = useGetAllProductsQuery();
+  const { data: productData, isLoading } = useGetAllProductsQuery();
 
   const products = productData?.data || [];
 
@@ -221,21 +221,21 @@ const GalleryPage = () => {
     );
   }
 
-  if (isError) {
-    return (
-      <div className="min-h-screen bg-[#111111] flex flex-col items-center justify-center text-white font-chakra">
-        <div className="text-xl font-bold text-red-500 mb-4">
-          Failed to load products
-        </div>
-        <button
-          onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-all"
-        >
-          Retry
-        </button>
-      </div>
-    );
-  }
+  // if (isError) {
+  //   return (
+  //     <div className="min-h-screen bg-[#111111] flex flex-col items-center justify-center text-white font-chakra">
+  //       <div className="text-xl font-bold text-red-500 mb-4">
+  //         Failed to load products
+  //       </div>
+  //       <button
+  //         onClick={() => window.location.reload()}
+  //         className="px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-all"
+  //       >
+  //         Retry
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="relative min-h-screen bg-[#111111] overflow-hidden text-white font-chakra">
