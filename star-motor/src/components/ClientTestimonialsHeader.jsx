@@ -12,16 +12,16 @@ export default function ClientTestimonialsHeader() {
             What Our <span className="text-orange-500">Clients Say</span>
           </h2>
           {/* Top decorative line */}
-          <div className="flex items-center justify-center mb-6">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+          <div className="flex items-center justify-center mb-4">
+            <div className="h-px w-12 bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
             <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+            <div className="h-px w-12 bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
           </div>
 
           {/* Small label */}
-         <p className="text-white text-lg max-w-2xl mx-auto">
+         {/* <p className="text-white text-lg max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied customers have to say about our service
-          </p>
+          </p> */}
         </div>
       </div>
 

@@ -110,7 +110,7 @@ export default function ManagementPage() {
       </div>
 
       {/* Leadership Message */}
-      <div className=" px-4 sm:px-6 lg:px-20 py-10">
+      {/* <div className=" px-4 sm:px-6 lg:px-20 py-10">
         <div className=" bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Leadership <span className="text-[#ff6b35]">Message</span>
@@ -130,10 +130,10 @@ export default function ManagementPage() {
             the changing needs of our valued customers.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Management Team */}
-      <div className=" px-4 sm:px-6 lg:px-20 pb-10">
+      <div className=" px-4 sm:px-6 lg:px-20 pb-10 mt-10">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5">
           Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
         </h2>
@@ -314,7 +314,7 @@ export default function ManagementPage() {
                     d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
                   />
                 </svg>
-                CONTACT US NOW
+                Call NOW
               </span>
             </a>
           </div>

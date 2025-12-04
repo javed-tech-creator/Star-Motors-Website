@@ -14,10 +14,11 @@ import {
   ChevronRight,
   MessageCircleMore,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AnimatedButton from "../components/AnimatedButton";
 
 export default function AboutUsPage() {
+  const navigate =useNavigate()
   const milestones = [
     {
       year: "2000",
@@ -372,7 +373,7 @@ export default function AboutUsPage() {
             cornerColor="#1a1a1a"
             textColor="#ffffff"
             className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
-            onClick={() => console.log("Button Clicked!")}
+            onClick={() => navigate("/contact")}
           />
             </div>
 

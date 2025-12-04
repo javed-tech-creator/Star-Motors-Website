@@ -28,7 +28,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-10 px-2">
             {/* HOME */}
             <Link
               to="/"
@@ -37,7 +37,7 @@ export default function Navbar() {
               HOME
             </Link>
 
-            {/* ABOUT DROPDOWN
+            {/* ABOUT DROPDOWN */}
             <div className="relative group">
               <button className="text-sm text-white hover:text-[#ff6b35] flex items-center gap-1">
                 ABOUT <span className="text-[#ff6b35]">+</span>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
               <div
                 className="
-                absolute top-10 left-0 w-48 bg-[#0f0f0f]
+                absolute top-10 left-0 w-35 bg-[#0f0f0f]
                 border border-white
                 max-h-0 
                 opacity-0 overflow-hidden
@@ -61,42 +61,28 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                  to="#team"
+                  to="management"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-                  OUR TEAM
-                </Link>
-
-                <Link
-                  to="#works"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  OUR WORKS
-                </Link>
-
-                <Link
-                  to="#faq"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  FAQ
+                MANAGEMENT
                 </Link>
               </div>
-            </div> */}
+            </div>
 
-            <Link
+            {/* <Link
             to="about"
               className="text-sm hover:text-[#ff6b35] transition-colors text-white"
           >
             ABOUT US
-          </Link>
+          </Link> */}
 
             {/* MANAGEMENT */}
-            <Link
+            {/* <Link
               to="management"
-              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white text-center"
             >
               OUR MANAGEMENT
-            </Link>
+            </Link> */}
 
             {/* SERVICES DROPDOWN */}
             <div className="relative group">
@@ -190,7 +176,7 @@ export default function Navbar() {
             {/* CONTACT */}
             <Link
               to="contact"
-              className="text-sm hover:text-[#ff6b35] transition-colors text-white"
+              className="text-sm hover:text-[#ff6b35] transition-colors text-white text-center"
             >
               CONTACT US
             </Link>
@@ -202,12 +188,13 @@ export default function Navbar() {
             className="
             hidden 
             lg:flex
+            justify-center
               font-chakra
               relative
               text-white
               text-[14px]
               font-semibold
-              px-7
+              px-6
               py-1.5
               uppercase
               tracking-tight
@@ -215,6 +202,7 @@ export default function Navbar() {
               border-2 border-[#ff6b35]
               transition-all duration-300
               group
+              min-w-[170px]     
             "
           >
             <span
@@ -273,65 +261,101 @@ export default function Navbar() {
           {/* ---- HOME ---- */}
           <Link
             to="/"
+            onClick={() => setMobileMenuOpen(false)}
             className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
           >
             HOME
           </Link>
 
           {/* ---- ABOUT DROPDOWN ---- */}
-          {/* <MobileDropdown title="ABOUT">
+          <MobileDropdown title="ABOUT">
             <Link
               to="about"
+              onClick={() => setMobileMenuOpen(false)}
               className="block py-2 hover:text-[#ff6b35] text-gray-300"
             >
               ABOUT US
             </Link>
             <Link
-              to="#team"
+              to="management"
+              onClick={() => setMobileMenuOpen(false)}
               className="block py-2 hover:text-[#ff6b35] text-gray-300"
             >
-              OUR TEAM
+              MANAGEMENT
             </Link>
-          </MobileDropdown> */}
-             <Link
+          </MobileDropdown>
+          {/* <Link
             to="about"
             className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
           >
             ABOUT US
-          </Link>
+          </Link> */}
 
           {/* ---- MANAGEMENT ---- */}
-          <Link
+          {/* <Link
             to="management"
+            onClick={() => setMobileMenuOpen(false)}
             className="flex justify-between items-center text-white hover:text-[#ff6b35] py-2 border-b border-gray-700"
           >
             MANAGEMENT
-          </Link>
+          </Link> */}
 
           {/* ---- SERVICES DROPDOWN ---- */}
           <MobileDropdown title="SERVICES">
-            <Link to="service/service1"  className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/service1"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               CSR SERVICE/REPARING
             </Link>
-            <Link to="service/service2" className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/service2"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               CAR, BIKE FOAM WASH
             </Link>
-            <Link to="service/single1" className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/single1"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               INTERIOR CLEANING
             </Link>
-            <Link to="service/single2" className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/single2"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               DENTING PAINTING
             </Link>
-            <Link  to="service/single3"className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/single3"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               CAR MODIFICATION
             </Link>
-            <Link to="service/single4" className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/single4"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               WHEEL ALIGNMENT
             </Link>
-            <Link to="service/single5" className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/single5"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               WHEEL BALANCING
             </Link>
-            <Link to="service/single6" className="block py-2 text-gray-300 hover:text-[#ff6b35]">
+            <Link
+              to="service/single6"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
               TYRE WITH TYRE CHANGING
             </Link>
           </MobileDropdown>
@@ -339,6 +363,7 @@ export default function Navbar() {
           {/* ---- BLOG ---- */}
           <Link
             to="blog"
+            onClick={() => setMobileMenuOpen(false)}
             className="flex justify-between items-center text-white py-2 border-b hover:text-[#ff6b35] border-gray-700"
           >
             BLOG
@@ -347,6 +372,7 @@ export default function Navbar() {
           {/* ---- GALLERY ---- */}
           <Link
             to="gallery"
+            onClick={() => setMobileMenuOpen(false)}
             className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
           >
             GALLERY
@@ -355,6 +381,7 @@ export default function Navbar() {
           {/* ---- CONTACT US ---- */}
           <Link
             to="contact"
+            onClick={() => setMobileMenuOpen(false)}
             className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
           >
             CONTACT US

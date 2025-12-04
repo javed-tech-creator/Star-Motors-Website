@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 export default function ClientTestimonials() {
@@ -62,13 +62,13 @@ export default function ClientTestimonials() {
   ];
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
@@ -77,9 +77,18 @@ export default function ClientTestimonials() {
     setCurrentIndex(index);
   };
 
+  //  Auto-slide added here
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2000); // Auto-slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="w-full bg-[#111111] py-10 overflow-hidden font-chakra">
-      <div className=" px-6 lg:px-20">
+      <div className=" px-5 lg:px-20">
       
         {/* Testimonials Slider */}
         <div className="relative">
@@ -90,9 +99,10 @@ export default function ClientTestimonials() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
+                <div key={testimonial.id} className="w-full shrink-0 px-2 md:px-6">
                   <div className="max-w-4xl mx-auto">
-                    <div className="bg-gradient-to-br from-gray-900/80 to-black/60 backdrop-blur-lg rounded-3xl border border-gray-800/50 p-8 md:p-12 relative overflow-hidden group hover:border-orange-500/50 transition-all duration-300">
+                    <div className="bg-linear-to-br from-gray-900/80 to-black/60 backdrop-blur-lg rounded-3xl border border-gray-800/50 p-4  md:p-12 relative overflow-hidden group hover:border-orange-500/50 transition-all duration-300">
+
                       {/* Quote Icon */}
                       <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
                         <Quote size={80} className="text-orange-500" />
@@ -100,6 +110,7 @@ export default function ClientTestimonials() {
 
                       {/* Content */}
                       <div className="relative z-10">
+
                         {/* Rating */}
                         <div className="flex gap-1 mb-6">
                           {[...Array(testimonial.rating)].map((_, i) => (
@@ -129,6 +140,7 @@ export default function ClientTestimonials() {
                             </p>
                           </div>
                         </div>
+
                       </div>
                     </div>
                   </div>
@@ -143,18 +155,18 @@ export default function ClientTestimonials() {
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg z-10"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={22} />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg z-10"
             aria-label="Next testimonial"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={22} />
           </button>
         </div>
 
-        {/* Dots Navigation */}
+        {/* Dots */}
         <div className="flex justify-center gap-2 mt-12">
           {testimonials.map((_, index) => (
             <button
@@ -170,7 +182,7 @@ export default function ClientTestimonials() {
           ))}
         </div>
 
-        {/* Stats Section */}
+        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
             { number: "5000+", label: "Happy Clients" },
@@ -180,7 +192,7 @@ export default function ClientTestimonials() {
           ].map((stat, index) => (
             <div 
               key={index}
-              className="text-center p-6 bg-gradient-to-br from-gray-900/50 to-black/30 rounded-xl border border-gray-800/50 hover:border-orange-500/50 transition-all duration-300"
+              className="text-center p-6 bg-linear-to-br from-gray-900/50 to-black/30 rounded-xl border border-gray-800/50 hover:border-orange-500/50 transition-all duration-300"
             >
               <h3 className="text-3xl md:text-4xl font-bold text-orange-500 mb-2">
                 {stat.number}
@@ -191,6 +203,7 @@ export default function ClientTestimonials() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

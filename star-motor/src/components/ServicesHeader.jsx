@@ -4,7 +4,6 @@ export default function ServicesHeader() {
   return (
     <div className="relative w-full py-2 md:py-4 overflow-hidden font-chakra">
     
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
@@ -13,16 +12,16 @@ export default function ServicesHeader() {
           <span className="text-white">OUR</span>   SERVICES
           </h2>
           {/* Top decorative line */}
-          <div className="flex items-center justify-center mb-6">
+          <div className="flex items-center justify-center mb-4">
             <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
             <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
             <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
           </div>
 
           {/* Small label */}
-          <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
+          {/* <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase">
             What We Offer
-          </p>
+          </p> */}
         </div>
       </div>
 

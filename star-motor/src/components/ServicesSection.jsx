@@ -53,47 +53,51 @@ export default function OurServices() {
   return (
     <section className="w-full  bg-[#111111] py-10">
       {/* SERVICES GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 lg:px-20">
-        {menuServices.map((service, index) => (
-          <div
-            key={index}
-            className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-gray-700 hover:border-[#ff6b35] transition-all group/service"
-          >
-            {/* IMAGE */}
-            <div className="w-full h-40 overflow-hidden">
-              <img
-                src={images[index]}
-                alt={service}
-                className="w-full h-full object-cover transform group-hover/service:scale-110 transition-all duration-500"
-              />
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 lg:px-20">
+  {menuServices.map((service, index) => (
+    <div
+      key={index}
+      className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-gray-700 hover:border-[#ff6b35] transition-all group/service flex flex-col justify-between"
+    >
+      {/* IMAGE */}
+      <div>
+        <div className="w-full h-40 overflow-hidden">
+          <img
+            src={images[index]}
+            alt={service}
+            className="w-full h-full object-cover transform group-hover/service:scale-110 transition-all duration-500"
+          />
+        </div>
 
-            {/* TEXT BELOW IMAGE */}
-            <div className="p-5">
-              {/* SERVICE NAME */}
-              <h3 className="text-white text-lg font-chakra font-semibold mb-3">
-                {service}
-              </h3>
+        {/* TEXT BELOW IMAGE */}
+        <div className="p-5">
+          <h3 className="text-white text-lg font-chakra font-semibold mb-3">
+            {service}
+          </h3>
 
-              {/* DESCRIPTION */}
-              <p className="text-gray-300 text-sm leading-relaxed mb-4 font-chakra">
-                {descriptions[index]}
-              </p>
-
-              <AnimatedButton
-                text="DETAILS"
-                width="120px"
-                height="30px"
-                bgColor="#ff6b35"
-                borderColor="#ff6b35"
-                textColor="#ffffff"
-                cornerColor="#1a1a1a"
-                onClick={() => navigate(`/service/${link[index]}`)}
-              />
-            </div>
-          </div>
-        ))}
+          <p className="text-gray-300 text-sm leading-relaxed mb-4 font-chakra">
+            {descriptions[index]}
+          </p>
+        </div>
       </div>
+
+      {/* BUTTON FIXED AT BOTTOM */}
+      <div className="mb-4 pl-5">
+        <AnimatedButton
+          text="DETAILS"
+          width="120px"
+          height="30px"
+          bgColor="#ff6b35"
+          borderColor="#ff6b35"
+          textColor="#ffffff"
+          cornerColor="#1a1a1a"
+          onClick={() => navigate(`/service/${link[index]}`)}
+        />
+      </div>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }

@@ -4,8 +4,11 @@ import enginewheel from "../assets/engine-wheel.png";
 import rightlight from "../assets/right-light.png";
 import leftlight from "../assets/left-light.png";
 import AnimatedButton from "./AnimatedButton";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+
+  const navigate = useNavigate();
   return (
     <section className="relative w-full bg-[#111111] text-white overflow-hidden py-20 min-h-[80vh] px-6 lg:px-20">
       {/* BACKGROUND OUTLINE TEXT */}
@@ -62,7 +65,7 @@ const HeroSection = () => {
             borderColor="#ff6b35"
             textColor="#ffffff"
             className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
-            onClick={() => console.log("Button Clicked!")}
+            onClick={() => navigate("contact")}
           />
         </div>
 

@@ -1,31 +1,19 @@
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
 import ctaimage from "../assets/cta-image.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
+  const navigate = useNavigate();
   return (
     <section className=" bg-[#111111] py-10 font-chakra ">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-0 px-6 lg:px-20">
         {/* Content Side */}
         <div className=" order-2 lg:order-1">
           {/* Logo */}
-          <div className="flex items-center gap-4 mb-6 animate-fadeIn">
-            <div className="w-14 h-14  bg-linear-to-br from-[#ff6b35] to-[#f7931e] rounded-xl flex items-center justify-center text-3xl shadow-lg">
-              ⭐
-            </div>
-            <h3 className="text-3xl font-bold text-white uppercase tracking-wider">
-              Star Motors
-            </h3>
-          </div>
-
-          {/* Tagline */}
-          <p className="text-[#ff6b35] uppercase tracking-widest text-sm font-bold mb-6 animate-fadeIn">
-            Premium Auto Care
-          </p>
-
-          {/* Heading */}
+    
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight animate-fadeIn">
-            Your Car Deserves the{" "}
+         ⭐ Your Car Deserves the{" "}
             <span className=" bg-linear-to-r from-[#ff6b35] to-[#f7931e] bg-clip-text text-transparent">
               Best Service
             </span>
@@ -48,19 +36,60 @@ export default function CTASection() {
               borderColor="#ff6b35"
               cornerColor="#111111"
               textColor="#ffffff"
-              onClick={() => console.log("Subscribe Click")}
+              onClick={() => navigate("contact")}
             />
 
-            <AnimatedButton
-              text="SERVICES"
-              width="170px"
-              height="40px"
-              bgColor="#ff6b35"
-              borderColor="#ff6b35"
-              cornerColor="#111111"
-              textColor="#ffffff"
-              onClick={() => console.log("Subscribe Click")}
-            />
+              <a
+              href="tel:7526074042"
+              className="
+    group
+    relative
+    overflow-hidden
+    flex
+    gap-2
+    text-white
+    text-[14px]
+    font-semibold
+    px-7
+    py-2
+    uppercase
+    tracking-tight
+    items-center
+    border-2 border-[#ff6b35]
+    transition-all duration-300
+    hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
+  "
+            >
+              {/* Background hover fill animation */}
+              <span
+                className="
+      absolute inset-0 bg-[#ff6b35]
+      scale-x-0 origin-center
+      transition-transform duration-300 ease-out
+      group-hover:scale-x-100
+      z-0
+    "
+              ></span>
+
+              {/* Icon + text (stay on top of background) */}
+              <span className="relative z-10 flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 group-hover:rotate-12 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
+                  />
+                </svg>
+                Call NOW
+              </span>
+            </a>
           </div>
 
           {/* Features */}
