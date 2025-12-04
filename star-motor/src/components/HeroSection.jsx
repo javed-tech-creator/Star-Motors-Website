@@ -12,16 +12,19 @@ const HeroSection = () => {
   return (
     <section className="relative w-full bg-[#111111] text-white overflow-hidden py-20 min-h-[80vh] px-6 lg:px-20">
       {/* BACKGROUND OUTLINE TEXT */}
-      <h1
-        className="
+    <h1
+  className={`
     absolute
     top-10
     md:top-5
     lg:top-18
-    -right-35
-    md:-right-65
-    lg:-right-65
+    ${/* MOBILE & TABLET CENTER */""}
+    left-1/2 md:left-1/2
     -translate-x-1/2
+    text-center
+    ${/* DESKTOP PAR ORIGINAL RIGHT SIDE */""}
+    lg:left-auto lg:-right-65 lg:text-right
+
     whitespace-nowrap
     text-[35px]
     md:text-[70px]
@@ -31,14 +34,15 @@ const HeroSection = () => {
     tracking-[0.2em]
     select-none
     pointer-events-none
-  "
-        style={{
-          WebkitTextStroke: "2px rgba(255,255,255,0.07)",
-          color: "transparent",
-        }}
-      >
-        STAR MOTORS
-      </h1>
+  `}
+  style={{
+    WebkitTextStroke: "2px rgba(255,255,255,0.07)",
+    color: "transparent",
+  }}
+>
+  STAR MOTORS
+</h1>
+
 
       <div className=" flex flex-col-reverse lg:flex-row items-center justify-between ">
         {/* =========================
