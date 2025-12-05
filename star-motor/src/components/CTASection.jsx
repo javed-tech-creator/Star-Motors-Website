@@ -40,7 +40,7 @@ export default function CTASection() {
             />
 
               <a
-              href="tel:7526074042"
+              href="tel:9956877786"
               className="
     group
     relative

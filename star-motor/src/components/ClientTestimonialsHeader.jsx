@@ -26,7 +26,7 @@ export default function ClientTestimonialsHeader() {
       </div>
 
       {/* Bottom shadow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
 
       <style jsx>{`
         @keyframes fade-in {

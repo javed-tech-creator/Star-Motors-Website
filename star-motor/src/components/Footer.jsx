@@ -31,29 +31,49 @@ const Footer = () => {
   return (
     <>
    <footer className="bg-black text-white py-10 md:py-12 px-6 md:px-12 lg:px-20 font-chakra">
-  <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-20">
+  <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14 lg:gap-20">
 
     {/* BRAND INFO */}
-    <div className="space-y-6">
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-lg font-bold">
-          ⚙
-        </div>
-        <h2 className="text-2xl font-bold tracking-wide">
-          STAR<span className="text-orange-600">MOTORS</span>
-        </h2>
-      </div>
-
-      <p className="text-sm lg:text-base leading-6 text-neutral-300 max-w-sm">
-        Every service is rigorously screened and constantly rated to ensure you get the best experience.
-      </p>
+   <div className="space-y-6">
+  <div className="flex items-center gap-3">
+    <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-lg font-bold">
+      ⚙
     </div>
+    <h2 className="text-2xl font-bold tracking-wide">
+      STAR<span className="text-orange-600">MOTORS</span>
+    </h2>
+  </div>
+
+  <p className="text-sm lg:text-base leading-6 text-neutral-300 max-w-sm">
+    Every service is rigorously screened and constantly rated to ensure you get the best experience.
+  </p>
+
+  {/* Admin Login Button */}
+  <div>
+    <button
+      className="
+        px-5 py-2 
+       cursor-pointer
+        text-white 
+        font-semibold 
+        rounded-lg 
+        bg-orange-500 
+        hover:bg-orange-600 
+        transition 
+        duration-300
+      "
+    >
+      Admin Login
+    </button>
+  </div>
+</div>
+
 
     {/* POPULAR SERVICES */}
     <div className="col-span-2">
       <h4 className="font-bold text-lg mb-6 tracking-wide">POPULAR SERVICES</h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
         {menuServices.map((item, index) => (
           <div
             onClick={() => navigate(`/service/${menuLink[index]}`)}
@@ -78,7 +98,7 @@ const Footer = () => {
       </h4>
 
       <div>
-        <p className="text-sm font-semibold text-white">ADDRESS</p>
+        <p className="text-sm font-semibold text-orange-500">ADDRESS</p>
         <p className="text-sm mt-1 leading-6">
           23/A, New Market Road,<br />
           Mumbai, Maharashtra 400001,<br />
@@ -88,16 +108,28 @@ const Footer = () => {
 
 <div className="flex gap-5">
       <div>
-        <p className="text-sm font-semibold text-white">PHONE</p>
-        <p className="text-sm mt-1">+91 98765 43210</p>
+        <p className="text-sm font-semibold text-orange-500">PHONE</p>
+        <p className="text-sm mt-1">9956877786 </p>
       </div>
 
       <div>
-        <p className="text-sm font-semibold text-white">EMAIL</p>
+        <p className="text-sm font-semibold text-orange-500">EMAIL</p>
         <p className="text-sm mt-1">support@domain.com</p>
       </div>
       </div>
     </div>
+
+    {/* Map SECTION */}
+      <div className="">
+          <iframe
+            src="https://maps.google.com/maps?q=Digital%20Signage%20Solutions%20Lucknow&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: "5px" }}
+            loading="lazy"
+            title="Google Map"
+          ></iframe>
+        </div>
 
   </div>
 </footer>

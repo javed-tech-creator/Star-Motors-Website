@@ -40,12 +40,12 @@ export default function Navbar() {
             {/* ABOUT DROPDOWN */}
             <div className="relative group">
               <button className="text-sm text-white hover:text-[#ff6b35] flex items-center gap-1">
-                ABOUT <span className="text-[#ff6b35]">+</span>
+                ABOUT <span className="text-[#ff6b35] text-lg">+</span>
               </button>
 
               <div
                 className="
-                absolute top-10 left-0 w-35 bg-[#0f0f0f]
+                absolute top-10 left-0 w-45 bg-[#0f0f0f]
                 border border-white
                 max-h-0 
                 opacity-0 overflow-hidden
@@ -64,7 +64,7 @@ export default function Navbar() {
                   to="management"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-                MANAGEMENT
+               OUR MANAGEMENT
                 </Link>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
             {/* SERVICES DROPDOWN */}
             <div className="relative group">
               <button className="text-sm text-white hover:text-[#ff6b35] flex items-center gap-1">
-                SERVICES <span className="text-[#ff6b35]">+</span>
+                SERVICES <span className="text-[#ff6b35] text-lg">+</span>
               </button>
 
               <div
@@ -184,7 +184,7 @@ export default function Navbar() {
 
           {/* Contact Number (Desktop) */}
           <Link
-            to="tel:7526074042"
+            to="tel:9956877786"
             className="
             hidden 
             lg:flex
@@ -218,7 +218,7 @@ export default function Navbar() {
             <span className="absolute h-7 w-5 bg-[#0f0f0f] rotate-52 -left-2 -top-4 pointer-events-none"></span>
             <span className="absolute h-7 w-5 bg-[#0f0f0f] rotate-52 -right-2 -bottom-4 pointer-events-none"></span>
 
-            <span className="relative z-10">+91 752 60 74 042</span>
+            <span className="relative z-10">+91 995 687 7786</span>
           </Link>
 
           {/* Mobile Menu Button */}
@@ -281,7 +281,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 hover:text-[#ff6b35] text-gray-300"
             >
-              MANAGEMENT
+            OUR MANAGEMENT
             </Link>
           </MobileDropdown>
           {/* <Link

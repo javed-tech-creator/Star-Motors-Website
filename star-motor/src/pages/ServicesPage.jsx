@@ -273,7 +273,7 @@ export default function ServicePage() {
   return (
     <div className="min-h-screen bg-[#111111] text-white font-chakra">
       {/* Hero Section */}
-      <div className="relative h-96 overflow-hidden">
+      <div className="relative h-76 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${service.heroImage})` }}
@@ -337,59 +337,6 @@ export default function ServicePage() {
           </div>
         </div>
 
-        {/* Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5 font-chakra">
-            Pricing <span className="text-[#ff6b35]">Plans</span>
-          </h2>
-
-          <div className="flex items-center justify-center mb-10">
-            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-            <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {service.pricing.map((plan, idx) => (
-              <div
-                key={idx}
-                className="
-          group
-           bg-linear-to-br from-[#111] to-[#0c0c0c]
-          border border-gray-800
-          rounded-2xl
-          p-8
-          shadow-xl
-          transition-all
-          duration-300
-          hover:border-[#ff6b35]
-          hover:shadow-[#ff6b35]/30
-          hover:-translate-y-2
-        "
-              >
-                {/* Plan Title */}
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#ff6b35] transition">
-                  {plan.name}
-                </h3>
-
-                {/* Price */}
-                <p className="text-5xl font-bold text-[#ff6b35] mb-6 tracking-tight">
-                  {plan.price}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-3 mb-10">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-[#ff6b35] mr-3 text-xl">✔</span>
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Highlights / Key Benefits */}
         <div className="mb-15">
@@ -493,34 +440,35 @@ export default function ServicePage() {
             <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 space-y-6">
-            {[
-              {
-                q: "How long does this service take?",
-                a: "Usually between 1-3 hours depending on the selected service plan.",
-              },
-              {
-                q: "Do you provide warranty?",
-                a: "Yes, we provide up to 30 days of service warranty.",
-              },
-              {
-                q: "Are spare parts genuine?",
-                a: "Yes, 100% OEM and genuine parts are used.",
-              },
-              {
-                q: "Can I get same-day service?",
-                a: "Yes, same-day service is available for most categories.",
-              },
-            ].map((faq, i) => (
-              <div
-                key={i}
-                className="bg-[#0f0f0f] p-6 rounded-xl border border-gray-800 hover:border-[#ff6b35] transition-all"
-              >
-                <p className="text-lg font-semibold mb-2">{faq.q}</p>
-                <p className="text-gray-400">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {[
+    {
+      q: "How long does this service take?",
+      a: "Usually between 1-3 hours depending on the selected service plan.",
+    },
+    {
+      q: "Do you provide warranty?",
+      a: "Yes, we provide up to 30 days of service warranty.",
+    },
+    {
+      q: "Are spare parts genuine?",
+      a: "Yes, 100% OEM and genuine parts are used.",
+    },
+    {
+      q: "Can I get same-day service?",
+      a: "Yes, same-day service is available for most categories.",
+    },
+  ].map((faq, i) => (
+    <div
+      key={i}
+      className="bg-[#0f0f0f] p-6 rounded-xl border border-gray-800 hover:border-[#ff6b35] transition-all h-full"
+    >
+      <p className="text-lg font-semibold mb-2">{faq.q}</p>
+      <p className="text-gray-400">{faq.a}</p>
+    </div>
+  ))}
+</div>
+
         </div>
 
         {/* Call To Action */}
@@ -535,7 +483,7 @@ export default function ServicePage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             {/* Call Button */}
             <a
-              href="tel:7526074042"
+              href="tel:9956877786"
               className="
     group
     relative
@@ -588,7 +536,7 @@ export default function ServicePage() {
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/7526074042"
+              href="https://wa.me/9956877786"
               target="_blank"
               rel="noopener noreferrer"
               className="

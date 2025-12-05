@@ -107,7 +107,7 @@ export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white font-chakra">
       {/* Hero Section */}
-      <div className="relative h-96 flex items-center justify-center overflow-hidden">
+      <div className="relative h-76 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-[#ff6b35]/30 via-[#ff6b35]/10 to-transparent"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200')] bg-cover bg-center opacity-50"></div>
 
@@ -155,9 +155,9 @@ export default function AboutUsPage() {
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {/* <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Who <span className="text-[#ff6b35]">We Are</span>
-            </h2>
+            </h2> */}
 
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Star Motors is Lucknow's premier automotive service center,
@@ -258,59 +258,6 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      {/* Our Journey Timeline */}
-      <div className="bg-[#1a1a1a] py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-5">
-            Our <span className="text-[#ff6b35]">Journey</span>
-          </h2>
-          <div className="flex items-center justify-center mb-10">
-            <div className="h-px w-12 bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-            <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12 bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-linear-to-b from-[#ff6b35] to-transparent hidden md:block"></div>
-
-            <div className="space-y-12">
-              {milestones.map((milestone, idx) => (
-                <div
-                  key={idx}
-                  className={`flex flex-col md:flex-row gap-8 items-center ${
-                    idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                >
-                  <div
-                    className={`flex-1 ${
-                      idx % 2 === 0 ? "md:text-right" : "md:text-left"
-                    }`}
-                  >
-                    <div className=" bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-6 hover:border-[#ff6b35] transition-all duration-500 hover:shadow-xl hover:shadow-[#ff6b35]/20">
-                      <div className="text-[#ff6b35] text-3xl font-bold mb-2">
-                        {milestone.year}
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-gray-400">{milestone.description}</p>
-                    </div>
-                  </div>
-
-                  <div className="relative">
-                    <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center border-4 border-[#0f0f0f] shadow-lg shadow-[#ff6b35]/50">
-                      <Star className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-
-                  <div className="flex-1"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Achievements Stats */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -408,7 +355,7 @@ export default function AboutUsPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               {/* Call Button */}
               <a
-                href="tel:7526074042"
+                href="tel:9956877786"
                 className="
     group
     relative
@@ -461,7 +408,7 @@ export default function AboutUsPage() {
 
               {/* WhatsApp Button */}
               <a
-                href="https://wa.me/7526074042"
+                href="https://wa.me/9956877786"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

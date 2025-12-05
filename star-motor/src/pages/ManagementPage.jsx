@@ -19,40 +19,28 @@ export default function ManagementPage() {
       position: "Founder & CEO",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      bio: "25+ years of experience in automotive industry",
-      email: "rajesh@starmotors.com",
-      phone: "+91 752 60 74 042",
-      linkedin: "#",
+      
     },
     {
       name: "Priya Sharma",
       position: "Operations Director",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-      bio: "Expert in service management and quality control",
-      email: "priya@starmotors.com",
-      phone: "+91 752 60 74 043",
-      linkedin: "#",
+     
     },
     {
       name: "Amit Verma",
       position: "Technical Head",
       image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      bio: "Certified automotive engineer with 15+ years experience",
-      email: "amit@starmotors.com",
-      phone: "+91 752 60 74 044",
-      linkedin: "#",
+    
     },
     {
       name: "Sneha Patel",
       position: "Customer Relations Manager",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      bio: "Dedicated to ensuring exceptional customer satisfaction",
-      email: "sneha@starmotors.com",
-      phone: "+91 752 60 74 045",
-      linkedin: "#",
+     
     },
   ];
 
@@ -82,13 +70,13 @@ export default function ManagementPage() {
   return (
     <div className="min-h-screen bg-[#111111] text-white font-chakra">
       {/* Hero Section */}
-      <div className="relative h-96 flex items-center justify-center overflow-hidden">
+      <div className="relative h-76 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0  bg-linear-to-br from-[#ff6b35]/20 via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200')] bg-cover bg-center opacity-40"></div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-            Our <span className="text-[#ff6b35]">Management</span>
+                Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-2">
             Meet the experts driving excellence at Star Motors
@@ -134,14 +122,8 @@ export default function ManagementPage() {
 
       {/* Management Team */}
       <div className=" px-4 sm:px-6 lg:px-20 pb-10 mt-10">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5">
-          Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
-        </h2>
-        <div className="flex items-center justify-center mb-10">
-          <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-          <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-          <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-        </div>
+       
+       
 
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
           {managementTeam.map((member, idx) => (
@@ -165,34 +147,7 @@ export default function ManagementPage() {
                 <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
                   {member.position}
                 </p>
-                <p className="text-gray-400 mb-4 leading-relaxed">
-                  {member.bio}
-                </p>
-
-                {/* Contact Info */}
-                <div className="space-y-2 border-t border-gray-700 pt-4">
-                  <a
-                    href={`mailto:${member.email}`}
-                    className="flex items-center gap-3 text-gray-300 hover:text-[#ff6b35] transition-colors group/link"
-                  >
-                    <Mail className="w-5 h-5 group-hover/link:scale-110 transition-transform" />
-                    <span className="text-sm">{member.email}</span>
-                  </a>
-                  <a
-                    href={`tel:${member.phone}`}
-                    className="flex items-center gap-3 text-gray-300 hover:text-[#ff6b35] transition-colors group/link"
-                  >
-                    <Phone className="w-5 h-5 group-hover/link:scale-110 transition-transform" />
-                    <span className="text-sm">{member.phone}</span>
-                  </a>
-                  <a
-                    href={member.linkedin}
-                    className="flex items-center gap-3 text-gray-300 hover:text-[#ff6b35] transition-colors group/link"
-                  >
-                    <Linkedin className="w-5 h-5 group-hover/link:scale-110 transition-transform" />
-                    <span className="text-sm">Connect on LinkedIn</span>
-                  </a>
-                </div>
+             
               </div>
             </div>
           ))}
@@ -267,7 +222,7 @@ export default function ManagementPage() {
           </p>
           <div className="flex justify-center gap-2">
             <a
-              href="tel:7526074042"
+              href="tel:9956877786"
               className="
     group
     relative

@@ -21,6 +21,9 @@ const MainPage = () => {
       <AboutUsHeader />
       <AboutSection />
 
+       <LatestArticlesHeader />
+      <LatestArticlesSection />
+
       {/*  Services HEADING ADDED HERE  */}
       <ServicesHeader />
       <OurServices />
@@ -36,8 +39,7 @@ const MainPage = () => {
       <ClientTestimonialsHeader />
       <ClientTestimonials />
 
-      <LatestArticlesHeader />
-      <LatestArticlesSection />
+     
     </>
   );
 };
