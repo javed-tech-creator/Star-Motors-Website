@@ -23,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ContactUsPage = () => {
   const BACKEND_URL =
     import.meta.env.VITE_BACKEND_URL ??
-    "http://localhost:3000/api/v1";
+    "https://star-motors-website.onrender.com/api/v1";
 
   const [formData, setFormData] = useState({
     name: "",
