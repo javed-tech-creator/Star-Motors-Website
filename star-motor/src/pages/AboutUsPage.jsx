@@ -122,7 +122,7 @@ export default function AboutUsPage() {
           </div> */}
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-            About <span className="text-[#ff6b35]">Us</span>
+            Star <span className="text-[#ff6b35]">Motors</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-2 max-w-3xl mx-auto leading-relaxed">
             Your Trusted Partner in Automotive Excellence Since 2000

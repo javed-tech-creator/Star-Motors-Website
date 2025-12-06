@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/Logo.jpeg";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     if (mobileMenuOpen) {
@@ -14,17 +17,20 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#0f0f0f] backdrop-blur-sm font-chakra ">
+    <nav className="fixed top-0 w-full z-50 bg-black backdrop-blur-sm font-chakra ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-xl font-bold">
-              ⚙
-            </div>
-            <div className="text-xl font-bold text-white ">
-              STAR<span className="text-[#ff6b35]  ">MOTORS</span>
-            </div>
+
+          <div
+            className="flex  cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            <img
+              src={logo}
+              alt="Star Motors Logo"
+              className="w-52 h-20 object-contain"
+            />
           </div>
 
           {/* Desktop Menu */}
@@ -64,7 +70,7 @@ export default function Navbar() {
                   to="management"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-               OUR MANAGEMENT
+                  OUR MANAGEMENT
                 </Link>
               </div>
             </div>
@@ -170,7 +176,7 @@ export default function Navbar() {
               to="gallery"
               className="text-sm hover:text-[#ff6b35] transition-colors text-white"
             >
-              GALLERY
+              OUR WORKS
             </Link>
 
             {/* CONTACT */}
@@ -215,10 +221,10 @@ export default function Navbar() {
               "
             ></span>
 
-            <span className="absolute h-7 w-5 bg-[#0f0f0f] rotate-52 -left-2 -top-4 pointer-events-none"></span>
-            <span className="absolute h-7 w-5 bg-[#0f0f0f] rotate-52 -right-2 -bottom-4 pointer-events-none"></span>
+            <span className="absolute h-7 w-5 bg-black rotate-52 -left-2 -top-4 pointer-events-none"></span>
+            <span className="absolute h-7 w-5 bg-black rotate-52 -right-2 -bottom-4 pointer-events-none"></span>
 
-            <span className="relative z-10">+91 995 687 7786</span>
+            <span className="relative z-10">+91 99568 77786</span>
           </Link>
 
           {/* Mobile Menu Button */}
@@ -248,14 +254,15 @@ export default function Navbar() {
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex gap-2 items-center px-4 py-10 border-b border-gray-700">
-          <div className="w-10 h-10 rounded-full border-2 border-[#ff6b35] flex items-center justify-center text-[#ff6b35] text-xl font-bold">
-            ⚙
-          </div>
-          <div className="text-xl font-bold text-white ">
-            STAR<span className="text-[#ff6b35]  ">MOTORS</span>
-          </div>
-        </div>
+       <div className=" bg-black pl-5 flex items-start h-full w-full border-b border-gray-700 cursor-pointer"
+     onClick={() => navigate("/")}
+>
+  <img
+    src={logo}
+    alt="Star Motors Logo"
+    className=" h-20 object-contain"
+  />
+</div>
 
         <div className="px-4 mt-2 bg-[#0f0f0f] text-sm font-semibold">
           {/* ---- HOME ---- */}
@@ -281,7 +288,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 hover:text-[#ff6b35] text-gray-300"
             >
-            OUR MANAGEMENT
+              OUR MANAGEMENT
             </Link>
           </MobileDropdown>
           {/* <Link
@@ -375,7 +382,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="flex justify-between items-center hover:text-[#ff6b35] text-white py-2 border-b border-gray-700"
           >
-            GALLERY
+            OUR WORKS
           </Link>
 
           {/* ---- CONTACT US ---- */}

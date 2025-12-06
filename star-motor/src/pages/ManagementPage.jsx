@@ -11,38 +11,53 @@ import {
   Home,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useGetAllTeamQuery } from "../api/team.api";
 
 export default function ManagementPage() {
-  const managementTeam = [
-    {
-      name: "Rajesh Kumar",
-      position: "Founder & CEO",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+
+const {
+    data,
+    error,
+    isLoading,
+    isFetching,
+    isSuccess,
+  } = useGetAllTeamQuery();  
+
+  console.log("data management",data);
+  const managementTeam = data?.data || [];
+  // const managementTeam = [
+  //   {
+  //     name: "Rajesh Kumar",
+  //     position: "Founder & CEO",
+  //     image:
+  //       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       
-    },
-    {
-      name: "Priya Sharma",
-      position: "Operations Director",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+  //   },
+  //   {
+  //     name: "Priya Sharma",
+  //     position: "Operations Director",
+  //     image:
+  //       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
      
-    },
-    {
-      name: "Amit Verma",
-      position: "Technical Head",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+  //   },
+  //   {
+  //     name: "Amit Verma",
+  //     position: "Technical Head",
+  //     image:
+  //       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
     
-    },
-    {
-      name: "Sneha Patel",
-      position: "Customer Relations Manager",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+  //   },
+  //   {
+  //     name: "Sneha Patel",
+  //     position: "Customer Relations Manager",
+  //     image:
+  //       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
      
-    },
-  ];
+  //   },
+  // ];
+
+   if (isLoading) return <p>Loading…</p>;
+  if (error) return <p className="text-red-500">Failed to load team!</p>;
 
   const values = [
     {
@@ -126,35 +141,38 @@ export default function ManagementPage() {
        
 
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {managementTeam.map((member, idx) => (
-            <div
-              key={idx}
-              className="group  bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
-            >
-              <div className="relative h-80 overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover  transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0  bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
-              </div>
+         {managementTeam?.map((member) => (
+  <div
+    key={member._id}
+    className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
+  >
+    {/* IMAGE */}
+    <div className="relative h-80 overflow-hidden">
+      <img
+        src={member?.image?.public_url}
+        alt={member?.name}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
+    </div>
 
-              <div className="p-4">
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-[#ff6b35] transition-colors">
-                  {member.name}
-                </h3>
-                <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
-                  {member.position}
-                </p>
-             
-              </div>
-            </div>
-          ))}
+    {/* CONTENT */}
+    <div className="p-4">
+      <h3 className="text-2xl font-bold mb-2 group-hover:text-[#ff6b35] transition-colors">
+        {member?.name}
+      </h3>
+
+      <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
+        {member?.designation}
+      </p>
+    </div>
+  </div>
+))}
+
         </div>
       </div>
 
-      {/* Core Values */}
+      {/* Core Values
       <div className="bg-[#111111] py-10">
         <div className=" px-4 sm:px-6 lg:px-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
@@ -185,10 +203,10 @@ export default function ManagementPage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Stats Section */}
-      <div className=" px-4 sm:px-6 lg:px-20 py-10">
+      {/* <div className=" px-4 sm:px-6 lg:px-20 py-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { number: "25+", label: "Years Experience" },
@@ -207,7 +225,7 @@ export default function ManagementPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
       <div className=" px-4 sm:px-6 lg:px-20 pb-10">
