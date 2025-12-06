@@ -19,12 +19,15 @@ import VisitorDashboard from "./pages/visitor/VisitorDashboard";
 import SubscriberDashboard from "./pages/subscribers/SubscriberDashboard";
 import JobDashboard from "./pages/job/JobDahboard";
 import AnnouncementForm from "./pages/subscribers/AnnouncementForm";
+import ProtectedRoute from "./pages/ProtectedRoute";
 function App() {
   return (
     <>
       <ToastContainer/>
     <Routes>
       <Route path="/" element={<LoginPage />} />
+        {/* Protected Routes */}
+        <Route element={<ProtectedRoute />}>
       <Route element={<Layout />}>
       <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path="/blog" element={<BlogDashboard/>}/>
@@ -44,6 +47,7 @@ function App() {
       <Route path="/subscriber" element={<SubscriberDashboard/>}/>
       <Route path="/subscriber/announcement" element={<AnnouncementForm/>}/>
       <Route path="/job-application" element={<JobDashboard/>}/>
+      </Route>
       </Route>
     </Routes>
     </>

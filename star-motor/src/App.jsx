@@ -24,7 +24,7 @@ function App() {
          <Route path="/management" element={<ManagementPage />} />
          <Route path="/about" element={<AboutUsPage />} />
          <Route path="/blog" element={<BlogPage />} />
-         <Route path="/blog-detail" element={<BlogDetail />} />
+         <Route path="/blog-detail/:slug" element={<BlogDetail />} />
         <Route path="/contact" element={<ContactUsPage />} /> 
         <Route path="/gallery" element={<ProjectPageGallery />} /> 
       </Route>
