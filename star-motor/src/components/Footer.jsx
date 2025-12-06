@@ -53,7 +53,8 @@ const Footer = () => {
 
             {/* Admin Login Button */}
             <div>
-              <button
+              <a
+              href="https://starmotor-admin.netlify.app"
                 className="
         px-5 py-2 
        cursor-pointer
@@ -67,7 +68,7 @@ const Footer = () => {
       "
               >
                 Admin Login
-              </button>
+              </a>
             </div>
           </div>
 
