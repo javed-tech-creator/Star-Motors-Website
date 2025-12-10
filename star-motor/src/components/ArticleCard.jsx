@@ -30,16 +30,16 @@ export default function ArticleCard({ article }) {
       </div>
 
       {/* CONTENT */}
-      <div className="flex flex-col p-4 sm:p-6 grow font-chakra">
+      <div className="flex flex-col p-3 sm:p-4 grow font-chakra">
 
         {/* Category */}
-        <span className="inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-full bg-[#111] border border-orange-500/20 text-xs text-orange-400 mb-3">
+        <span className="absolute top-3 right-2 inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-full bg-[#111] border border-orange-500/20 text-xs text-orange-400 mb-3">
           <Tag className="w-3 h-3" />
           {article?.category || "Technology"}
         </span>
 
         {/* Title */}
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-3 line-clamp-2 leading-snug group-hover:text-orange-400">
+        <h3 className="text-lg sm:text-xl font-bold text-white line-clamp-2 leading-snug group-hover:text-orange-400">
           {article.title}
         </h3>
 

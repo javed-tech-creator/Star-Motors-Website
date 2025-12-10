@@ -69,7 +69,7 @@ export default function ClientBrands() {
   const duplicatedBrands = [...carBrands, ...carBrands];
 
   return (
-    <section className="w-full bg-[#0a0a0a] py-15 overflow-hidden relative">
+    <section className="w-full bg-[#0a0a0a]  overflow-hidden relative">
       <div className="relative z-10 px-6 lg:px-20">
       
 
@@ -99,11 +99,11 @@ export default function ClientBrands() {
         </div>
 
         {/* Bottom Info */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <p className="text-gray-300 text-sm md:text-base font-medium">
             And Many More! We service all car brands with expert care
           </p>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`

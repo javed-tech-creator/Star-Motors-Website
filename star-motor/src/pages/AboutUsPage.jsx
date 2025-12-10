@@ -18,7 +18,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AnimatedButton from "../components/AnimatedButton";
 
 export default function AboutUsPage() {
-  const navigate =useNavigate()
+  const navigate = useNavigate();
   const milestones = [
     {
       year: "2000",
@@ -77,10 +77,10 @@ export default function AboutUsPage() {
   ];
 
   const achievements = [
-    { number: "25+", label: "Years of Excellence" },
+    { number: "10+", label: "Years of Excellence" },
     { number: "10,000+", label: "Happy Customers" },
-    { number: "50+", label: "Expert Team Members" },
-    { number: "15+", label: "Services Offered" },
+    { number: "100%", label: "Satisfaction Rate" },
+    { number: "10+", label: "Services Offered" },
   ];
 
   const coreValues = [
@@ -88,19 +88,19 @@ export default function AboutUsPage() {
       icon: <Target className="w-10 h-10" />,
       title: "Our Mission",
       description:
-        "To provide exceptional automotive care that exceeds customer expectations through quality service, skilled expertise, and unwavering dedication to excellence.",
+        "To provide dependable, high-quality automotive services that ensure customer satisfaction, safety, and long-lasting performance.",
     },
     {
       icon: <Lightbulb className="w-10 h-10" />,
       title: "Our Vision",
       description:
-        "To be the most trusted and preferred automotive service provider in the region, setting industry standards for quality, innovation, and customer satisfaction.",
+        "To become the most trusted and preferred multi-brand service center known for excellence, transparency, and innovation.",
     },
     {
       icon: <Heart className="w-10 h-10" />,
       title: "Our Values",
       description:
-        "Integrity, excellence, customer-first approach, continuous improvement, and building lasting relationships with our community.",
+        "We deliver reliable service with quality, transparency, and skilled workmanship you can trust.",
     },
   ];
 
@@ -121,12 +121,10 @@ export default function AboutUsPage() {
             </div>
           </div> */}
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-            Star <span className="text-[#ff6b35]">Motors</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-2 max-w-3xl mx-auto leading-relaxed">
-            Your Trusted Partner in Automotive Excellence Since 2000
-          </p>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
+            Who <span className="text-[#ff6b35]">We Are</span>
+          </h3>
+          
           <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
 
           <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-5">
@@ -143,66 +141,50 @@ export default function AboutUsPage() {
       </div>
 
       {/* Who We Are Section */}
-      <div className=" px-4 sm:px-6 lg:px-20 py-10 md:py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative group">
+      <div className=" px-4 sm:px-6 lg:px-20 py-10 md:py-10">
+        <div className="grid md:grid-cols-1 gap-12 items-center">
+          {/* <div className="relative group">
             <div className="absolute -inset-4 bg-linear-to-r from-[#ff6b35]/20 to-[#ff6b35]/0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
             <img
               src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&h=600&fit=crop"
               alt="Star Motors Workshop"
               className="relative rounded-2xl w-full h-[400px] object-cover shadow-2xl group-hover:scale-105 transition-transform duration-500"
             />
-          </div>
+          </div> */}
 
           <div>
-            {/* <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Who <span className="text-[#ff6b35]">We Are</span>
-            </h2> */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              ⭐ About Us –{" "}
+              <span className="text-orange-500">Star Motors </span>
+            </h2>
 
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Star Motors is Lucknow's premier automotive service center,
-              dedicated to providing top-quality car care and maintenance
-              services. With over 25 years of experience, we've built our
-              reputation on trust, expertise, and exceptional customer service.
+            <p className="text-gray-300 text-lg leading-relaxed">
+              At Star Motors, we are committed to providing high-quality car
+              repair, servicing, and maintenance backed by expert workmanship
+              and modern technology. With years of experience and a team of
+              certified mechanics, we ensure every vehicle receives the care,
+              precision, and attention it deserves. <br /> <br />
+              We specialize in complete automotive services — including
+              mechanical repairs, car & bike foam wash, denting and painting,
+              wheel alignment, wheel balancing, interior detailing, tyre change,
+              and custom modifications. Whether it’s a regular checkup or a
+              major repair, our focus is on delivering reliable, long-lasting
+              results.
+              <br />
+              <br />
+              Our workshop is equipped with advanced diagnostic tools and
+              premium-grade parts to maintain the performance, safety, and
+              durability of your vehicle. We believe in honest pricing,
+              transparent service, and building long-term trust with our
+              customers.
+              <br />
+              <br />
+              At Star Motors, your car is handled with expertise,
+              professionalism, and genuine care — because we treat every vehicle
+              as if it’s our own.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Our state-of-the-art facility is equipped with the latest
-              diagnostic tools and equipment, ensuring your vehicle receives the
-              best possible care. From routine maintenance to complex repairs,
-              our team of certified technicians handles it all with precision
-              and professionalism.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-[#ff6b35]">
-                <CheckCircle className="w-5 h-5" />
-                <span>Certified Technicians</span>
-              </div>
-              <div className="flex items-center gap-2 text-[#ff6b35]">
-                <CheckCircle className="w-5 h-5" />
-                <span>Modern Equipment</span>
-              </div>
-              <div className="flex items-center gap-2 text-[#ff6b35]">
-                <CheckCircle className="w-5 h-5" />
-                <span>Quality Service</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Mission, Vision, Values */}
-      <div className="bg-[#1a1a1a] py-10 md:py-20">
-        <div className="px-4 sm:px-6 lg:px-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-5">
-            Our <span className="text-[#ff6b35]">Foundation</span>
-          </h2>
-          <div className="flex items-center justify-center mb-10">
-            <div className="h-px w-12 bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-            <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12 bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+               <div className="grid md:grid-cols-3 gap-8 mt-10">
             {coreValues.map((item, idx) => (
               <div
                 key={idx}
@@ -220,11 +202,13 @@ export default function AboutUsPage() {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </div>
 
+
       {/* Why Choose Us */}
-      <div className=" px-4 sm:px-6 lg:px-20 py-10">
+      <div className=" px-4 sm:px-6 lg:px-20 py-5">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-5">
           Why Choose <span className="text-[#ff6b35]">Star Motors?</span>
         </h2>
@@ -258,9 +242,8 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-
       {/* Achievements Stats */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className=" px-6 lg:px-20 py-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-5">
           Our <span className="text-[#ff6b35]">Achievements</span>
         </h2>
@@ -293,7 +276,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* Team Section */}
-      <div className=" bg-linear-to-b from-[#0f0f0f] to-[#1a1a1a] py-20">
+      {/* <div className=" bg-linear-to-b from-[#0f0f0f] to-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -311,17 +294,17 @@ export default function AboutUsPage() {
                 ensure our team stays ahead of industry developments, providing
                 you with cutting-edge service for all vehicle makes and models.
               </p>
-             <AnimatedButton
-            text="Contact Us"
-            width="160px"
-            height="40px"
-            bgColor="#ff6b35"
-            borderColor="#ff6b35"
-            cornerColor="#1a1a1a"
-            textColor="#ffffff"
-            className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
-            onClick={() => navigate("/contact")}
-          />
+              <AnimatedButton
+                text="Contact Us"
+                width="160px"
+                height="40px"
+                bgColor="#ff6b35"
+                borderColor="#ff6b35"
+                cornerColor="#1a1a1a"
+                textColor="#ffffff"
+                className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
+                onClick={() => navigate("/contact")}
+              />
             </div>
 
             <div className="relative group">
@@ -334,122 +317,102 @@ export default function AboutUsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
-      <div className=" px-4 sm:px-6 lg:px-20 py-20">
-        <div className=" border border-gray-800 rounded-2xl p-12 text-center">
-          {" "}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Experience the{" "}
-              <span className="text-orange-500"> Star Motors </span> Difference
-            </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who trust us with their
-              vehicles. Enquiry your service today and discover why we're
-              Lucknow's #1 choice.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              {/* Call Button */}
-              <a
-                href="tel:9956877786"
-                className="
-    group
-    relative
-    overflow-hidden
-    flex
-    gap-2
-    text-white
-    text-[14px]
-    font-semibold
-    px-7
-    py-1.5
-    uppercase
-    tracking-tight
-    items-center
-    border-2 border-[#ff6b35]
-    transition-all duration-300
-    hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
+      <div className=" px-4 sm:px-6 lg:px-20 py-10">
+     <div
+  className="
+    border border-gray-800 rounded-2xl p-12 text-center
+    relative overflow-hidden
+    bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
+    bg-cover bg-center bg-no-repeat
   "
-              >
-                {/* Background hover fill animation */}
-                <span
-                  className="
-      absolute inset-0 bg-[#ff6b35]
-      scale-x-0 origin-center
-      transition-transform duration-300 ease-out
-      group-hover:scale-x-100
-      z-0
-    "
-                ></span>
+>
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-black/70"></div>
 
-                {/* Icon + text (stay on top of background) */}
-                <span className="relative z-10 flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 group-hover:rotate-12 transition-transform"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
-                    />
-                  </svg>
-                  Call Now
-                </span>
-              </a>
+  <div className="relative z-10">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+      Experience the{" "}
+      <span className="text-orange-500"> Star Motors </span> Difference
+    </h2>
 
-              {/* WhatsApp Button */}
-              <a
-                href="https://wa.me/9956877786"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-    group
-    relative
-    overflow-hidden
-    flex
-    gap-2
-    text-white
-    text-[14px]
-    font-semibold
-    px-7
-    py-1.5
-    uppercase
-    tracking-tight
-    items-center
-    border-2 border-[#ff6b35]
-    transition-all duration-300
-    hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
-  "
-              >
-                {/* Background Fill Animation */}
-                <span
-                  className="
-      absolute inset-0 bg-[#ff6b35]
-      scale-x-0 origin-center
-      transition-transform duration-300 ease-out
-      group-hover:scale-x-100
-      z-0
-    "
-                ></span>
+    <p className="text-lg mb-8 max-w-2xl mx-auto text-white">
+      Join thousands of satisfied customers who trust us with their vehicles.
+      Book your service today and discover why we’re Lucknow’s #1 choice.
+    </p>
 
-                {/* Text + Icon should stay above background */}
-                <span className="relative z-10 flex items-center gap-2">
-                  <MessageCircleMore className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  WhatsApp
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="flex flex-col sm:flex-row justify-center gap-4">
+      {/* Call Button */}
+      <a
+        href="tel:9956877786"
+        className="
+          group relative overflow-hidden flex gap-2
+          text-white text-[14px] font-semibold px-7 py-1.5 uppercase tracking-tight
+          items-center border-2 border-[#ff6b35]
+          transition-all duration-300
+          hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
+          rounded-md
+        "
+      >
+        {/* Background hover fill animation */}
+        <span
+          className="
+            absolute inset-0 bg-[#ff6b35]
+            scale-x-0 origin-center transition-transform duration-300 ease-out
+            group-hover:scale-x-100 z-0
+          "
+        ></span>
+
+        <span className="relative z-10 flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-5 h-5 group-hover:rotate-12 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
+            />
+          </svg>
+          Call Now
+        </span>
+      </a>
+
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/9956877786"
+        className="
+          group relative overflow-hidden flex gap-2
+          text-white text-[14px] font-semibold px-7 py-1.5 uppercase tracking-tight
+          items-center border-2 border-[#ff6b35]
+          transition-all duration-300
+          hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
+          rounded-md
+        "
+      >
+        <span
+          className="
+            absolute inset-0 bg-[#ff6b35]
+            scale-x-0 origin-center transition-transform duration-300 ease-out
+            group-hover:scale-x-100 z-0
+          "
+        ></span>
+
+        <span className="relative z-10 flex items-center gap-2">
+          <MessageCircleMore className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+          WhatsApp
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );

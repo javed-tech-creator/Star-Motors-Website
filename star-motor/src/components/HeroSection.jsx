@@ -48,22 +48,20 @@ const HeroSection = () => {
         {/* =========================
             LEFT SIDE TEXT CONTENT
         ============================ */}
-        <div className="w-full lg:w-[40%] space-y-6 z-20 mt-10 lg:mt-0">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight font-chakra">
-            MAINTENANCE &<br />
-            <span className="text-white">REPAIR SERVICE</span>
+        <div className="w-full lg:w-[40%] space-y-4 z-20 mt-10 lg:mt-0">
+          <h1 className="text-2xl md:text-2xl lg:text-[34px] font-extrabold leading-tight font-chakra">
+           Premium Car Maintenance & 
+            <span className="text-white"> Repair Service</span>
           </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed font-chakra">
-            StarMotors is a trusted automotive service hub dedicated to
-            delivering professional car care with precision and reliability.
-            From routine maintenance to premium detailing, we ensure every
-            vehicle receives the highest level of attention and expertise.
+            Keep your car running like new with expert care, precision, and reliability.
+From routine checkups to advanced repairs — Star Motors has you covered.
           </p>
 
           <AnimatedButton
-            text="Contact Us"
-            width="160px"
+            text="Book Your Service Today !"
+            width="242px"
             height="40px"
             bgColor="#ff6b35"
             borderColor="#ff6b35"

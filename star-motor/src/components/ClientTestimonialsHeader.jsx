@@ -8,7 +8,7 @@ export default function ClientTestimonialsHeader() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           {/* Main heading with gradient */}
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 pt-5">
             What Our <span className="text-orange-500">Clients Say</span>
           </h2>
           {/* Top decorative line */}

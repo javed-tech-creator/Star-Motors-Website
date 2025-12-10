@@ -10,7 +10,7 @@ export default function AboutUsHeader() {
          
           {/* Main heading with gradient */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-orange-500 tracking-wider mb-4 animate-fade-in">
-            <span className='text-white'>ABOUT</span> US
+            <span className='text-white'>ABOUT</span> STAR MOTORS
           </h2>
 
            {/* Top decorative line */}

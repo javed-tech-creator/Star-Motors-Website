@@ -32,27 +32,9 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black text-white py-10 md:py-12 px-6 md:px-12 lg:px-20 font-chakra">
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-14 lg:gap-20">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-20">
           {/* BRAND INFO */}
-          <div className="space-y-6">
-            <div
-              className="flex items-center cursor-pointer"
-              onClick={() => navigate("/")}
-            >
-              <img
-                src={logo}
-                alt="Star Motors Logo"
-                className="w-52 h-20 object-contain"
-              />
-            </div>
-
-            <p className="text-sm lg:text-base leading-6 text-neutral-300 max-w-sm">
-              Every service is rigorously screened and constantly rated to
-              ensure you get the best experience.
-            </p>
-
-            {/* Admin Login Button */}
-            <div>
+   {/* <div>
               <a
               href="https://starmotor-admin.netlify.app"
                 className="
@@ -69,8 +51,7 @@ const Footer = () => {
               >
                 Admin Login
               </a>
-            </div>
-          </div>
+            </div> */}
 
           {/* POPULAR SERVICES */}
           <div className="lg:col-span-2">
@@ -99,7 +80,7 @@ const Footer = () => {
           {/* ADDRESS SECTION */}
          <div className="space-y-5 text-neutral-300">
   <h4 className="font-bold text-lg tracking-wide mb-4 text-white">
-    CONTACT DETAILS
+    GET IN TOUCH
   </h4>
 
   {/* ADDRESS */}
@@ -112,35 +93,28 @@ const Footer = () => {
       rel="noopener noreferrer"
       className="text-sm mt-1 leading-6 block hover:text-orange-400 transition cursor-pointer"
     >
-      23/A, New Market Road,<br />
-      Mumbai, Maharashtra 400001,<br />
-      India
+     Bharat Gas Plant,
+     Opp. HP Petrol Pump Mishrapur, Kursi Rd. Lucknow 226026
     </a>
   </div>
-
-  <div className="flex gap-10">
+  <div className="flex flex-col gap-1">
 
     {/* PHONE */}
     <div>
       <p className="text-sm font-semibold text-orange-500">PHONE</p>
-
-      <a
-        href="tel:9956877786"
-        className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer"
-      >
-        9956877786
+      <a href="tel:9956877786" className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer">
+       +91 99568 77786
       </a>
     </div>
 
     {/* EMAIL */}
     <div>
       <p className="text-sm font-semibold text-orange-500">EMAIL</p>
-
       <a
         href="mailto:support@domain.com"
         className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer"
       >
-        support@domain.com
+        starmotorslucknow@gmail.com
       </a>
     </div>
 

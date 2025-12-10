@@ -282,36 +282,142 @@ export default function ServicePage() {
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
           <Icon className="w-16 h-16 text-[#ff6b35] mb-2" />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold  mb-2">
             {service.title}
           </h1>
-          <p className="text-xl text-white max-w-2xl">{service.description}</p>
+          <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
+
           <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-3">
-                        <Link
-                          to="/"
-                          className="hover:text-orange-400 flex items-center gap-1 transition-colors"
-                        >
-                          <Home className="w-3.5 h-3.5" /> Home
-                        </Link>
-                        <ChevronRight className="w-3 h-3 text-gray-600" />
-                        <span className="text-white font-medium font-chakra">Services</span>
-                      </nav>
+            <Link
+              to="/"
+              className="hover:text-orange-400 flex items-center gap-1 transition-colors"
+            >
+              <Home className="w-3.5 h-3.5" /> Home
+            </Link>
+            <ChevronRight className="w-3 h-3 text-gray-600" />
+            <span className="text-white font-medium font-chakra">Services</span>
+          </nav>
         </div>
       </div>
 
       <div className=" py-10 px-6 lg:px-20">
         {/* Features */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5 font-chakra">
-            Our <span className="text-[#ff6b35]">Services</span>
-          </h2>
-          <div className="flex items-center justify-center mb-10">
-            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-            <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-          </div>
+          <p>
+            At our *Car Service and Repairing Center*, we provide comprehensive
+            care for all types of vehicles, from luxury cars to everyday models.
+            Our team of skilled and certified technicians uses modern tools and
+            advanced diagnostic equipment to ensure your car runs safely,
+            efficiently, and smoothly. <br />
+            <br />
+            We offer a full range of services including routine maintenance like
+            oil changes and filter replacements, mechanical and electrical
+            repairs, brake and suspension work, AC and cooling system servicing,
+            wheel alignment and balancing, as well as bodywork, denting, and
+            paint touch-ups. <br />
+            <br />
+            With a focus on quality, transparency, and customer satisfaction, we
+            deliver timely and reliable service at affordable prices. No matter
+            the brand or model, you can trust us to keep your car in top
+            condition. Book a service with us today and experience professional,
+            trustworthy car care.
+          </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+         <ul className="space-y-2 grid grid-cols-1 md:grid-cols-3 gap-4 text-left mt-10">
+     <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          border border-gray-800
+          rounded-xl
+          p-5
+          shadow-lg
+          hover:shadow-[#ff6b35]/30 
+          hover:border-[#ff6b35]
+          transition-all duration-300
+          flex flex-col items-start">
+    <h4 className="font-semibold text-[16px]">Routine Maintenance</h4>
+    <p className="text-sm text-gray-300">
+      Oil changes, filter replacements, fluid top-ups
+    </p>
+  </li>
+
+  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          border border-gray-800
+          rounded-xl
+          p-5
+          shadow-lg
+          hover:shadow-[#ff6b35]/30 
+          hover:border-[#ff6b35]
+          transition-all duration-300
+          flex flex-col items-start">
+    <h4 className="font-semibold text-[16px]">Mechanical Repairs</h4>
+    <p className="text-sm text-gray-300">
+      Engine, transmission, brakes, suspension, and more
+    </p>
+  </li>
+
+  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          border border-gray-800
+          rounded-xl
+          p-5
+          shadow-lg
+          hover:shadow-[#ff6b35]/30 
+          hover:border-[#ff6b35]
+          transition-all duration-300
+          flex flex-col items-start ">
+    <h4 className="font-semibold text-[16px]">Electrical Repairs</h4>
+    <p className="text-sm text-gray-300">
+      Battery, lights, sensors, and wiring issues
+    </p>
+  </li>
+
+  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          border border-gray-800
+          rounded-xl
+          p-5
+          shadow-lg
+          hover:shadow-[#ff6b35]/30 
+          hover:border-[#ff6b35]
+          transition-all duration-300
+          flex items-start flex-col">
+    <h4 className="font-semibold text-[16px]">Bodywork & Denting</h4>
+    <p className="text-sm text-gray-300">
+      Minor scratches, dents, and paint touch-ups
+    </p>
+  </li>
+
+  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          border border-gray-800
+          rounded-xl
+          p-5
+          shadow-lg
+          hover:shadow-[#ff6b35]/30 
+          hover:border-[#ff6b35]
+          transition-all duration-300
+          flex items-start  flex-col">
+    <h4 className="font-semibold text-[16px]">Wheel & Tyre Care</h4>
+    <p className="text-sm text-gray-300">
+      Alignment, balancing, and replacements
+    </p>
+  </li>
+
+  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          border border-gray-800
+          rounded-xl
+          p-5
+          shadow-lg
+          hover:shadow-[#ff6b35]/30 
+          hover:border-[#ff6b35]
+          transition-all duration-300
+          flex items-start flex-col">
+    <h4 className="font-semibold text-[16px]">AC & Cooling System Service</h4>
+    <p className="text-sm text-gray-300">
+      Complete AC inspection & performance enhancement
+    </p>
+  </li>
+  </ul>
+
+
+
+          {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-10 gap-6">
             {service.features.map((feature, idx) => (
               <div
                 key={idx}
@@ -325,8 +431,8 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex items-center justify-center
-          text-center
+          flex items-center justify-start
+          text-start
         "
               >
                 <p className="text-gray-300 group-hover:text-white text-lg font-medium transition-all">
@@ -334,9 +440,8 @@ export default function ServicePage() {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
-
 
         {/* Highlights / Key Benefits */}
         <div className="mb-15">
@@ -400,33 +505,6 @@ export default function ServicePage() {
           </div>
         </div>
 
-        {/* Image Gallery */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-5">
-            Service <span className="text-[#ff6b35]">Gallery</span>
-          </h2>
-
-          <div className="flex items-center justify-center mb-10">
-            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-            <div className="mx-3 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <div className="h-px w-12  bg-linear-to-r from-transparent via-orange-500 to-transparent"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((img) => (
-              <div
-                key={img}
-                className="h-56 rounded-xl overflow-hidden border border-gray-800 hover:border-[#ff6b35] transition-all"
-              >
-                <img
-                  src={service.heroImage}
-                  className="w-full h-full object-cover"
-                  alt="Service Preview"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-20">
@@ -441,42 +519,47 @@ export default function ServicePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-  {[
-    {
-      q: "How long does this service take?",
-      a: "Usually between 1-3 hours depending on the selected service plan.",
-    },
-    {
-      q: "Do you provide warranty?",
-      a: "Yes, we provide up to 30 days of service warranty.",
-    },
-    {
-      q: "Are spare parts genuine?",
-      a: "Yes, 100% OEM and genuine parts are used.",
-    },
-    {
-      q: "Can I get same-day service?",
-      a: "Yes, same-day service is available for most categories.",
-    },
-  ].map((faq, i) => (
-    <div
-      key={i}
-      className="bg-[#0f0f0f] p-6 rounded-xl border border-gray-800 hover:border-[#ff6b35] transition-all h-full"
-    >
-      <p className="text-lg font-semibold mb-2">{faq.q}</p>
-      <p className="text-gray-400">{faq.a}</p>
-    </div>
-  ))}
-</div>
-
+            {[
+              {
+                q: "How long does this service take?",
+                a: "Usually between 1-3 hours depending on the selected service plan.",
+              },
+              {
+                q: "Do you provide warranty?",
+                a: "Yes, we provide up to 30 days of service warranty.",
+              },
+              {
+                q: "Are spare parts genuine?",
+                a: "Yes, 100% OEM and genuine parts are used.",
+              },
+              {
+                q: "Can I get same-day service?",
+                a: "Yes, same-day service is available for most categories.",
+              },
+            ].map((faq, i) => (
+              <div
+                key={i}
+                className="bg-[#0f0f0f] p-6 rounded-xl border border-gray-800 hover:border-[#ff6b35] transition-all h-full"
+              >
+                <p className="text-lg font-semibold mb-2">{faq.q}</p>
+                <p className="text-gray-400">{faq.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Call To Action */}
-        <div className=" border border-gray-800 rounded-2xl p-12 text-center">
+        <div
+          className=" border border-gray-800 rounded-2xl p-12 text-center relative overflow-hidden
+    bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
+    bg-cover bg-center bg-no-repeat "
+        >
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/70"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Enquiry Your <span className="text-orange-500">Service</span> Now
           </h2>
-          <p className="text-gray-100 mb-8 text-lg">
+          <p className="text-gray-100 mb-8 text-lg ">
             Quick response & guaranteed support
           </p>
 
@@ -501,6 +584,7 @@ export default function ServicePage() {
     border-2 border-[#ff6b35]
     transition-all duration-300
     hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
+    rounded-md
   "
             >
               {/* Background hover fill animation */}
@@ -556,6 +640,7 @@ export default function ServicePage() {
     border-2 border-[#ff6b35]
     transition-all duration-300
     hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
+    rounded-md
   "
             >
               {/* Background Fill Animation */}

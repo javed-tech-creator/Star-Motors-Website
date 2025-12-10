@@ -7,47 +7,30 @@ export default function AboutSection() {
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-12  items-center">
         {/* LEFT SIDE CONTENT */}
         <div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-chakra font-bold text-white leading-tight">
+          {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-chakra font-bold text-white leading-tight">
             WE MAKE AUTO REPAIR <br /> MORE CONVENIENT
-          </h2>
+          </h2> */}
 
           <p className="text-gray-300 text-lg leading-relaxed mt-6 font-chakra">
-            StarMotors is a trusted automotive service hub dedicated to
-            delivering professional car care with precision and reliability.
-            From routine maintenance to premium detailing, we ensure every
-            vehicle receives the highest level of attention and expertise.
+            At <span className="text-orange-500 font-semibold"> Star Motors</span> , we bring you a complete range of automotive care —
+            all under one roof. From regular maintenance and repair services to
+            car/bike foam wash, interior cleaning, denting & painting, car
+            modification, wheel alignment, wheel balancing, and even tyre
+            replacement with advanced tyre changer, we do it all with precision
+            and perfection.
+            <br />
+            With a team of skilled technicians and modern equipment, we ensure
+            your vehicle receives the best care, durability, and performance it
+            deserves. Whether it’s restoring your car’s shine or enhancing its
+            performance, Star Motors is your trusted destination for premium car
+            and bike care services.
+            <br />
+            <br />
+            Drive In. Drive Out – With Confidence.
           </p>
 
           {/* Progress Bars */}
-          <div className="mt-10 space-y-6">
-            {/* ---------- EXPERTS ---------- */}
-            <div>
-              <div className="flex justify-between text-white font-chakra mb-1">
-                <span>HIGHLY QUALIFIED EXPERTS</span>
-                <span>90%</span>
-              </div>
-              <div className="w-full h-2 bg-gray-700 rounded">
-                <div
-                  className="h-full bg-[#ff6b35] rounded"
-                  style={{ width: "90%" }}
-                ></div>
-              </div>
-            </div>
-
-            {/* ---------- CLEAN FACILITY ---------- */}
-            <div>
-              <div className="flex justify-between text-white font-chakra mb-1">
-                <span>CLEAN, MODERN FACILITY</span>
-                <span>99%</span>
-              </div>
-              <div className="w-full h-2 bg-gray-700 rounded">
-                <div
-                  className="h-full bg-[#ff6b35] rounded"
-                  style={{ width: "99%" }}
-                ></div>
-              </div>
-            </div>
-          </div>
+       
         </div>
 
         {/* RIGHT SIDE IMAGE */}

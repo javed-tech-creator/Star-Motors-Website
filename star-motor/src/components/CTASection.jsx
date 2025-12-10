@@ -6,94 +6,95 @@ import { useNavigate } from "react-router-dom";
 export default function CTASection() {
   const navigate = useNavigate();
   return (
-    <section className=" bg-[#111111] py-10 font-chakra ">
+    <section className=" bg-[#111111]  font-chakra ">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-0 px-6 lg:px-20">
         {/* Content Side */}
         <div className=" order-2 lg:order-1">
           {/* Logo */}
-    
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight animate-fadeIn">
-         ⭐ Your Car Deserves the{" "}
-            <span className=" bg-linear-to-r from-[#ff6b35] to-[#f7931e] bg-clip-text text-transparent">
-              Best Service
-            </span>
-          </h2>
+
+        
 
           {/* Description */}
-          <p className="text-gray-300 text-lg mb-8 leading-relaxed animate-fadeIn">
-            Experience professional car repair and maintenance with our team of
-            expert mechanics. Quality parts, advanced diagnostics, and
-            unbeatable service - all at competitive prices.
-          </p>
+          <p className="text-gray-300 text-md mb-2 leading-snug animate-fadeIn px-3">
 
-          {/* CTA Buttons */}
-          <div className="flex gap-5 mb-10 animate-fadeIn ">
-            <AnimatedButton
-              text="CONTACT US"
-              width="170px"
-              height="40px"
-              bgColor="#ff6b35"
-              borderColor="#ff6b35"
-              cornerColor="#111111"
-              textColor="#ffffff"
-              onClick={() => navigate("contact")}
-            />
-
-              <a
-              href="tel:9956877786"
-              className="
-    group
-    relative
-    overflow-hidden
-    flex
-    gap-2
-    text-white
-    text-[14px]
-    font-semibold
-    px-7
-    py-2
-    uppercase
-    tracking-tight
-    items-center
-    border-2 border-[#ff6b35]
-    transition-all duration-300
-    hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
-  "
-            >
-              {/* Background hover fill animation */}
-              <span
-                className="
-      absolute inset-0 bg-[#ff6b35]
-      scale-x-0 origin-center
-      transition-transform duration-300 ease-out
-      group-hover:scale-x-100
-      z-0
-    "
-              ></span>
-
-              {/* Icon + text (stay on top of background) */}
-              <span className="relative z-10 flex items-center gap-2">
+            <div className="flex items-center gap-2 font-bold text-lg">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 group-hover:rotate-12 transition-transform"
+                  className="w-6 h-6 text-[#ff6b35]"
                   fill="none"
-                  viewBox="0 0 24 24"
                   stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                Call NOW
-              </span>
-            </a>
-          </div>
+              </div>{" "}
+              Certified Expert
+            </div>
+            <p>Mechanics Trained and experienced technicians ensuring reliable and
+            professional service.</p>
+            <br/>
+
+            <div className="flex items-center gap-2 font-bold">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+                ⚡
+              </div>
+              Fast & Efficient
+            </div>
+            <p>Service Quick turnaround time with high-quality workmanship—no
+            unnecessary delays. </p>
+            <br/>
+
+            <div className="flex items-center gap-2 font-bold">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+                💰
+              </div>
+              Affordable & Transparent
+            </div>
+            <p>Pricing Premium service at honest prices
+            with complete clarity and no hidden charges. </p>
+            <br/>
+
+            <div className="flex items-center gap-2 font-bold">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+                🔧
+              </div>
+              Advanced Diagnostic
+            </div>
+            <p>  Tools Modern technology to detect issues
+            accurately and fix them with precision. </p>
+            <br/>
+
+            <div className="flex items-center gap-2 font-bold">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+                🛡️
+              </div>
+             Quality Parts & Long-Lasting
+            </div>
+            <p> Results We use trusted, high-grade
+            parts for better performance and durability.</p>
+            <br/>
+
+            <div className="flex items-center gap-2 font-bold">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+                🚗
+              </div>
+             Complete Car Care 
+            </div>
+            <p> Under One Roof From repairs and servicing to
+            washing, detailing, and modification—everything in one place.</p>
+          
+            
+          </p>
+          {/* <br /> */}
+          {/* CTA Buttons */}
 
           {/* Features */}
-          <div className="grid grid-cols-3 gap-6 animate-fadeIn">
+          {/* <div className="grid grid-cols-3 gap-6 animate-fadeIn">
             <div className="text-center lg:text-left">
               <div className="w-12 h-12 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mb-3 mx-auto lg:mx-0">
                 <svg
@@ -153,7 +154,7 @@ export default function CTASection() {
               <h4 className="text-white font-bold text-sm mb-1">Affordable</h4>
               <p className="text-gray-300 text-xs">Best Pricing</p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Image Side */}

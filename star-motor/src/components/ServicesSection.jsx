@@ -25,14 +25,14 @@ const menuServices = [
 
 // ---- DESCRIPTIONS FOR EACH SERVICE ----
 const descriptions = [
-  "You get used to your brakes. Brake pads and rotors wear out from the immense friction and heat they encounter. Air gets into brake lines....",
-  "Premium foam wash service for your car and bike. Deep cleaning with high-quality products for a spotless shine.",
-  "Complete interior detailing including vacuuming, dashboard cleaning, and upholstery treatment for a fresh cabin experience.",
-  "Expert denting and painting services using advanced technology and premium quality paints for a factory-finish look.",
-  "Transform your vehicle with custom modifications. From performance upgrades to aesthetic enhancements.",
-  "Precise wheel alignment ensures proper tire contact, better handling, and improved fuel efficiency for your vehicle.",
-  "Professional wheel balancing service to eliminate vibrations and ensure smooth, safe driving at all speeds.",
-  "Quick and efficient tyre replacement service with a wide range of premium brands to choose from.",
+  "Keep your car running smooth and safe. Expert repair and regular service to restore performance and reliability. ",
+  "Premium foam wash that deeply cleans your vehicle, removes dirt and grease, and brings back a bright, spotless, showroom-like shine.",
+  "Complete interior detailing including vacuuming, dashboard polish, and upholstery cleaning to give your cabin a fresh, hygienic, and luxurious feel.",
+  "Advanced denting and painting services using quality materials to restore your vehicle’s look with a smooth, flawless, factory-finish appearance.",
+  "Custom car modification services using premium upgrades to enhance performance, style, and overall driving experience with a refined, standout look.",
+  "Precision wheel alignment using advanced equipment to improve tyre contact, handling stability, and fuel efficiency for a smoother, safer drive.",
+  "Professional wheel balancing solutions designed to eliminate vibrations and ensure steady, comfortable, and reliable driving performance at all speeds.",
+  "Quick and efficient tyre replacement using trusted premium brands to deliver superior grip, enhanced safety, and long-lasting on-road performance.",
 ];
 const link = [
   "service1",
@@ -51,7 +51,7 @@ const images = [ser1, ser2, ser3, ser4, ser5, ser6, ser7, ser8];
 export default function OurServices() {
   const navigate = useNavigate();
   return (
-    <section className="w-full  bg-[#111111] py-10">
+    <section className="w-full  bg-[#111111] ">
       {/* SERVICES GRID */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 lg:px-20">
   {menuServices.map((service, index) => (
