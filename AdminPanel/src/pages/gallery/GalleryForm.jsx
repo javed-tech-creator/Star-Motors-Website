@@ -64,7 +64,7 @@ function GalleryForm() {
 
   useEffect(() => {
     if (id && galleryData?.data) {
-      // const { category, image } = galleryData.data;
+      const { image } = galleryData.data;
       reset({
         // category: category || "",
         image: image,
