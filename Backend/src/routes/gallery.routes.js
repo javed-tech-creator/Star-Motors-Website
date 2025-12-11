@@ -11,7 +11,7 @@ router.post(
   "/",
   Upload("Gallery").single("image"),
   fileValidator({ types: ["image"], maxSizeMB: 5 }),
-  requireBody(Gallery),
+  // requireBody(Gallery),
   createGallery
 );
 

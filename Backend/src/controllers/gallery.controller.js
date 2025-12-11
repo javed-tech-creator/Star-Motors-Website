@@ -8,6 +8,9 @@ export const createGallery = async (req, res, next) => {
   let uploadedFileId = null;
   let uploadedFileUrl = null;
 
+  console.log("req.body",req.body);
+  console.log("req.file",req.file);
+  
   try {
     if (!req.file) {
       return next(new ApiError(400, "Image is required"));
@@ -38,8 +41,8 @@ export const createGallery = async (req, res, next) => {
     const gallery = new Gallery({
       image: result.files[0],
       // category: req.body.category || null,
-      projectName: req.body.projectName || null,
-      productName: req.body.productName || null,
+      // projectName: req.body.projectName || null,
+      // productName: req.body.productName || null,
     });
 
     const savedGallery = await gallery.save();

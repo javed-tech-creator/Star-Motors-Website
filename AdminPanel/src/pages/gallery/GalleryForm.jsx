@@ -15,10 +15,10 @@ import PageHeader from "../../components/PageHeader";
 import Loader from "../../components/Loader";
 
 const schema = yup.object().shape({
-  category: yup.string().required("Category is required"),
+  // category: yup.string().required("Category is required"),
   image: yup
     .mixed()
-    .test("required", "Image is required", function (value) {
+    .test("Image is required", function (value) {
       // If we're updating and there's an existing image, we don't require a new one
       if (this.parent.id && this.parent.existingImage) {
         return true;
@@ -64,9 +64,9 @@ function GalleryForm() {
 
   useEffect(() => {
     if (id && galleryData?.data) {
-      const { category, image } = galleryData.data;
+      // const { category, image } = galleryData.data;
       reset({
-        category: category || "",
+        // category: category || "",
         image: image,
         id,
         existingImage: image,
