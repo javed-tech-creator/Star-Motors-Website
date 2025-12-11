@@ -13,7 +13,7 @@ const imageSchema = new mongoose.Schema(
 const gallerySchema = new mongoose.Schema(
   {
     image: { type: imageSchema, required: true }, 
-    category: { type: String, trim: true, default: null }
+    // category: { type: String, trim: true, default: null }
   },
   { timestamps: true }
 );

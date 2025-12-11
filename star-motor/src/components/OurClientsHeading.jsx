@@ -11,7 +11,7 @@ export default function OurClientsHeading() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-orange-500 to-white tracking-wider mb-4 animate-fade-in">
             <span className="text-white">WE SERVICE</span>  ALL BRANDS
           </h2>
-           <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase px-40">
+           <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase lg:px-40">
            No matter the brand— from luxury to everyday models — we provide complete servicing for all vehicles with precision, quality, and trusted workmanship.
           </p>
           {/* Top decorative line */}

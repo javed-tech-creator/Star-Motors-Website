@@ -166,7 +166,7 @@ function BlogPage() {
                 {/* Content Section */}
                 <div className="flex flex-col grow p-6 font-chakra">
                   {/* Category */}
-                  <div className="mb-4">
+                  <div className="mb-4 absolute top-2 right-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#111111] border border-orange-500/20 text-xs font-medium text-orange-400">
                       <Tag className="w-3 h-3" />
                       {post?.category || "Technology"}
@@ -174,7 +174,7 @@ function BlogPage() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 leading-snug group-hover:text-orange-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-1 line-clamp-2 leading-snug group-hover:text-orange-400 transition-colors">
                     {post.title}
                   </h3>
 

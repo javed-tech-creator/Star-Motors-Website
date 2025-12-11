@@ -26,10 +26,10 @@ const MainPage = () => {
       <div className=" w-full py-10 px-6 lg:px-20 font-chakra">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-             { number: "10+", label: "Years of Excellence" },
-    { number: "10,000+", label: "Happy Customers" },
-    { number: "100%", label: "Satisfaction Rate" },
-    { number: "10+", label: "Services Offered" },
+            { number: "10+", label: "Years of Excellence" },
+            { number: "10,000+", label: "Happy Customers" },
+            { number: "100%", label: "Satisfaction Rate" },
+            { number: "10+", label: "Services Offered" },
           ].map((stat, index) => (
             <div
               key={index}
@@ -44,13 +44,12 @@ const MainPage = () => {
         </div>
       </div>
 
-       
       {/*  Services HEADING ADDED HERE  */}
       <ServicesHeader />
       <OurServices />
 
       {/*  CTA HEADING ADDED HERE  */}
-      <ChooseUS/>
+      <ChooseUS />
       <CTASection />
 
       {/*  client tail HEADING ADDED HERE  */}

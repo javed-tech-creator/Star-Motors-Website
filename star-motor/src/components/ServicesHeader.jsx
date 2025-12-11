@@ -14,7 +14,7 @@ export default function ServicesHeader() {
         
 
           {/* Small label */}
-          <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase px-40">
+          <p className="text-white text-sm md:text-base font-medium tracking-widest mb-4 uppercase lg:px-4">
             At Star Motors, we offer a complete range of automotive services designed to keep your vehicle looking great and performing even better. Our team ensures every service is handled with precision, care, and top-quality materials.
           </p>
 

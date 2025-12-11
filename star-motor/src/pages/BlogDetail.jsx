@@ -85,66 +85,73 @@ const BlogDetail = () => {
             </span>
           </nav>
 
-          {/* --- Main 2-column Layout --- */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            {/* Left Side: Image */}
-            <div className="lg:col-span-6 animate-up">
-              <div className="relative rounded-3xl overflow-hidden aspect-video border border-white/10 shadow-2xl group">
-                <img
-                  src={blog?.image?.public_url || `${backendUrl}/${blog?.image?.url}`}
-                  alt={blog.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </div>
-
-            {/* Right Side: Content */}
-            <div className="lg:col-span-6 animate-up flex flex-col justify-start space-y-6">
-              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-                {blog.title}
-              </h1>
-
-              {/* Metadata */}
-              <div className="flex items-center gap-6 text-sm text-gray-400">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-linear-to-br from-green-500 to-blue-500 flex items-center justify-center text-white font-bold">
-                    <User className="w-4 h-4" />
+         <div className="container mx-auto px-4 py-10 lg:py-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
+                {/* Blog Details */}
+                <div className="lg:col-span-3">
+                  <div className="relative">
+                    <img
+                      src={blog?.image?.public_url || `${backendUrl}/${blog?.image?.url}`}
+                      alt={blog.title}
+                      className="w-full h-[400px] rounded-2xl object-cover shadow-md"
+                    />
+                    <div className="flex absolute gap-4 top-5 left-3 justify-between">
+                      <p className="text-gray-900 text-sm bg-white px-2 py-2 rounded-full">
+                        <Calendar className="inline-flex mr-1 h-4 w-4" />
+                        {formatDate(blog.updatedAt)}
+                      </p>
+                      <div className="flex justify-center items-center bg-green-500 px-2 py-1 rounded-full text-xs font-medium text-white">
+                        <Tag className="h-4 w-4 mr-1 inline-flex" />
+                        {blog.category || "Uncategorized"}
+                      </div>
+                    </div>
                   </div>
-                  <span>
-                    By <span className="text-white">Admin</span>
-                  </span>
+        
+                  <h1 className="lg:text-2xl lg:mt-6 mt-4 text-xl font-semibold">
+                    {blog.title}
+                  </h1>
+                  <div
+                    className="mt-4 lg:text-lg text-gray-950 blog"
+                    dangerouslySetInnerHTML={{ __html: blog.description }}
+                  />
+        
+                  {/* Back to Blogs Button */}
+                  <Link
+                    to="/blog"
+                    className="mt-4 inline-block bg-green-600 text-white px-6 py-3 hover:bg-green-600 rounded-xl transition-all duration-300"
+                  >
+                    Back to Blogs
+                  </Link>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-green-400" />
-                  <span>5 min read</span>
+        
+                {/* Related Blogs */}
+                <div className="lg:col-span-1 border p-2 border-gray-100">
+                  <h2 className="text-2xl font-semibold mb-4 messiri">Other Blogs</h2>
+                  <div className="space-y-4 overflow-y-auto">
+                    {blog?.map((relatedBlog) => (
+                      <Link
+                        to={`/blog-detail/${relatedBlog.slug}`}
+                        key={relatedBlog._id}
+                        className="block p-4 bg-white border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300"
+                      >
+                        <img
+                          src={
+                            relatedBlog?.image?.public_url ||
+                            `${backendUrl}/${relatedBlog?.image?.url}`
+                          }
+                          alt={relatedBlog.title}
+                          className="w-full h-28 rounded-xl object-cover"
+                        />
+                        <p className="text-gray-500 text-sm mt-2">
+                          {formatDate(relatedBlog.updatedAt)}
+                        </p>
+                        <h3 className="text-lg font-semibold mt-1 line-clamp-1">
+                          {relatedBlog.title}
+                        </h3>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              {/* Description */}
-              <div
-                className="prose prose-invert prose-lg max-w-none
-                  prose-headings:text-white prose-headings:font-bold
-                  prose-p:text-gray-300 prose-p:leading-relaxed
-                  prose-a:text-green-400 prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white prose-strong:font-semibold
-                  prose-ul:text-gray-300 prose-li:marker:text-green-500
-                  prose-img:rounded-2xl prose-img:border prose-img:border-white/10
-                  prose-blockquote:border-l-green-500 prose-blockquote:bg-white/5 prose-blockquote:p-4 prose-blockquote:rounded-r-xl"
-                dangerouslySetInnerHTML={{ __html: blog.description }}
-              />
-
-              {/* Back Button */}
-              <div className="pt-8 border-t border-white/10">
-                <Link
-                  to="/blog"
-                  className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                  Back to Articles
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

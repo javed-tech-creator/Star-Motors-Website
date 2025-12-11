@@ -124,7 +124,7 @@ export default function AboutUsPage() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
             Who <span className="text-[#ff6b35]">We Are</span>
           </h3>
-          
+
           <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
 
           <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-5">
@@ -184,28 +184,27 @@ export default function AboutUsPage() {
               as if it’s our own.
             </p>
 
-               <div className="grid md:grid-cols-3 gap-8 mt-10">
-            {coreValues.map((item, idx) => (
-              <div
-                key={idx}
-                className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-8 hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
-              >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-[#ff6b35]/10 border-2 border-[#ff6b35] rounded-full mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                  <div className="text-[#ff6b35]">{item.icon}</div>
+            <div className="grid md:grid-cols-3 gap-8 mt-10">
+              {coreValues.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-8 hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
+                >
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-[#ff6b35]/10 border-2 border-[#ff6b35] rounded-full mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                    <div className="text-[#ff6b35]">{item.icon}</div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-[#ff6b35] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-[#ff6b35] transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-
 
       {/* Why Choose Us */}
       <div className=" px-4 sm:px-6 lg:px-20 py-5">
@@ -321,98 +320,98 @@ export default function AboutUsPage() {
 
       {/* CTA Section */}
       <div className=" px-4 sm:px-6 lg:px-20 py-10">
-     <div
-  className="
+        <div
+          className="
     border border-gray-800 rounded-2xl p-12 text-center
     relative overflow-hidden
     bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
     bg-cover bg-center bg-no-repeat
   "
->
-  {/* DARK OVERLAY */}
-  <div className="absolute inset-0 bg-black/70"></div>
+        >
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/70"></div>
 
-  <div className="relative z-10">
-    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-      Experience the{" "}
-      <span className="text-orange-500"> Star Motors </span> Difference
-    </h2>
+          <div className="relative z-10">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-white">
+              Experience the{" "}
+              <span className="text-orange-500"> Star Motors </span> Difference
+            </h2>
 
-    <p className="text-lg mb-8 max-w-2xl mx-auto text-white">
-      Join thousands of satisfied customers who trust us with their vehicles.
-      Book your service today and discover why we’re Lucknow’s #1 choice.
-    </p>
+            <p className="text-md lg:text-lg mb-8 max-w-2xl mx-auto text-white">
+              Join thousands of satisfied customers who trust us with their
+              vehicles. Book your service today and discover why we’re Lucknow’s
+              #1 choice.
+            </p>
 
-    <div className="flex flex-col sm:flex-row justify-center gap-4">
-      {/* Call Button */}
-      <a
-        href="tel:9956877786"
-        className="
+            <div className="flex lg:flex-col sm:flex-row justify-center gap-2 lg:gap-4">
+              {/* Call Button */}
+              <a
+                href="tel:9956877786"
+                className="
           group relative overflow-hidden flex gap-2
-          text-white text-[14px] font-semibold px-7 py-1.5 uppercase tracking-tight
+          text-white text-[14px] font-semibold px-3 lg:px-7 py-1.5 uppercase tracking-tight
           items-center border-2 border-[#ff6b35]
           transition-all duration-300
           hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
           rounded-md
         "
-      >
-        {/* Background hover fill animation */}
-        <span
-          className="
+              >
+                {/* Background hover fill animation */}
+                <span
+                  className="
             absolute inset-0 bg-[#ff6b35]
             scale-x-0 origin-center transition-transform duration-300 ease-out
             group-hover:scale-x-100 z-0
           "
-        ></span>
+                ></span>
 
-        <span className="relative z-10 flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 group-hover:rotate-12 transition-transform"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
-            />
-          </svg>
-          Call Now
-        </span>
-      </a>
+                <span className="relative z-10 flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 group-hover:rotate-12 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
+                    />
+                  </svg>
+                  Call Now
+                </span>
+              </a>
 
-      {/* WhatsApp Button */}
-      <a
-        href="https://wa.me/9956877786"
-        className="
+              {/* WhatsApp Button */}
+              <a
+                href="https://wa.me/9956877786"
+                className="
           group relative overflow-hidden flex gap-2
-          text-white text-[14px] font-semibold px-7 py-1.5 uppercase tracking-tight
+          text-white text-[14px] font-semibold px-3 lg:px-7 py-1.5 uppercase tracking-tight
           items-center border-2 border-[#ff6b35]
           transition-all duration-300
           hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
           rounded-md
         "
-      >
-        <span
-          className="
+              >
+                <span
+                  className="
             absolute inset-0 bg-[#ff6b35]
             scale-x-0 origin-center transition-transform duration-300 ease-out
             group-hover:scale-x-100 z-0
           "
-        ></span>
+                ></span>
 
-        <span className="relative z-10 flex items-center gap-2">
-          <MessageCircleMore className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-          WhatsApp
-        </span>
-      </a>
-    </div>
-  </div>
-</div>
-
+                <span className="relative z-10 flex items-center gap-2">
+                  <MessageCircleMore className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  WhatsApp
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

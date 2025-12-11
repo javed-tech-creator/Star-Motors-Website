@@ -14,16 +14,10 @@ import { Link } from "react-router-dom";
 import { useGetAllTeamQuery } from "../api/team.api";
 
 export default function ManagementPage() {
+  const { data, error, isLoading, isFetching, isSuccess } =
+    useGetAllTeamQuery();
 
-const {
-    data,
-    error,
-    isLoading,
-    isFetching,
-    isSuccess,
-  } = useGetAllTeamQuery();  
-
-  console.log("data management",data);
+  console.log("data management", data);
   const managementTeam = data?.data || [];
   // const managementTeam = [
   //   {
@@ -31,32 +25,32 @@ const {
   //     position: "Founder & CEO",
   //     image:
   //       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      
+
   //   },
   //   {
   //     name: "Priya Sharma",
   //     position: "Operations Director",
   //     image:
   //       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-     
+
   //   },
   //   {
   //     name: "Amit Verma",
   //     position: "Technical Head",
   //     image:
   //       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    
+
   //   },
   //   {
   //     name: "Sneha Patel",
   //     position: "Customer Relations Manager",
   //     image:
   //       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-     
+
   //   },
   // ];
 
-   if (isLoading) return <p>Loading…</p>;
+  if (isLoading) return <p>Loading…</p>;
   if (error) return <p className="text-red-500">Failed to load team!</p>;
 
   const values = [
@@ -91,24 +85,25 @@ const {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-                Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
+            Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-2">
             Meet the experts driving excellence at Star Motors
           </p>
           <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
 
-           <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-5">
-                        <Link
-                          to="/"
-                          className="hover:text-orange-400 flex items-center gap-1 transition-colors"
-                        >
-                          <Home className="w-3.5 h-3.5" /> Home
-                        </Link>
-                        <ChevronRight className="w-3 h-3 text-gray-600" />
-                        <span className="text-white font-medium font-chakra">Management</span>
-                      </nav>
-      
+          <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-5">
+            <Link
+              to="/"
+              className="hover:text-orange-400 flex items-center gap-1 transition-colors"
+            >
+              <Home className="w-3.5 h-3.5" /> Home
+            </Link>
+            <ChevronRight className="w-3 h-3 text-gray-600" />
+            <span className="text-white font-medium font-chakra">
+              Management
+            </span>
+          </nav>
         </div>
       </div>
 
@@ -137,38 +132,34 @@ const {
 
       {/* Management Team */}
       <div className=" px-4 sm:px-6 lg:px-20 pb-10 mt-10">
-       
-       
-
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-         {managementTeam?.map((member) => (
-  <div
-    key={member._id}
-    className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
-  >
-    {/* IMAGE */}
-    <div className="relative h-80 overflow-hidden">
-      <img
-        src={member?.image?.public_url}
-        alt={member?.name}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-      />
-      <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
-    </div>
+          {managementTeam?.map((member) => (
+            <div
+              key={member._id}
+              className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
+            >
+              {/* IMAGE */}
+              <div className="relative h-80 overflow-hidden">
+                <img
+                  src={member?.image?.public_url}
+                  alt={member?.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
+              </div>
 
-    {/* CONTENT */}
-    <div className="p-4">
-      <h3 className="text-2xl font-bold mb-2 group-hover:text-[#ff6b35] transition-colors">
-        {member?.name}
-      </h3>
+              {/* CONTENT */}
+              <div className="p-4">
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-[#ff6b35] transition-colors">
+                  {member?.name}
+                </h3>
 
-      <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
-        {member?.designation}
-      </p>
-    </div>
-  </div>
-))}
-
+                <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
+                  {member?.designation}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -229,12 +220,23 @@ const {
 
       {/* CTA Section */}
       <div className=" px-4 sm:px-6 lg:px-20 pb-10">
-        <div className=" bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800  rounded-2xl p-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to <span className="text-orange-500">Experience</span>{" "}
+        <div
+          className="relative border border-gray-800  rounded-2xl p-12 text-center overflow-hidden
+    bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
+    bg-cover bg-center bg-no-repeat
+  "
+        >
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="relative z-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6  ">
+            Ready to{" "}
+            <span className="text-orange-500">
+              Experience
+            </span>{" "}
             Excellence?
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-md lg:text-lg mb-8 max-w-2xl mx-auto ">
             Get in touch with our management team to discuss how we can serve
             you better
           </p>
@@ -290,6 +292,7 @@ const {
                 Call NOW
               </span>
             </a>
+          </div>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import cclogo from "../assets/cc-logo.png";
 import AnimatedButton from "./AnimatedButton";
 import logo from "../assets/Logo.jpeg";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const menuAbout = ["ABOUT US", "OUR TEAM", "OUR WORKS", "FAQ"];
@@ -34,7 +35,7 @@ const Footer = () => {
       <footer className="bg-black text-white py-10 md:py-12 px-6 md:px-12 lg:px-20 font-chakra">
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-20">
           {/* BRAND INFO */}
-   {/* <div>
+          {/* <div>
               <a
               href="https://starmotor-admin.netlify.app"
                 className="
@@ -78,49 +79,82 @@ const Footer = () => {
           </div>
 
           {/* ADDRESS SECTION */}
-         <div className="space-y-5 text-neutral-300">
-  <h4 className="font-bold text-lg tracking-wide mb-4 text-white">
-    GET IN TOUCH
-  </h4>
+          <div className="space-y-2 text-neutral-300">
+            <h4 className="font-bold text-lg tracking-wide mb-4 text-white">
+              GET IN TOUCH
+            </h4>
 
-  {/* ADDRESS */}
-  <div>
-    <p className="text-sm font-semibold text-orange-500">ADDRESS</p>
+            {/* ADDRESS */}
+            <div className="flex gap-2 justify-center">
+              <MapPin size={30} className="text-orange-500" />
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=23/A,+New+Market+Road,+Mumbai,+Maharashtra+400001"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm mt-1 leading-6 block hover:text-orange-400 transition cursor-pointer"
+              >
+                Bharat Gas Plant, Opp. HP Petrol Pump Mishrapur, Kursi Rd.
+                Lucknow 226026
+              </a>
+            </div>
+            <div>
+              {/* PHONE */}
+              <div className="flex gap-2 items-center">
+                <Phone size={25} className="text-orange-500" />
 
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=23/A,+New+Market+Road,+Mumbai,+Maharashtra+400001"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-sm mt-1 leading-6 block hover:text-orange-400 transition cursor-pointer"
-    >
-     Bharat Gas Plant,
-     Opp. HP Petrol Pump Mishrapur, Kursi Rd. Lucknow 226026
-    </a>
-  </div>
-  <div className="flex flex-col gap-1">
+                <div className="text-sm mt-1 flex flex-wrap gap-1">
+                  <a
+                    href="tel:+919956877786"
+                    className="hover:text-orange-400 transition cursor-pointer"
+                  >
+                    +91 99568 77786
+                  </a>
+                  <span>,</span>
+                  <a
+                    href="tel:+919026119669"
+                    className="hover:text-orange-400 transition cursor-pointer"
+                  >
+                    +91 90261 19669
+                  </a>
+                  <span>,</span>
+                  <a
+                    href="tel:+918545045881"
+                    className="hover:text-orange-400 transition cursor-pointer"
+                  >
+                    +91 85450 45881
+                  </a>
+                  ,
+                  <span>
+                    <a
+                      href="https://starmotor-admin.netlify.app"
+                      target="_blank"
+                      className="
+       cursor-pointer
+        text-white 
+        font-semibold 
+        hover:text-orange-600 
+        transition 
+        duration-300
+      "
+                    >
+                      Admin Login
+                    </a>
+                  </span>
+                </div>
+              </div>
 
-    {/* PHONE */}
-    <div>
-      <p className="text-sm font-semibold text-orange-500">PHONE</p>
-      <a href="tel:9956877786" className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer">
-       +91 99568 77786
-      </a>
-    </div>
-
-    {/* EMAIL */}
-    <div>
-      <p className="text-sm font-semibold text-orange-500">EMAIL</p>
-      <a
-        href="mailto:support@domain.com"
-        className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer"
-      >
-        starmotorslucknow@gmail.com
-      </a>
-    </div>
-
-  </div>
-</div>
-
+              {/* EMAIL */}
+              <div className="flex gap-2 items-center">
+                <Mail size={14} className="text-orange-500" />
+                <a
+                  href="mailto:starmotorslucknow@gmail.com"
+                  className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer"
+                >
+                  starmotorslucknow@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
 
           {/* Map SECTION */}
           <div className="">
@@ -137,7 +171,7 @@ const Footer = () => {
       {/* BOTTOM BAR */}
       <div className="border-t border-neutral-800 bg-neutral-950 font-chakra">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-3 text-center">
+          <div className="flex flex-col md:flex-row justify-center items-center  text-center">
             <p className="text-xs lg:text-sm text-neutral-300 flex items-center gap-2">
               © 2025 Star Motors Authorised Service Center. Designed By
               <Link

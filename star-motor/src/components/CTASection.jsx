@@ -18,7 +18,7 @@ export default function CTASection() {
           <p className="text-gray-300 text-md mb-2 leading-snug animate-fadeIn px-3">
 
             <div className="flex items-center gap-2 font-bold text-lg">
-              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center lg:mx-0">
                 <svg
                   className="w-6 h-6 text-[#ff6b35]"
                   fill="none"
@@ -40,7 +40,7 @@ export default function CTASection() {
             <br/>
 
             <div className="flex items-center gap-2 font-bold">
-              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center  lg:mx-0">
                 ⚡
               </div>
               Fast & Efficient
@@ -50,7 +50,7 @@ export default function CTASection() {
             <br/>
 
             <div className="flex items-center gap-2 font-bold">
-              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center  lg:mx-0">
                 💰
               </div>
               Affordable & Transparent
@@ -60,7 +60,7 @@ export default function CTASection() {
             <br/>
 
             <div className="flex items-center gap-2 font-bold">
-              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center lg:mx-0">
                 🔧
               </div>
               Advanced Diagnostic
@@ -70,7 +70,7 @@ export default function CTASection() {
             <br/>
 
             <div className="flex items-center gap-2 font-bold">
-              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center lg:mx-0">
                 🛡️
               </div>
              Quality Parts & Long-Lasting
@@ -80,7 +80,7 @@ export default function CTASection() {
             <br/>
 
             <div className="flex items-center gap-2 font-bold">
-              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center mx-auto lg:mx-0">
+              <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-xl flex items-center justify-center lg:mx-0">
                 🚗
               </div>
              Complete Car Care 

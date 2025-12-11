@@ -31,23 +31,7 @@ const servicesData = {
       "Brake System Service",
       "AC Service & Repair",
     ],
-    pricing: [
-      {
-        name: "Basic Service",
-        price: "₹2,499",
-        features: ["Oil Change", "Filter Replacement"],
-      },
-      {
-        name: "Standard Service",
-        price: "₹4,999",
-        features: ["Complete Service", "AC Check"],
-      },
-      {
-        name: "Premium Service",
-        price: "₹7,999",
-        features: ["Full Service", "Diagnostics"],
-      },
-    ],
+  
   },
   service2: {
     title: "CAR, BIKE FOAM WASH",
@@ -62,23 +46,7 @@ const servicesData = {
       "Wheel & Tire Clean",
       "Wax Polish",
     ],
-    pricing: [
-      {
-        name: "Basic Wash",
-        price: "₹299",
-        features: ["Foam Wash", "Tire Clean"],
-      },
-      {
-        name: "Premium Wash",
-        price: "₹599",
-        features: ["Foam Wash", "Wax Polish"],
-      },
-      {
-        name: "Deluxe Wash",
-        price: "₹999",
-        features: ["Complete Detailing", "Ceramic Coat"],
-      },
-    ],
+
   },
   single1: {
     title: "INTERIOR CLEANING",
@@ -93,23 +61,7 @@ const servicesData = {
       "Dashboard Polish",
       "Odor Elimination",
     ],
-    pricing: [
-      {
-        name: "Basic Interior",
-        price: "₹799",
-        features: ["Vacuum Clean", "Dashboard Polish"],
-      },
-      {
-        name: "Deep Clean",
-        price: "₹1,499",
-        features: ["Seat Shampoo", "Carpet Clean"],
-      },
-      {
-        name: "Premium Detail",
-        price: "₹2,999",
-        features: ["Full Detail", "Sanitization"],
-      },
-    ],
+   
   },
   single2: {
     title: "DENTING PAINTING",
@@ -124,23 +76,7 @@ const servicesData = {
       "Color Matching",
       "Premium Paint",
     ],
-    pricing: [
-      {
-        name: "Minor Dent",
-        price: "₹1,999",
-        features: ["Dent Repair", "Touch-up"],
-      },
-      {
-        name: "Panel Repair",
-        price: "₹4,999",
-        features: ["Full Panel", "Paint Match"],
-      },
-      {
-        name: "Full Body",
-        price: "₹25,999",
-        features: ["Complete Body", "Premium Paint"],
-      },
-    ],
+  
   },
   single3: {
     title: "CAR MODIFICATION",
@@ -154,23 +90,7 @@ const servicesData = {
       "LED Lighting",
       "Alloy Wheels",
     ],
-    pricing: [
-      {
-        name: "Basic Mods",
-        price: "₹9,999",
-        features: ["LED Lights", "Badges"],
-      },
-      {
-        name: "Performance",
-        price: "₹29,999",
-        features: ["Exhaust", "Suspension"],
-      },
-      {
-        name: "Full Custom",
-        price: "₹99,999",
-        features: ["Complete", "Body Kit"],
-      },
-    ],
+  
   },
   single4: {
     title: "WHEEL ALIGNMENT",
@@ -184,19 +104,7 @@ const servicesData = {
       "Camber Adjustment",
       "Test Drive",
     ],
-    pricing: [
-      {
-        name: "Front Alignment",
-        price: "₹699",
-        features: ["Front Wheels", "Report"],
-      },
-      {
-        name: "4-Wheel",
-        price: "₹1,299",
-        features: ["All Wheels", "Test Drive"],
-      },
-      { name: "Premium", price: "₹1,999", features: ["3D Scan", "Warranty"] },
-    ],
+   
   },
   single5: {
     title: "WHEEL BALANCING",
@@ -210,15 +118,7 @@ const servicesData = {
       "Weight Application",
       "Vibration Test",
     ],
-    pricing: [
-      { name: "Basic", price: "₹399", features: ["4 Wheels", "Weights"] },
-      {
-        name: "Premium",
-        price: "₹699",
-        features: ["Electronic", "Test Drive"],
-      },
-      { name: "Complete", price: "₹999", features: ["Full Service", "Report"] },
-    ],
+  
   },
   single6: {
     title: "TYRE WITH TYRE CHANGING",
@@ -231,23 +131,6 @@ const servicesData = {
       "Expert Fitting",
       "Balancing",
       "Nitrogen Filling",
-    ],
-    pricing: [
-      {
-        name: "Budget",
-        price: "₹2,499",
-        features: ["Economy Brand", "Installation"],
-      },
-      {
-        name: "Premium",
-        price: "₹4,999",
-        features: ["Top Brand", "Alignment"],
-      },
-      {
-        name: "Performance",
-        price: "₹8,999",
-        features: ["Premium Brand", "Nitrogen"],
-      },
     ],
   },
 };
@@ -323,8 +206,9 @@ export default function ServicePage() {
             trustworthy car care.
           </p>
 
-         <ul className="space-y-2 grid grid-cols-1 md:grid-cols-3 gap-4 text-left mt-10">
-     <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+          <ul className="space-y-2 grid grid-cols-1 md:grid-cols-3 gap-4 text-left mt-10">
+            <li
+              className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800
           rounded-xl
           p-5
@@ -332,14 +216,16 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex flex-col items-start">
-    <h4 className="font-semibold text-[16px]">Routine Maintenance</h4>
-    <p className="text-sm text-gray-300">
-      Oil changes, filter replacements, fluid top-ups
-    </p>
-  </li>
+          flex flex-col items-start"
+            >
+              <h4 className="font-semibold text-[16px]">Routine Maintenance</h4>
+              <p className="text-sm text-gray-300">
+                Oil changes, filter replacements, fluid top-ups
+              </p>
+            </li>
 
-  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+            <li
+              className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800
           rounded-xl
           p-5
@@ -347,14 +233,16 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex flex-col items-start">
-    <h4 className="font-semibold text-[16px]">Mechanical Repairs</h4>
-    <p className="text-sm text-gray-300">
-      Engine, transmission, brakes, suspension, and more
-    </p>
-  </li>
+          flex flex-col items-start"
+            >
+              <h4 className="font-semibold text-[16px]">Mechanical Repairs</h4>
+              <p className="text-sm text-gray-300">
+                Engine, transmission, brakes, suspension, and more
+              </p>
+            </li>
 
-  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+            <li
+              className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800
           rounded-xl
           p-5
@@ -362,14 +250,16 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex flex-col items-start ">
-    <h4 className="font-semibold text-[16px]">Electrical Repairs</h4>
-    <p className="text-sm text-gray-300">
-      Battery, lights, sensors, and wiring issues
-    </p>
-  </li>
+          flex flex-col items-start "
+            >
+              <h4 className="font-semibold text-[16px]">Electrical Repairs</h4>
+              <p className="text-sm text-gray-300">
+                Battery, lights, sensors, and wiring issues
+              </p>
+            </li>
 
-  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+            <li
+              className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800
           rounded-xl
           p-5
@@ -377,14 +267,16 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex items-start flex-col">
-    <h4 className="font-semibold text-[16px]">Bodywork & Denting</h4>
-    <p className="text-sm text-gray-300">
-      Minor scratches, dents, and paint touch-ups
-    </p>
-  </li>
+          flex items-start flex-col"
+            >
+              <h4 className="font-semibold text-[16px]">Bodywork & Denting</h4>
+              <p className="text-sm text-gray-300">
+                Minor scratches, dents, and paint touch-ups
+              </p>
+            </li>
 
-  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+            <li
+              className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800
           rounded-xl
           p-5
@@ -392,14 +284,16 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex items-start  flex-col">
-    <h4 className="font-semibold text-[16px]">Wheel & Tyre Care</h4>
-    <p className="text-sm text-gray-300">
-      Alignment, balancing, and replacements
-    </p>
-  </li>
+          flex items-start  flex-col"
+            >
+              <h4 className="font-semibold text-[16px]">Wheel & Tyre Care</h4>
+              <p className="text-sm text-gray-300">
+                Alignment, balancing, and replacements
+              </p>
+            </li>
 
-  <li className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
+            <li
+              className="  bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800
           rounded-xl
           p-5
@@ -407,15 +301,16 @@ export default function ServicePage() {
           hover:shadow-[#ff6b35]/30 
           hover:border-[#ff6b35]
           transition-all duration-300
-          flex items-start flex-col">
-    <h4 className="font-semibold text-[16px]">AC & Cooling System Service</h4>
-    <p className="text-sm text-gray-300">
-      Complete AC inspection & performance enhancement
-    </p>
-  </li>
-  </ul>
-
-
+          flex items-start flex-col"
+            >
+              <h4 className="font-semibold text-[16px]">
+                AC & Cooling System Service
+              </h4>
+              <p className="text-sm text-gray-300">
+                Complete AC inspection & performance enhancement
+              </p>
+            </li>
+          </ul>
 
           {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-10 gap-6">
             {service.features.map((feature, idx) => (
@@ -505,7 +400,6 @@ export default function ServicePage() {
           </div>
         </div>
 
-
         {/* FAQ Section */}
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-5">
@@ -556,15 +450,15 @@ export default function ServicePage() {
         >
           {/* DARK OVERLAY */}
           <div className="absolute inset-0 bg-black/70"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="relative z-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Enquiry Your <span className="text-orange-500">Service</span> Now
           </h2>
-          <p className="text-gray-100 mb-8 text-lg ">
+          <p className="text-gray-100 mb-8 text-md lg:text-lg ">
             Quick response & guaranteed support
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            {/* Call Button */}
+           <div className="flex justify-center gap-2">
             <a
               href="tel:9956877786"
               className="
@@ -577,14 +471,13 @@ export default function ServicePage() {
     text-[14px]
     font-semibold
     px-7
-    py-1.5
+    py-2
     uppercase
     tracking-tight
     items-center
     border-2 border-[#ff6b35]
     transition-all duration-300
     hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
-    rounded-md
   "
             >
               {/* Background hover fill animation */}
@@ -614,53 +507,12 @@ export default function ServicePage() {
                     d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
                   />
                 </svg>
-                Call Now
-              </span>
-            </a>
-
-            {/* WhatsApp Button */}
-            <a
-              href="https://wa.me/9956877786"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-    group
-    relative
-    overflow-hidden
-    flex
-    gap-2
-    text-white
-    text-[14px]
-    font-semibold
-    px-7
-    py-1.5
-    uppercase
-    tracking-tight
-    items-center
-    border-2 border-[#ff6b35]
-    transition-all duration-300
-    hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
-    rounded-md
-  "
-            >
-              {/* Background Fill Animation */}
-              <span
-                className="
-      absolute inset-0 bg-[#ff6b35]
-      scale-x-0 origin-center
-      transition-transform duration-300 ease-out
-      group-hover:scale-x-100
-      z-0
-    "
-              ></span>
-
-              {/* Text + Icon should stay above background */}
-              <span className="relative z-10 flex items-center gap-2">
-                <MessageCircleMore className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                WhatsApp
+                Call NOW
               </span>
             </a>
           </div>
+          </div>
+
         </div>
       </div>
     </div>

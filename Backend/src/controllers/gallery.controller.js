@@ -37,7 +37,7 @@ export const createGallery = async (req, res, next) => {
 
     const gallery = new Gallery({
       image: result.files[0],
-      category: req.body.category || null,
+      // category: req.body.category || null,
       projectName: req.body.projectName || null,
       productName: req.body.productName || null,
     });
@@ -81,7 +81,7 @@ export const updateGallery = async (req, res, next) => {
     if (!gallery) return next(new ApiError(404, "Gallery item not found"));
 
     const updateData = {
-      category: req.body.category || gallery.category,
+      // category: req.body.category || gallery.category,
       projectName: req.body.projectName || gallery.projectName,
       productName: req.body.productName || gallery.productName,
     };

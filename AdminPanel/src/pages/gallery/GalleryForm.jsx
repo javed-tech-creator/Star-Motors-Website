@@ -55,7 +55,7 @@ function GalleryForm() {
     resolver: yupResolver(schema),
     mode: "onChange",
     defaultValues: {
-      category: "",
+      // category: "",
       image: null,
     },
   });
@@ -93,7 +93,7 @@ function GalleryForm() {
   const onSubmit = async (formData) => {
     try {
       const payload = new FormData();
-      payload.append("category", formData.category);
+      // payload.append("category", formData.category);
       
       if (formData.image && formData.image.length > 0) {
         payload.append("image", formData.image[0]);
@@ -126,7 +126,7 @@ function GalleryForm() {
             <div className="max-w-2xl mx-auto space-y-3 border border-gray-200 rounded-2xl bg-white p-4">
               
               {/* Category Selection */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="block text-sm font-medium text-black/80 mb-1">
                   Category <span className="text-red-500">*</span>
                 </label>
@@ -155,7 +155,7 @@ function GalleryForm() {
                     {errors.category.message}
                   </p>
                 )}
-              </div>
+              </div> */}
 
               {/* Image Upload */}
               <div className="space-y-3">

@@ -66,33 +66,27 @@ const ContactUsPage = () => {
       hrf: "https://www.google.com/maps/search/?api=1&query=23/A,+New+Market+Road,+Mumbai,+Maharashtra+400001",
       details: [
         "Star Motors Services",
-        "Chinhat Tiraha, Faizabad Road",
-        "Lucknow-226028",
+        "Bharat Gas Plant, Opp. HP Petrol",
+        "Kursi Rd. Lucknow 226026",
       ],
       gradient: "from-orange-500 to-orange-600",
       action: "https://goo.gl/maps/YOUR_MAP_LINK",
     },
     {
       icon: Phone,
-      hrf: "tel:9956877786",
+      hrf: "tel:+919956877786",
       title: "Call Us",
-      details: ["+91-9956877786"],
+      details: ["+91-9956877786", "+91-9026119669", "+91-8545045881"],
       gradient: "from-blue-500 to-indigo-600",
-      action: "tel:9956877786",
+      action: "tel:+919956877786",
     },
     {
       icon: Mail,
-      hrf: "mailto:info@starmotor.co.in",
+      hrf: "mailto:starmotorslucknow@gmail.com",
       title: "Email Us",
-      details: ["info@starmotor.co.in"],
+      details: ["starmotorslucknow@gmail.com"],
       gradient: "from-purple-500 to-violet-600",
-      action: "mailto:info@starmotor.co.in",
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: ["Mon - Sat: 9:00 AM - 7:00 PM", "Sunday: 10:00 AM - 5:00 PM"],
-      gradient: "from-orange-500 to-amber-600",
+      action: "mailto:starmotorslucknow@gmail.com",
     },
   ];
 
@@ -168,52 +162,50 @@ const ContactUsPage = () => {
     }));
   };
 
-// Submit handler (Fully Fixed)
-const handleSubmit = async () => {
-  // Stop if validation fails
-  if (!validateForm()) return;
+  // Submit handler (Fully Fixed)
+  const handleSubmit = async () => {
+    // Stop if validation fails
+    if (!validateForm()) return;
 
-  setIsSubmitting(true);
-  setSubmitStatus(null);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-  try {
-    const response = await axios.post(`${BACKEND_URL}/inquiry`, formData);
+    try {
+      const response = await axios.post(`${BACKEND_URL}/inquiry`, formData);
 
-    // SUCCESS
-    setSubmitStatus("success");
+      // SUCCESS
+      setSubmitStatus("success");
 
-    // Reset fields
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      requirement: "",
-    });
+      // Reset fields
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        requirement: "",
+      });
 
-    // Show Success Toast
-    toast.success("Inquiry submitted successfully!", {
-      position: "top-right",
-      autoClose: 2000,
-    });
-
-  } catch (err) {
-    // ERROR
-    setSubmitStatus("error");
-
-    toast.error(
-      err?.response?.data?.message ||
-        "Something went wrong! Please try again.",
-      {
+      // Show Success Toast
+      toast.success("Inquiry submitted successfully!", {
         position: "top-right",
-        autoClose: 3000,
-      }
-    );
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+        autoClose: 2000,
+      });
+    } catch (err) {
+      // ERROR
+      setSubmitStatus("error");
 
+      toast.error(
+        err?.response?.data?.message ||
+          "Something went wrong! Please try again.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+        }
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="relative min-h-screen bg-[#111111] text-white">
@@ -244,7 +236,7 @@ const handleSubmit = async () => {
         {/* NEW GRID LAYOUT */}
         <div className="content-container grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Top Cards → 4 columns on large */}
-          <div className="lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-up">
+          <div className="lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-up">
             {contactInfo.map((info, idx) => (
               <a
                 key={idx}
@@ -260,11 +252,22 @@ const handleSubmit = async () => {
                   {info.title}
                 </h3>
                 <div className="space-y-1">
-                  {info.details.map((line, i) => (
-                    <p key={i} className="text-gray-400 text-sm">
-                      {line}
-                    </p>
-                  ))}
+                  {info.details.map((line, i) =>
+                    info.title === "Call Us" ? (
+                      <a
+                        key={i}
+                        href={`tel:${line.replace(/[^0-9]/g, "")}`}
+                        className="text-gray-300 text-sm hover:text-orange-400 transition"
+                      >
+                        {line}
+                        {", "}
+                      </a>
+                    ) : (
+                      <p key={i} className="text-gray-400 hover:text-orange-400 text-sm">
+                        {line}
+                      </p>
+                    )
+                  )}
                 </div>
               </a>
             ))}
@@ -376,16 +379,18 @@ const handleSubmit = async () => {
                     <label className="text-sm text-gray-400 mb-1 block">
                       Requirement *
                     </label>
-                  <input
-  type="text"
-  name="requirement"
-  value={formData.requirement}
-  onChange={handleInputChange}
-  className={`w-full bg-black/20 border rounded-xl px-4 py-3 text-white ${
-    errors.requirement ? "border-red-500" : "border-white/10"
-  }`}
-  placeholder="Service, Wash, Painting..."
-/>
+                    <input
+                      type="text"
+                      name="requirement"
+                      value={formData.requirement}
+                      onChange={handleInputChange}
+                      className={`w-full bg-black/20 border rounded-xl px-4 py-3 text-white ${
+                        errors.requirement
+                          ? "border-red-500"
+                          : "border-white/10"
+                      }`}
+                      placeholder="Service, Wash, Painting..."
+                    />
 
                     {errors.requirement && (
                       <p className="text-red-500 text-xs">
@@ -415,23 +420,22 @@ const handleSubmit = async () => {
                   )}
                 </div>
 
-              <button
-  onClick={handleSubmit}
-  disabled={isSubmitting}
-  className="w-full py-4 bg-orange-500 hover:bg-orange-600 rounded-xl font-bold flex items-center justify-center gap-2"
->
-  {isSubmitting ? (
-    <>
-      <div className="animate-spin h-5 w-5 border-2 border-white/30 border-t-white rounded-full"></div>
-      Sending...
-    </>
-  ) : (
-    <>
-      <Send className="w-5 h-5" /> Send Message
-    </>
-  )}
-</button>
-
+                <button
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-orange-500 hover:bg-orange-600 rounded-xl font-bold flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin h-5 w-5 border-2 border-white/30 border-t-white rounded-full"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" /> Send Message
+                    </>
+                  )}
+                </button>
               </div>
             </div>
           </div>
