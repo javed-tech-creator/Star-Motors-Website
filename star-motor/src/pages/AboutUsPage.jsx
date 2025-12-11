@@ -343,7 +343,7 @@ export default function AboutUsPage() {
               #1 choice.
             </p>
 
-            <div className="flex lg:flex-col sm:flex-row justify-center gap-2 lg:gap-4">
+            <div className="flex flex-row justify-center gap-2 lg:gap-4">
               {/* Call Button */}
               <a
                 href="tel:9956877786"

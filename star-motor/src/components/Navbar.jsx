@@ -314,7 +314,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
-              CSR SERVICE/REPARING
+              CAR SERVICE/REPARING
             </Link>
             <Link
               to="service/service2"

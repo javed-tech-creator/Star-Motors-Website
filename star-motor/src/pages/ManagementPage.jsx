@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useGetAllTeamQuery } from "../api/team.api";
+import Loader from "../utils/Loader";
 
 export default function ManagementPage() {
   const { data, error, isLoading, isFetching, isSuccess } =
@@ -50,7 +51,6 @@ export default function ManagementPage() {
   //   },
   // ];
 
-  if (isLoading) return <p>Loading…</p>;
   if (error) return <p className="text-red-500">Failed to load team!</p>;
 
   const values = [
@@ -129,37 +129,49 @@ export default function ManagementPage() {
       </div> */}
 
       {/* Management Team */}
-      <div className=" px-4 sm:px-6 lg:px-20 pb-10 mt-10">
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {managementTeam?.map((member) => (
-            <div
-              key={member._id}
-              className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
-            >
-              {/* IMAGE */}
-              <div className="relative h-80 overflow-hidden">
-                <img
-                  src={member?.image?.public_url}
-                  alt={member?.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
-              </div>
+   <div className="px-4 sm:px-6 lg:px-20 pb-10 mt-10">
 
-              {/* CONTENT */}
-              <div className="p-4">
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-[#ff6b35] transition-colors">
-                  {member?.name}
-                </h3>
+  {/* LOADER — show until API loads */}
+  {isLoading ? (
+    <div className="flex justify-center items-center h-[60vh]">
+      <Loader />
+    </div>
+  ) : (
+    <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {managementTeam?.map((member) => (
+        <div
+          key={member._id}
+          className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2"
+        >
+          {/* IMAGE */}
+          <div className="relative h-80 overflow-hidden">
+            <img
+              src={member?.image?.public_url}
+              alt={member?.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div>
+          </div>
 
-                <p className="text-[#ff6b35] font-semibold mb-3 text-lg">
-                  {member?.designation}
-                </p>
-              </div>
-            </div>
-          ))}
+          {/* CONTENT */}
+          <div className="p-4">
+            <h3 className="text-2xl text-center font-bold mb-1 group-hover:text-[#ff6b35] transition-colors">
+              {member?.name}
+            </h3>
+
+            <p className="text-[#ff6b35] text-center font-semibold mb-1 text-lg">
+              {member?.designation}
+            </p>
+             <p className=" text-center font-semibold mb-2 text-lg">
+              {member?.description}
+            </p>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+  )}
+</div>
+
 
       {/* Core Values
       <div className="bg-[#111111] py-10">

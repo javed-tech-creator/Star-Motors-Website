@@ -189,7 +189,7 @@ function TeamForm() {
   {/* Description */}
   <div className="flex flex-col h-full">
     <label className="block text-sm font-medium text-black/80 mb-2">
-      Description
+      Phone No.
     </label>
     <textarea
       {...register("description")}

@@ -67,9 +67,9 @@ export default function Login() {
   };
 
   return (
-<div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 ">
+// {/* <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 "> */}
   
-  <div className="w-full max-w-lg bg-black/90 rounded-2xl shadow-lg border border-gray-200 p-8 sm:p-10">
+  <div className="w-full max-w-md bg-black/90 rounded-2xl shadow-lg border border-gray-200 p-8 sm:p-10">
     <div className="flex flex-col items-center mb-6">
       <img src={logo} alt="Logo" className="h-24 w-auto mb-2" />
       <h2 className="text-2xl font-bold text-white">Sign In</h2>
@@ -162,7 +162,7 @@ export default function Login() {
       </button>
     </form>
   </div>
-</div>
+// </div>
 
   );
 }
