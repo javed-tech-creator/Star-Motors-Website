@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { Calendar, Tag, Clock, ArrowLeft, Home, User } from "lucide-react";
+import { Calendar, Tag, Clock, ArrowLeft, Home, User, ChevronRight, FileText } from "lucide-react";
 import formatDate from "../utils/FormateDate";
 import Loader from "../utils/Loader";
 import { gsap } from "gsap";
@@ -48,7 +48,11 @@ const BlogDetail = () => {
   }
 
   const blog = blogData?.data?.find((item) => item.slug === slug);
+  const relatedBlogs = blogData?.data?.filter((item) => item.slug !== blog?._id);
 
+  console.log("slug",slug);
+  console.log("blogData?.data?",blogData?.data);
+  
   if (!blog) {
     return (
       <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center text-white">
@@ -67,25 +71,41 @@ const BlogDetail = () => {
     <div className="relative min-h-screen bg-[#111111] overflow-hidden text-white selection:bg-green-500/30">
       <div className="relative z-10 pt-20  lg:pt-20">
         <div className="px-6 lg:px-20">
-          {/* Breadcrumb */}
-          <nav className="animate-up inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all">
-            <Link
-              to="/"
-              className="hover:text-green-400 flex items-center gap-1 transition-colors"
-            >
-              <Home className="w-3.5 h-3.5" /> Home
-            </Link>
-            <span className="text-gray-500">/</span>
-            <Link to="/blog" className="hover:text-green-400 transition-colors">
-              Blog
-            </Link>
-            <span className="text-gray-500">/</span>
-            <span className="text-white font-medium truncate max-w-[200px]">
-              {blog.title}
-            </span>
-          </nav>
+          {/* breadcrumb  */}
+         <div className="text-center mb-10">
+            
 
-         <div className="container mx-auto px-4 py-10 lg:py-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <h1 className="hero-animate text-4xl md:text-6xl font-black mb-3 leading-tight">
+              <span className="bg-clip-text text-white font-chakra">
+                Blog <span className="text-orange-500">Details</span> 
+              </span>
+            </h1>
+            <p className="hero-animate text-gray-400 max-w-2xl mx-auto text-lg mb-3  font-chakra">
+              Stay updated with the latest trends in Star Motors, technology
+              innovations, and company announcements.
+            </p>
+
+            <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 mb-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all">
+              <Link
+                to="/"
+                className="hover:text-orange-400 flex items-center gap-1 transition-colors"
+              >
+                <Home className="w-3.5 h-3.5" /> Home
+              </Link>
+               <ChevronRight className="w-3 h-3 text-gray-600" />
+               <Link
+                              to="/blog"
+                              className="hover:text-orange-400 flex items-center gap-1 transition-colors"
+                            >
+                            <FileText className="w-3.5 h-3.5" /> Blog
+                            </Link>
+              <ChevronRight className="w-3 h-3 text-gray-600" />
+              <span className="text-white font-medium font-chakra">Blog & Insights</span>
+            </nav>
+            
+          </div>
+
+         <div className="container mx-auto px-4 py-10 lg:pb-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
                 {/* Blog Details */}
                 <div className="lg:col-span-3">
                   <div className="relative">
@@ -127,11 +147,11 @@ const BlogDetail = () => {
                 <div className="lg:col-span-1 border p-2 border-gray-100">
                   <h2 className="text-2xl font-semibold mb-4 messiri">Other Blogs</h2>
                   <div className="space-y-4 overflow-y-auto">
-                    {blog?.map((relatedBlog) => (
+                    {relatedBlogs?.map((relatedBlog) => (
                       <Link
                         to={`/blog-detail/${relatedBlog.slug}`}
                         key={relatedBlog._id}
-                        className="block p-4 bg-white border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300"
+                        className="block p-4 bg-white  shadow-md hover:shadow-lg transition-all duration-300"
                       >
                         <img
                           src={

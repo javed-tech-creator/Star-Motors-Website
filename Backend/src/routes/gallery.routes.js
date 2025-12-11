@@ -20,7 +20,7 @@ router.get("/:id", getGalleryById)
 router.delete("/:id", deleteGallery)
 router.put("/:id",Upload("Gallery").single("image"),
   fileValidator({ types: ["image"], maxSizeMB: 5 }),
-  requireBody(Gallery), updateGallery)
+  updateGallery)
 
 
 

@@ -200,16 +200,13 @@ const ProjectPageGallery = () => {
          
 
           {/* Hero Section */}
-          <div className="text-center mb-8">
-            <h1 className="hero-animate text-3xl md:text-5xl font-black mb-6 leading-tight">
+          <div className="text-center mb-6">
+            <h1 className="hero-animate text-2xl md:text-3xl lg:text-4xl font-black mb-3 leading-tight">
               <span className="text-white">
                  Gallery <span className="text-orange-500"> Images </span>
               </span>
             </h1>
-            <p className="hero-animate text-gray-400 max-w-2xl mx-auto text-lg">
-              A curated showcase of our most impactful digital signage
-              installations across various industries.
-            </p>
+           <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
           </div>
            {/* Breadcrumb */}
           <div className="flex justify-center mb-15">
@@ -281,7 +278,7 @@ const ProjectPageGallery = () => {
                   <div className="aspect-4/3 overflow-hidden">
                     <img
                       src={product.image?.public_url}
-                      alt={product.category}
+                      alt={product.category || "Gallery"}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />

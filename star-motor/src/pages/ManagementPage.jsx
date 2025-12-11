@@ -84,12 +84,10 @@ export default function ManagementPage() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200')] bg-cover bg-center opacity-40"></div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
             Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-2">
-            Meet the experts driving excellence at Star Motors
-          </p>
+         
           <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
 
           <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-5">

@@ -3,7 +3,7 @@ import Login from '../components/LoginForm'
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import { useAuth } from '../store/AuthContext';
-
+import bgImg from "../assets/login.jpg"
 function LoginPage() {
 
     const { userData } = useAuth();
@@ -16,7 +16,12 @@ function LoginPage() {
   }, [userData, navigate]);
 
   return (
-    <div className='bg-gray-50 flex h-screen w-screen justify-center items-center'>
+   <div
+  className="h-screen w-screen flex justify-center items-center bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url(${bgImg})`,
+  }}
+>
     <Login/>
     </div>
   )

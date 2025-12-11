@@ -58,25 +58,22 @@ const ContactUsPage = () => {
       }
     );
   }, []);
-
   const contactInfo = [
     {
       icon: MapPin,
       title: "Our Location",
-      hrf: "https://www.google.com/maps/search/?api=1&query=23/A,+New+Market+Road,+Mumbai,+Maharashtra+400001",
+      hrf: "https://maps.app.goo.gl/ESNDgU14qmkLtfou8",
       details: [
-        "Star Motors Services",
-        "Bharat Gas Plant, Opp. HP Petrol",
-        "Kursi Rd. Lucknow 226026",
+        "Bharat Gas Plant, Opp. HP Petrol Pump Mishrapur, Kursi Rd. Lucknow 226026",
       ],
       gradient: "from-orange-500 to-orange-600",
       action: "https://goo.gl/maps/YOUR_MAP_LINK",
     },
     {
       icon: Phone,
-      hrf: "tel:+919956877786",
+      hrf: "tel:9956877786",
       title: "Call Us",
-      details: ["+91-9956877786", "+91-9026119669", "+91-8545045881"],
+      details: ["+91 99568 77786", "+91 90261 19669", "+91 85450 45881"],
       gradient: "from-blue-500 to-indigo-600",
       action: "tel:+919956877786",
     },
@@ -212,12 +209,11 @@ const ContactUsPage = () => {
       {/* Hero Section */}
       <div className="pt-12 pb-12 px-6 lg:px-20">
         <div className="text-center mb-6">
-          <h1 className="hero-animate text-4xl md:text-6xl font-black mb-2">
+          <h1 className="hero-animate text-2xl md:text-3xl lg:text-4xl font-black mb-3">
             Get In <span className="text-orange-500">Touch</span> With Us
           </h1>
-          <p className="hero-animate text-gray-400 max-w-2xl mx-auto text-lg">
-            Have a project in mind? Let's build something amazing.
-          </p>
+                  <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
+
         </div>
 
         <div className="flex justify-center mb-6">
@@ -241,6 +237,7 @@ const ContactUsPage = () => {
               <a
                 key={idx}
                 href={info.hrf || ""}
+                target="_blank"
                 className="bg-white/3 border border-white/10 rounded-2xl p-6 text-center flex flex-col items-center"
               >
                 <div
@@ -256,11 +253,10 @@ const ContactUsPage = () => {
                     info.title === "Call Us" ? (
                       <a
                         key={i}
-                        href={`tel:${line.replace(/[^0-9]/g, "")}`}
+                         href={`tel:${line.replace(/^\+91/, "").replace(/[^0-9]/g, "")}`}
                         className="text-gray-300 text-sm hover:text-orange-400 transition"
                       >
-                        {line}
-                        {", "}
+                        {line} <br />
                       </a>
                     ) : (
                       <p key={i} className="text-gray-400 hover:text-orange-400 text-sm">
@@ -277,7 +273,7 @@ const ContactUsPage = () => {
           <div className="lg:col-span-6 animate-up">
             <div className="rounded-2xl h-full min-h-96">
               <iframe
-                src="https://maps.google.com/maps?q=Digital%20Signage%20Solutions%20Lucknow&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56911.07434078029!2d80.90426494863281!3d26.9370485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957b5e7d0468b%3A0xdc8a1fac896cec9d!2sStar%20Motors%20%E2%80%93%20Car%20Service%2C%20Repair%20%26%20Foam%20Wash%20Center%20Lucknow!5e0!3m2!1sen!2sin!4v1765450867551!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "12px" }}

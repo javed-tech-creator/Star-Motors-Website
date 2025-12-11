@@ -67,14 +67,13 @@ export default function Login() {
   };
 
   return (
-<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8">
-  <div className="w-full max-w-lg bg-black rounded-2xl shadow-lg border border-gray-200 p-8 sm:p-10">
+<div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 ">
+  
+  <div className="w-full max-w-lg bg-black/90 rounded-2xl shadow-lg border border-gray-200 p-8 sm:p-10">
     <div className="flex flex-col items-center mb-6">
       <img src={logo} alt="Logo" className="h-24 w-auto mb-2" />
       <h2 className="text-2xl font-bold text-white">Sign In</h2>
-      <p className="text-white text-sm mt-1 text-center">
-        Enter your credentials to access your account
-      </p>
+   
     </div>
 
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -93,7 +92,7 @@ export default function Login() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          className={`w-full px-4 py-3 border rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all ${
+          className={`w-full px-4 py-3 border rounded-xl shadow-sm placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all ${
             emailError
               ? "border-red-300 focus:ring-red-500 focus:border-red-500"
               : "border-gray-300"
@@ -120,7 +119,7 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter your password"
-            className={`w-full px-4 py-3 pr-12 border rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all ${
+            className={`w-full px-4 py-3 pr-12 border rounded-xl shadow-sm placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all ${
               passwordError
                 ? "border-red-300 focus:ring-red-500 focus:border-red-500"
                 : "border-gray-300"

@@ -159,11 +159,12 @@ const Footer = () => {
           {/* Map SECTION */}
           <div className="">
             <iframe
-              src="https://maps.google.com/maps?q=Digital%20Signage%20Solutions%20Lucknow&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56911.07434078029!2d80.90426494863281!3d26.9370485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957b5e7d0468b%3A0xdc8a1fac896cec9d!2sStar%20Motors%20%E2%80%93%20Car%20Service%2C%20Repair%20%26%20Foam%20Wash%20Center%20Lucknow!5e0!3m2!1sen!2sin!4v1765450867551!5m2!1sen!2sin"
               className="w-full h-full rounded-md"
               loading="lazy"
               title="Google Map"
             ></iframe>
+            {/* <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
           </div>
         </div>
       </footer>
