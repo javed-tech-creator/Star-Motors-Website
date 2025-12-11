@@ -97,7 +97,7 @@ function GalleryDashboard() {
         />
       ),
     },
-    category: { label: "Category" },
+    // category: { label: "Category" },
     createdAt: {
       label: "Created At",
       render: (val) => new Date(val).toLocaleString(),
