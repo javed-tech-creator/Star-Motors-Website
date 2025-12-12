@@ -2,8 +2,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const DEFAULT_BACKEND =
-  import.meta.env.VITE_BACKEND_URL ?? "https://db.starmotors.co.in/api/v1";
-  // import.meta.env.VITE_BACKEND_URL ?? "http://localhost:3000/api/v1";
+  // import.meta.env.VITE_BACKEND_URL ?? "https://db.starmotors.co.in/api/v1";
+  import.meta.env.VITE_BACKEND_URL ?? "https://star-motors-website.onrender.com/api/v1";
 
 export const axiosInstance = axios.create({
   baseURL: DEFAULT_BACKEND,
