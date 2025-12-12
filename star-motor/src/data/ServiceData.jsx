@@ -9,9 +9,10 @@ import {
   ShoppingCart,
 } from "lucide-react";
 
-const servicesData = {
-  service1: {
+const servicesData = [
+  {
     title: "CAR REPARING SERVICE",
+    slug: "car-reparing-service",
     icon: Wrench,
     heroImage:
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200",
@@ -99,8 +100,10 @@ const servicesData = {
       },
     ],
   },
-  service2: {
+  {
     title: "CAR FOAM WASH",
+    slug: "car-foam-wash",
+
     icon: Droplets,
     heroImage:
       "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1200",
@@ -192,9 +195,9 @@ const servicesData = {
       },
     ],
   },
-
-  single1: {
+  {
     title: "INTERIOR CLEANING",
+    slug: "car-interior-cleaning",
     icon: Sparkles,
     heroImage:
       "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1920&q=80",
@@ -297,8 +300,10 @@ const servicesData = {
       },
     ],
   },
-  single2: {
+  {
     title: "DENTING & PAINTING",
+    slug: "car-denting-painting",
+
     icon: Car,
     heroImage:
       "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=80",
@@ -408,9 +413,9 @@ const servicesData = {
       },
     ],
   },
-
-  single3: {
+  {
     title: "CAR MODIFICATION",
+    slug: "car-modification",
     icon: Settings,
     heroImage:
       "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200",
@@ -503,8 +508,9 @@ const servicesData = {
       },
     ],
   },
-  single4: {
+  {
     title: "WHEEL ALIGNMENT",
+    slug: "car-wheel-alignment",
     icon: Target,
     heroImage:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200",
@@ -599,8 +605,9 @@ const servicesData = {
       },
     ],
   },
-  single5: {
+  {
     title: "WHEEL BALANCING",
+    slug: "car-wheel-balancing",
     icon: Scale,
     heroImage:
       "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=1200",
@@ -700,9 +707,9 @@ const servicesData = {
       { text: "Fast & Professional Service", icon: "⚡" },
     ],
   },
-
-  single6: {
+  {
     title: "AC & Electrical Services",
+    slug: "car-ac-electrical-services",
     icon: ShoppingCart,
     heroImage:
       "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200",
@@ -799,5 +806,5 @@ const servicesData = {
       },
     ],
   },
-};
+];
 export default servicesData;

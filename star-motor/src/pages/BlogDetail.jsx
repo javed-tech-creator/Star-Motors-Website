@@ -144,14 +144,14 @@ const BlogDetail = () => {
                 </div>
         
                 {/* Related Blogs */}
-                <div className="lg:col-span-1 p-2">
-                  <h2 className="text-2xl font-semibold mb-4 font-chakra text-center">Other Blogs</h2>
+                <div className="lg:col-span-1 p-2 border border-white h-fit rounded-sm">
+                  <h2 className="text-2xl font-semibold mb-4 font-chakra text-orange-500 border-b-2  border-b-white p-2">Other Blogs</h2>
                   <div className="space-y-4 overflow-y-auto">
                     {relatedBlogs?.map((relatedBlog) => (
                       <Link
                         to={`/blog-detail/${relatedBlog.slug}`}
                         key={relatedBlog._id}
-                        className="block p-4 border-b-2 shadow-md hover:shadow-lg transition-all duration-300 hover:text-orange-400"
+                        className="block p-4 border-b-2 last:border-none shadow-md hover:shadow-lg transition-all duration-300 hover:text-orange-400"
                       >
                         <img
                           src={
@@ -159,12 +159,12 @@ const BlogDetail = () => {
                             `${backendUrl}/${relatedBlog?.image?.url}`
                           }
                           alt={relatedBlog.title}
-                          className="w-full h-28 rounded-xl object-cover"
+                          className="w-full h-28 rounded-sm object-cover"
                         />
-                        <p className="text-gray-500 text-sm mt-2">
+                        <p className=" text-sm mt-2 text-orange-400">
                           {formatDate(relatedBlog.updatedAt)}
                         </p>
-                        <h3 className="text-lg font-semibold mt-1 line-clamp-1 font-chakra ">
+                        <h3 className="text-md font-semibold mt-1 font-chakra ">
                           {relatedBlog.title}
                         </h3>
                       </Link>

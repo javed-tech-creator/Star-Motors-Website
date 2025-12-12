@@ -7,25 +7,38 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const menuAbout = ["ABOUT US", "OUR TEAM", "OUR WORKS", "FAQ"];
-  const menuServices = [
-    "CAR REPARING SERVICE",
-    "DENTING & PAINTING",
-    "AC & Electrical Services",
-    "CAR FOAM WASH",
-    "WHEEL ALIGNMENT",
-    "WHEEL BALANCING",
-    "INTERIOR CLEANING",
-    "CAR MODIFICATION",
-  ];
-  const menuLink = [
-    "service1",
-    "single2",
-    "single6",
-    "service2",
-    "single4",
-    "single5",
-    "single1",
-    "single3",
+  // const menuServices = [
+  //   "CAR REPARING SERVICE",
+  //   "DENTING & PAINTING",
+  //   "AC & Electrical Services",
+  //   "CAR FOAM WASH",
+  //   "WHEEL ALIGNMENT",
+  //   "WHEEL BALANCING",
+  //   "INTERIOR CLEANING",
+  //   "CAR MODIFICATION",
+  // ];
+  // const menuLink = [
+  //   "service1",
+  //   "single2",
+  //   "single6",
+  //   "service2",
+  //   "single4",
+  //   "single5",
+  //   "single1",
+  //   "single3",
+  // ];
+  const services = [
+    { name: "CAR REPAIRING SERVICE", path: "service/car-reparing-service" },
+    { name: "DENTING & PAINTING", path: "service/car-denting-painting" },
+    {
+      name: "AC & Electrical Services",
+      path: "service/car-ac-electrical-services",
+    },
+    { name: "CAR FOAM WASH", path: "service/car-foam-wash" },
+    { name: "WHEEL ALIGNMENT", path: "service/car-wheel-alignment" },
+    { name: "WHEEL BALANCING", path: "service/car-wheel-balancing" },
+    { name: "INTERIOR CLEANING", path: "service/car-interior-cleaning" },
+    { name: "CAR MODIFICATION", path: "service/car-modification" },
   ];
 
   const navigate = useNavigate();
@@ -61,16 +74,16 @@ const Footer = () => {
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2">
-              {menuServices.map((item, index) => (
+              {services.map((item, index) => (
                 <div
-                  onClick={() => navigate(`/service/${menuLink[index]}`)}
-                  key={item}
+                  onClick={() => navigate(`${item.path}`)}
+                  key={item.name}
                   className="relative text-sm cursor-pointer group pl-4"
                 >
                   <span className="absolute left-0 top-[7px] w-1.5 h-1.5 bg-orange-600"></span>
 
                   <span className="relative inline-block">
-                    {item}
+                    {item.name}
                     <span className="absolute left-0 -bottom-0.5 w-0 border-b-2 border-dashed border-orange-500 transition-all duration-300 group-hover:w-full"></span>
                   </span>
                 </div>
@@ -132,23 +145,22 @@ const Footer = () => {
                     href="tel:+919026119669"
                     className="hover:text-orange-400 transition cursor-pointer"
                   >
-                  90261 19669,
+                    90261 19669,
                   </a>
                   {/* <span>,</span> */}
                   <a
                     href="tel:+918545045881"
                     className="hover:text-orange-400 transition cursor-pointer"
                   >
-                  85450 45881
-                  </a>,
-
-                   <a
+                    85450 45881
+                  </a>
+                  ,
+                  <a
                     href="tel:052228331748"
                     className="hover:text-orange-400 transition cursor-pointer"
                   >
                     0522 28331748
                   </a>
-
                 </div>
               </div>
 

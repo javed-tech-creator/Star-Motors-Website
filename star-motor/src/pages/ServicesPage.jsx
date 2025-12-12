@@ -1,20 +1,15 @@
 import React from "react";
-import {
-  Home,
-  ChevronRight,
-} from "lucide-react";
+import { Home, ChevronRight } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
-import servicesData from "../data/ServiceData"
+import servicesData from "../data/ServiceData";
 // import FAQ from "../components/FAQ";
-
 
 // Service Detail Page Component
 export default function ServicePage() {
   // Params se service nikalo - tumhara actual code me useParams() use karna
   const { serviceId } = useParams();
-  console.log("serviceId", serviceId);
 
-  const service = servicesData[serviceId];
+  const service = servicesData.find((s) => s.slug === serviceId);
 
   if (!service) {
     return (
@@ -62,18 +57,18 @@ export default function ServicePage() {
           {service.description}
 
           <ul className="space-y-2 grid grid-cols-1 md:grid-cols-3 gap-4 text-left mt-10">
-          {service?.features?.map((item, i) => (
-        <li
-          key={i}
-          className="bg-linear-to-br from-[#121212] to-[#0a0a0a]
+            {service?.features?.map((item, i) => (
+              <li
+                key={i}
+                className="bg-linear-to-br from-[#121212] to-[#0a0a0a]
           border border-gray-800 rounded-xl p-5 shadow-lg
           hover:shadow-[#ff6b35]/30 hover:border-[#ff6b35]
           transition-all duration-300 flex flex-col items-start"
-        >
-          <h4 className="font-semibold text-[16px]">{item.title}</h4>
-          <p className="text-sm text-gray-300">{item.description}</p>
-        </li>
-      ))}
+              >
+                <h4 className="font-semibold text-[16px]">{item.title}</h4>
+                <p className="text-sm text-gray-300">{item.description}</p>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -91,9 +86,9 @@ export default function ServicePage() {
 
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             {service?.highlights?.map((item, i) => (
-        <div
-          key={i}
-          className="
+              <div
+                key={i}
+                className="
             group
             bg-linear-to-br from-[#111] to-[#0c0c0c]
             border border-gray-800
@@ -107,18 +102,18 @@ export default function ServicePage() {
             hover:-translate-y-2
             text-center
           "
-        >
-          {/* Icon */}
-          <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-            {item.icon}
-          </div>
+              >
+                {/* Icon */}
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
 
-          {/* Text */}
-          <p className="text-gray-300 text-lg font-medium group-hover:text-white transition">
-            {item.text}
-          </p>
-        </div>
-      ))}
+                {/* Text */}
+                <p className="text-gray-300 text-lg font-medium group-hover:text-white transition">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -136,14 +131,14 @@ export default function ServicePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {service?.faqs?.map((faq, i) => (
-        <div
-          key={i}
-          className="bg-[#0f0f0f] p-6 rounded-xl border border-gray-800 hover:border-[#ff6b35] transition-all h-full"
-        >
-          <p className="text-lg font-semibold mb-2">{faq.q}</p>
-          <p className="text-gray-400">{faq.a}</p>
-        </div>
-      ))}
+              <div
+                key={i}
+                className="bg-[#0f0f0f] p-6 rounded-xl border border-gray-800 hover:border-[#ff6b35] transition-all h-full"
+              >
+                <p className="text-lg font-semibold mb-2">{faq.q}</p>
+                <p className="text-gray-400">{faq.a}</p>
+              </div>
+            ))}
           </div>
           {/* <FAQ service={service}/> */}
         </div>
@@ -156,18 +151,18 @@ export default function ServicePage() {
         >
           {/* DARK OVERLAY */}
           <div className="absolute inset-0 bg-black/70"></div>
-            <div className="relative z-10">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            Enquiry Your <span className="text-orange-500">Service</span> Now
-          </h2>
-          <p className="text-gray-100 mb-8 text-md lg:text-lg ">
-            Quick response & guaranteed support
-          </p>
+          <div className="relative z-10">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              Enquiry Your <span className="text-orange-500">Service</span> Now
+            </h2>
+            <p className="text-gray-100 mb-8 text-md lg:text-lg ">
+              Quick response & guaranteed support
+            </p>
 
-           <div className="flex justify-center gap-2">
-            <a
-              href="tel:9956877786"
-              className="
+            <div className="flex justify-center gap-2">
+              <a
+                href="tel:9956877786"
+                className="
     group
     relative
     overflow-hidden
@@ -185,40 +180,39 @@ export default function ServicePage() {
     transition-all duration-300
     hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
   "
-            >
-              {/* Background hover fill animation */}
-              <span
-                className="
+              >
+                {/* Background hover fill animation */}
+                <span
+                  className="
       absolute inset-0 bg-[#ff6b35]
       scale-x-0 origin-center
       transition-transform duration-300 ease-out
       group-hover:scale-x-100
       z-0
     "
-              ></span>
+                ></span>
 
-              {/* Icon + text (stay on top of background) */}
-              <span className="relative z-10 flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 group-hover:rotate-12 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
-                  />
-                </svg>
-                Call NOW
-              </span>
-            </a>
+                {/* Icon + text (stay on top of background) */}
+                <span className="relative z-10 flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 group-hover:rotate-12 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
+                    />
+                  </svg>
+                  Call NOW
+                </span>
+              </a>
+            </div>
           </div>
-          </div>
-
         </div>
       </div>
     </div>

@@ -8,6 +8,20 @@ export default function Navbar() {
 
   const navigate = useNavigate();
 
+  const services = [
+    { name: "CAR REPAIRING SERVICE", path: "service/car-reparing-service" },
+    { name: "DENTING & PAINTING", path: "service/car-denting-painting" },
+    {
+      name: "AC & Electrical Services",
+      path: "service/car-ac-electrical-services",
+    },
+    { name: "CAR FOAM WASH", path: "service/car-foam-wash" },
+    { name: "WHEEL ALIGNMENT", path: "service/car-wheel-alignment" },
+    { name: "WHEEL BALANCING", path: "service/car-wheel-balancing" },
+    { name: "INTERIOR CLEANING", path: "service/car-interior-cleaning" },
+    { name: "CAR MODIFICATION", path: "service/car-modification" },
+  ];
+
   React.useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -22,10 +36,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-25">
           {/* Logo */}
 
-          <div
-            className="flex  cursor-pointer"
-            onClick={() => navigate("/")}
-          >
+          <div className="flex  cursor-pointer" onClick={() => navigate("/")}>
             <img
               src={logo}
               alt="Star Motors Logo"
@@ -105,61 +116,15 @@ export default function Navbar() {
       transition-all duration-500 ease-out
     "
               >
-                <Link
-                  to="service/service1"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  CAR REPAIRING SERVICE
-                </Link>
-
-                <Link
-                  to="service/single2"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  DENTING & PAINTING
-                </Link>
-
-                <Link
-                  to="service/single6"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  AC & Electrical Services
-                </Link>
-
-                <Link
-                  to="service/service2"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                   CAR FOAM WASH
-                </Link>
-
-                <Link
-                  to="service/single4"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  WHEEL ALIGNMENT
-                </Link>
-
-                <Link
-                  to="service/single5"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  WHEEL BALANCING
-                </Link>
-
-                <Link
-                  to="service/single1"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  INTERIOR CLEANING
-                </Link>
-
-                <Link
-                  to="service/single3"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                   CAR MODIFICATION
-                </Link>
+                {services.map((service, index) => (
+                  <Link
+                    to={service.path}
+                    key={index}
+                    className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -254,15 +219,16 @@ export default function Navbar() {
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-       <div className=" bg-black pl-5 flex items-start h-full w-full border-b border-gray-700 cursor-pointer"
-     onClick={() => navigate("/")}
->
-  <img
-    src={logo}
-    alt="Star Motors Logo"
-    className=" h-20 object-contain"
-  />
-</div>
+        <div
+          className=" bg-black pl-5 flex items-start h-full w-full border-b border-gray-700 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          <img
+            src={logo}
+            alt="Star Motors Logo"
+            className=" h-20 object-contain"
+          />
+        </div>
 
         <div className="px-4 mt-2 bg-[#0f0f0f] text-sm font-semibold">
           {/* ---- HOME ---- */}
@@ -309,63 +275,16 @@ export default function Navbar() {
 
           {/* ---- SERVICES DROPDOWN ---- */}
           <MobileDropdown title="SERVICES">
-            <Link
-              to="service/service1"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-              CAR REPAIRING SERVICE 
-            </Link>
-            <Link
-              to="service/single2"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-               DENTING & PAINTING
-            </Link>
-            <Link
-              to="service/single6"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-               AC & Electrical Services
-            </Link>
-            <Link
-              to="service/service2"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-              CAR FOAM WASH
-            </Link>
-            <Link
-              to="service/single4"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-              WHEEL ALIGNMENT
-
-            </Link>
-            <Link
-              to="service/single5"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-             WHEEL BALANCING
-            </Link>
-            <Link
-              to="service/single1"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-               INTERIOR CLEANING
-            </Link>
-            <Link
-              to="service/single3"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-              CAR MODIFICATION
-            </Link>
+            {services.map((service, index) => (
+              <Link
+                to={service.path}
+                key={index}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+              >
+                {service.name}
+              </Link>
+            ))}
           </MobileDropdown>
 
           {/* ---- BLOG ---- */}
