@@ -2,7 +2,7 @@ import ApiError from "../utils/ApiError.js";
 
 export const requireBody = (model) => {
   return (req, res, next) => {
-    const methods = ["POST", "PUT", "PATCH"];
+    const methods = ["POST", "PUT", "PATCH","DELETE"];
     if (!methods.includes(req.method)) return next();
     if (!req.body || Object.keys(req.body).length === 0) {
       if (process.env.SHOW_SCHEMA_FIELDS === "true") {

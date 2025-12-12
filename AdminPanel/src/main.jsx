@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
 
   <StrictMode>
     <AuthProvider>
-    <BrowserRouter>
+    <BrowserRouter basename='/admin'>
     <Provider store={store}>
     <App />
     </Provider>

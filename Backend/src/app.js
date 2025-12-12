@@ -6,11 +6,19 @@ import path from 'path'
 import ApiError from './utils/ApiError.js'
 import { responseMiddleware } from './utils/ApiResponse.js'
 
-const allowedOrigins = JSON.parse(process.env.CORS_ORIGIN);
+// const allowedOrigins = JSON.parse(process.env.CORS_ORIGIN);
 app.use(cors({
-  origin: allowedOrigins,
+  origin: [
+    "https://starmotors.co.in",
+    "https://www.starmotors.co.in",
+    "http://localhost:5173",
+    "http://localhost:5174"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+allowedHeaders: ["Content-Type", "Authorization", "Accept", "X-Requested-With"],
   credentials: true
 }));
+
 
   
   // origin:[`http://localhost:5173`, 'http://localhost:5174'],
@@ -41,8 +49,8 @@ import BlogRoutes from './routes/blog.routes.js'
 app.use('/api/v1/blog' , BlogRoutes)
 
 //product 
-import ProductRoutes from './routes/product.routes.js'
-app.use("/api/v1/product", ProductRoutes)
+// import ProductRoutes from './routes/product.routes.js'
+// app.use("/api/v1/product", ProductRoutes)
 
 //product 
 import TeamRoutes from './routes/team.routes.js'
@@ -54,21 +62,21 @@ app.use("/api/v1/inquiry", InquiryRoutes)
 
 
 //news latter
-import NewsLatterRoutes from './routes/newsLatter.routes.js'
-app.use("/api/v1/news-latter", NewsLatterRoutes)
+// import NewsLatterRoutes from './routes/newsLatter.routes.js'
+// app.use("/api/v1/news-latter", NewsLatterRoutes)
 
 //gallery routes
-import GalleryRoutes from './routes/gallery.routes.js'
-app.use("/api/v1/gallery", GalleryRoutes)
+// import GalleryRoutes from './routes/gallery.routes.js'
+// app.use("/api/v1/gallery", GalleryRoutes)
 
 //Visitor routes
-import VisitorRoutes from './routes/visitor.routes.js'
-app.use("/api/v1/visitor", VisitorRoutes)
+// import VisitorRoutes from './routes/visitor.routes.js'
+// app.use("/api/v1/visitor", VisitorRoutes)
 
 
 //Job routes
-import JobRoutes from './routes/job.routes.js'
-app.use("/api/v1/job", JobRoutes)
+// import JobRoutes from './routes/job.routes.js'
+// app.use("/api/v1/job", JobRoutes)
 
 
 //dashboard routes

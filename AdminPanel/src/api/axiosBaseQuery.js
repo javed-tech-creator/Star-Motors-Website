@@ -2,10 +2,9 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 export const axiosInstance = axios.create({ 
-  baseURL: import.meta.env.VITE_BACKEND_URL,
-  withCredentials: true,
-  credentials: 'include',
+  baseURL: import.meta.env.VITE_BACKEND_URL
 });
+
 
 export const axiosBaseQuery =
   ({ baseUrl = '' } = {}) =>

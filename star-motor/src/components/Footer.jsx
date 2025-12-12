@@ -2,31 +2,12 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cclogo from "../assets/cc-logo.png";
 import AnimatedButton from "./AnimatedButton";
-import logo from "../assets/Logo.jpeg";
+// import logo from "../assets/Logo.jpeg";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const menuAbout = ["ABOUT US", "OUR TEAM", "OUR WORKS", "FAQ"];
-  // const menuServices = [
-  //   "CAR REPARING SERVICE",
-  //   "DENTING & PAINTING",
-  //   "AC & Electrical Services",
-  //   "CAR FOAM WASH",
-  //   "WHEEL ALIGNMENT",
-  //   "WHEEL BALANCING",
-  //   "INTERIOR CLEANING",
-  //   "CAR MODIFICATION",
-  // ];
-  // const menuLink = [
-  //   "service1",
-  //   "single2",
-  //   "single6",
-  //   "service2",
-  //   "single4",
-  //   "single5",
-  //   "single1",
-  //   "single3",
-  // ];
+ 
   const services = [
     { name: "CAR REPAIRING SERVICE", path: "service/car-reparing-service" },
     { name: "DENTING & PAINTING", path: "service/car-denting-painting" },
@@ -90,7 +71,8 @@ const Footer = () => {
               ))}
               <span className="p-4">
                 <a
-                  href="https://starmotor-admin.netlify.app"
+                  // href="https://starmotor-admin.netlify.app"
+                 href="https://starmotors.co.in/admin/"
                   target="_blank"
                   className="
        cursor-pointer
