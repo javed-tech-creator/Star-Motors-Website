@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/Logo.jpeg";
+import logo from "../assets/Logo.jpg";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

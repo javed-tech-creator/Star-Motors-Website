@@ -93,7 +93,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-sm mt-1 leading-6 block hover:text-orange-400 transition cursor-pointer"
               >
-                Bharat Gas Plant, Opp. HP Petrol Pump Mishrapur, Kursi Rd.
+                Bharat Gas Plant, Opp. HP Petrol Pump Misripur, Kursi Rd.
                 Lucknow 226026
               </a>
             </div>

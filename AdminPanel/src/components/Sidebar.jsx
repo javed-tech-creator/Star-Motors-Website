@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import * as Icons from "lucide-react";
-import logo from '../assets/Logo.jpeg'
+import logo from '../assets/Logo.jpg'
 import { useAuth } from "../store/AuthContext";
 import { toast } from "react-toastify";
 
@@ -89,7 +89,7 @@ const Sidebar = () => {
         <div className="flex items-center justify-between h-18">
           {!isCollapsed && (
             <div className="flex items-center">
-                 <img src={logo} alt="logo" className="h-18 w-36 bg-white" />
+                 <img src={logo} alt="logo" className="h-16 w-36 bg-white" />
             </div>
           )}
           <button

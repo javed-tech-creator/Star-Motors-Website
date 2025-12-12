@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 // import ForgotPassword from "./ForgotPassword";
-import logo from "../assets/Logo.jpeg";
+import logo from "../assets/Logo.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useLoginMutation } from "../api/auth.api";
 import { useAuth } from "../store/AuthContext";

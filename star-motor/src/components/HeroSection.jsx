@@ -50,8 +50,8 @@ const HeroSection = () => {
         ============================ */}
         <div className="w-full lg:w-[40%] space-y-4 z-20 mt-10 lg:mt-0">
           <h1 className="text-2xl md:text-2xl lg:text-[34px] font-extrabold leading-tight font-chakra">
-           Premium Car Maintenance & 
-            <span className="text-white"> Repair Service</span>
+           Premium Car Maintenance Repair 
+            <span className="text-white"> & Painting Service</span>
           </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed font-chakra">

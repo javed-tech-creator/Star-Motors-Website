@@ -64,7 +64,7 @@ const ContactUsPage = () => {
       title: "Our Location",
       hrf: "https://maps.app.goo.gl/ESNDgU14qmkLtfou8",
       details: [
-        "Bharat Gas Plant, Opp. HP Petrol Pump Mishrapur, Kursi Rd. Lucknow 226026",
+        "Bharat Gas Plant, Opp. HP Petrol Pump Misripur, Kursi Rd. Lucknow 226026",
       ],
       gradient: "from-orange-500 to-orange-600",
       action: "https://goo.gl/maps/YOUR_MAP_LINK",
