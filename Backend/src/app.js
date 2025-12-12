@@ -12,7 +12,8 @@ app.use(cors({
     "https://starmotors.co.in",
     "https://www.starmotors.co.in",
     "http://localhost:5173",
-    "http://localhost:5174"
+    "http://localhost:5174",
+    "http://localhost:3000","http://localhost:5173","http://localhost:5174","https://starmotor.netlify.app","https://starmotor-admin.netlify.app","https://starmotors.co.in","https://starmotors.co.in/","https://www.starmotors.co.in","https://starmotors.co.in/admin","https://starmotors.co.in/admin/"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
 allowedHeaders: ["Content-Type", "Authorization", "Accept", "X-Requested-With"],
