@@ -1,66 +1,75 @@
-import express from 'express'
-const app = express()
-import cors from 'cors'
-import cookieParser from 'cookie-parser'
-import path from 'path'
-import ApiError from './utils/ApiError.js'
-import { responseMiddleware } from './utils/ApiResponse.js'
+import express from "express";
+const app = express();
+import cors from "cors";
+import cookieParser from "cookie-parser";
+import path from "path";
+import ApiError from "./utils/ApiError.js";
+import { responseMiddleware } from "./utils/ApiResponse.js";
 
 // const allowedOrigins = JSON.parse(process.env.CORS_ORIGIN);
-app.use(cors({
-  origin: [
-    "https://starmotors.co.in",
-    "https://www.starmotors.co.in",
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "http://localhost:3000","http://localhost:5173","http://localhost:5174","https://starmotor.netlify.app","https://starmotor-admin.netlify.app","https://starmotors.co.in","https://starmotors.co.in/","https://www.starmotors.co.in","https://starmotors.co.in/admin","https://starmotors.co.in/admin/"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-allowedHeaders: ["Content-Type", "Authorization", "Accept", "X-Requested-With"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: [
+      "https://starmotors.co.in",
+      "https://www.starmotors.co.in",
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://starmotor.netlify.app",
+      "https://starmotor-admin.netlify.app",
+      "https://starmotors.co.in",
+      "https://starmotors.co.in/",
+      "https://www.starmotors.co.in",
+      "https://starmotors.co.in/admin",
+      "https://starmotors.co.in/admin/",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Accept",
+      "X-Requested-With",
+    ],
+    credentials: true,
+  })
+);
 
-
-  
-  // origin:[`http://localhost:5173`, 'http://localhost:5174'],
-app.use(express.json({limit:"16kb"}))
-app.use(express.urlencoded({extended:true, limit:"16kb"}))
-app.use(express.static("public"))
+// origin:[`http://localhost:5173`, 'http://localhost:5174'],
+app.use(express.json({ limit: "16kb" }));
+app.use(express.urlencoded({ extended: true, limit: "16kb" }));
+app.use(express.static("public"));
 app.use("/public", express.static(path.join(process.cwd(), "public")));
-app.use(cookieParser())
-app.use(responseMiddleware)
-app.get('/', (req,res)=>{
-    res.send("Server is Running !!")
-})
+app.use(cookieParser());
+app.use(responseMiddleware);
+app.get("/", (req, res) => {
+  res.send("Server is Running !!");
+});
 
 app.use((req, res, next) => {
   console.log("➡️ Request:", req.method, req.originalUrl);
   next();
 });
 
-
-
-
 // user routes
-import userRoutes from './routes/user.route.js'
-app.use('/api/v1/user', userRoutes)
+import userRoutes from "./routes/user.route.js";
+app.use("/api/v1/user", userRoutes);
 
 //blog routes
-import BlogRoutes from './routes/blog.routes.js'
-app.use('/api/v1/blog' , BlogRoutes)
+import BlogRoutes from "./routes/blog.routes.js";
+app.use("/api/v1/blog", BlogRoutes);
 
-//product 
+//product
 // import ProductRoutes from './routes/product.routes.js'
 // app.use("/api/v1/product", ProductRoutes)
 
-//product 
-import TeamRoutes from './routes/team.routes.js'
-app.use("/api/v1/team", TeamRoutes)
+//product
+import TeamRoutes from "./routes/team.routes.js";
+app.use("/api/v1/team", TeamRoutes);
 
-//product 
-import InquiryRoutes from './routes/inquiry.routes.js'
-app.use("/api/v1/inquiry", InquiryRoutes)
-
+//product
+import InquiryRoutes from "./routes/inquiry.routes.js";
+app.use("/api/v1/inquiry", InquiryRoutes);
 
 //news latter
 // import NewsLatterRoutes from './routes/newsLatter.routes.js'
@@ -74,22 +83,17 @@ app.use("/api/v1/inquiry", InquiryRoutes)
 // import VisitorRoutes from './routes/visitor.routes.js'
 // app.use("/api/v1/visitor", VisitorRoutes)
 
-
 //Job routes
 // import JobRoutes from './routes/job.routes.js'
 // app.use("/api/v1/job", JobRoutes)
 
-
 //dashboard routes
-import DashboardRoutes from './routes/dashboard.routes.js'
-app.use("/api/v1/dashboard", DashboardRoutes)
-
-
+import DashboardRoutes from "./routes/dashboard.routes.js";
+app.use("/api/v1/dashboard", DashboardRoutes);
 
 app.use((req, res, next) => {
   next(new ApiError(404, "Route not found"));
 });
-
 
 // api error responce
 app.use((err, req, res, next) => {
@@ -99,11 +103,11 @@ app.use((err, req, res, next) => {
       success: false,
       message: err.message,
       data: err.data,
-      stack:err.stack,
+      stack: err.stack,
       timestamp: new Date().toISOString(),
     });
   }
   res.status(500).json({ message: "Internal Server Error" });
 });
 
-export {app}
+export { app };
