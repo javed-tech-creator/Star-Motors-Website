@@ -76,8 +76,8 @@ app.use("/api/v1/inquiry", InquiryRoutes);
 // app.use("/api/v1/news-latter", NewsLatterRoutes)
 
 //gallery routes
-// import GalleryRoutes from './routes/gallery.routes.js'
-// app.use("/api/v1/gallery", GalleryRoutes)
+import GalleryRoutes from './routes/gallery.routes.js'
+app.use("/api/v1/gallery", GalleryRoutes)
 
 //Visitor routes
 // import VisitorRoutes from './routes/visitor.routes.js'
