@@ -71,8 +71,8 @@ const Footer = () => {
               ))}
               <span className="p-4">
                 <a
-                  // href="https://starmotor-admin.netlify.app"
-                 href="https://starmotors.co.in/admin/"
+                  href="https://starmotor-admin.netlify.app"
+                //  href="https://starmotors.co.in/admin/"
                   target="_blank"
                   className="
        cursor-pointer
