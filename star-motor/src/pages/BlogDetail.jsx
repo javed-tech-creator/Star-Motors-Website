@@ -68,7 +68,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#111111] overflow-hidden text-white selection:bg-green-500/30">
+    <div className="relative min-h-screen bg-[#111111] overflow-hidden text-white selection:bg-orange-500/30">
       <div className="relative z-10 pt-20  lg:pt-20">
         <div className="px-6 lg:px-20">
           {/* breadcrumb  */}
@@ -85,7 +85,7 @@ const BlogDetail = () => {
               innovations, and company announcements.
             </p>
 
-            <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 mb-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all">
+            <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 mb-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all">
               <Link
                 to="/"
                 className="hover:text-orange-400 flex items-center gap-1 transition-colors"
@@ -105,7 +105,7 @@ const BlogDetail = () => {
             
           </div>
 
-         <div className="container mx-auto px-4 py-10 lg:pb-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
+         <div className="container mx-auto px-4 py-5 lg:pb-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
                 {/* Blog Details */}
                 <div className="lg:col-span-3">
                   <div className="relative">
@@ -119,7 +119,7 @@ const BlogDetail = () => {
                         <Calendar className="inline-flex mr-1 h-4 w-4" />
                         {formatDate(blog.updatedAt)}
                       </p>
-                      <div className="flex justify-center items-center bg-green-500 px-2 py-1 rounded-full text-xs font-medium text-white">
+                      <div className="flex justify-center items-center bg-orange-500 px-2 py-1 rounded-full text-xs font-medium text-white">
                         <Tag className="h-4 w-4 mr-1 inline-flex" />
                         {blog.category || "Uncategorized"}
                       </div>
@@ -130,28 +130,28 @@ const BlogDetail = () => {
                     {blog.title}
                   </h1>
                   <div
-                    className="mt-4 lg:text-lg text-gray-950 blog"
+                    className="mt-4 lg:text-lg text-white blog font-chakra"
                     dangerouslySetInnerHTML={{ __html: blog.description }}
                   />
         
                   {/* Back to Blogs Button */}
                   <Link
                     to="/blog"
-                    className="mt-4 inline-block bg-green-600 text-white px-6 py-3 hover:bg-green-600 rounded-xl transition-all duration-300"
+                    className="mt-4 inline-block bg-orange-600 text-white px-4 py-1.5 hover:bg-orange-600 rounded-xl transition-all duration-300"
                   >
                     Back to Blogs
                   </Link>
                 </div>
         
                 {/* Related Blogs */}
-                <div className="lg:col-span-1 border p-2 border-gray-100">
-                  <h2 className="text-2xl font-semibold mb-4 messiri">Other Blogs</h2>
+                <div className="lg:col-span-1 p-2">
+                  <h2 className="text-2xl font-semibold mb-4 font-chakra text-center">Other Blogs</h2>
                   <div className="space-y-4 overflow-y-auto">
                     {relatedBlogs?.map((relatedBlog) => (
                       <Link
                         to={`/blog-detail/${relatedBlog.slug}`}
                         key={relatedBlog._id}
-                        className="block p-4 bg-white  shadow-md hover:shadow-lg transition-all duration-300"
+                        className="block p-4 border-b-2 shadow-md hover:shadow-lg transition-all duration-300 hover:text-orange-400"
                       >
                         <img
                           src={
@@ -164,7 +164,7 @@ const BlogDetail = () => {
                         <p className="text-gray-500 text-sm mt-2">
                           {formatDate(relatedBlog.updatedAt)}
                         </p>
-                        <h3 className="text-lg font-semibold mt-1 line-clamp-1">
+                        <h3 className="text-lg font-semibold mt-1 line-clamp-1 font-chakra ">
                           {relatedBlog.title}
                         </h3>
                       </Link>

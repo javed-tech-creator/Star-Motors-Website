@@ -77,6 +77,18 @@
   }
   
   .blog strong{
-    color: black !important;
+    color: white !important;
   }
-  
+ 
+    .blog p{
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      color: white !important;
+
+    }
+    .blog li, p span{
+      font-size: 13px !important;
+      font-weight: 400 !important;
+          color: white !important;
+
+    }

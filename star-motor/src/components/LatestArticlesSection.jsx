@@ -46,10 +46,10 @@ export default function LatestArticlesSection() {
 
   return (
     <section className="w-full bg-[#111] py-10 font-chakra overflow-hidden">
-      <div className="px-4.5 md:px-6 lg:px-20">
+      <div className="px-4.5 md:px-6 lg:px-20 ">
 
         {/* SLIDER MAIN WRAPPER */}
-        <div className="relative w-full ">
+        <div className="relative w-full overflow-hidden ">
 
           {/* TRACK */}
           <div
@@ -89,7 +89,7 @@ export default function LatestArticlesSection() {
         </div>
 
         {/* DOTS */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-8 ">
           {articles.slice(0, articles.length - (slidesPerView - 1)).map((_, index) => (
             <button
               key={index}

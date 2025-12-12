@@ -8,24 +8,24 @@ import { Mail, MapPin, Phone } from "lucide-react";
 const Footer = () => {
   const menuAbout = ["ABOUT US", "OUR TEAM", "OUR WORKS", "FAQ"];
   const menuServices = [
-    "CAR SERVICE/REPARING",
-    "CAR, BIKE FOAM WASH",
-    "INTERIOR CLEANING",
-    "DENTING PAINTING",
-    "CAR MODIFICATION",
+    "CAR REPARING SERVICE",
+    "DENTING & PAINTING",
+    "AC & Electrical Services",
+    "CAR FOAM WASH",
     "WHEEL ALIGNMENT",
     "WHEEL BALANCING",
-    "TYRE WITH TYRE CHANGING",
+    "INTERIOR CLEANING",
+    "CAR MODIFICATION",
   ];
   const menuLink = [
     "service1",
-    "service2",
-    "single1",
     "single2",
-    "single3",
+    "single6",
+    "service2",
     "single4",
     "single5",
-    "single6",
+    "single1",
+    "single3",
   ];
 
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black text-white py-10 md:py-12 px-6 md:px-12 lg:px-20 font-chakra">
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-20">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-5">
           {/* BRAND INFO */}
           {/* <div>
               <a
@@ -60,7 +60,7 @@ const Footer = () => {
               POPULAR SERVICES
             </h4>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2">
               {menuServices.map((item, index) => (
                 <div
                   onClick={() => navigate(`/service/${menuLink[index]}`)}
@@ -75,6 +75,25 @@ const Footer = () => {
                   </span>
                 </div>
               ))}
+              <span className="p-4">
+                <a
+                  href="https://starmotor-admin.netlify.app"
+                  target="_blank"
+                  className="
+       cursor-pointer
+        text-white 
+        font-semibold 
+        transition 
+        duration-300
+        p-1.5
+        bg-orange-500
+        hover:bg-orange-600
+        rounded-md
+      "
+                >
+                  Admin Login
+                </a>
+              </span>
             </div>
           </div>
 
@@ -88,10 +107,10 @@ const Footer = () => {
             <div className="flex gap-2 justify-center">
               <MapPin size={30} className="text-orange-500" />
               <a
-                href="https://www.google.com/maps/search/?api=1&query=23/A,+New+Market+Road,+Mumbai,+Maharashtra+400001"
+                href="https://maps.app.goo.gl/ESNDgU14qmkLtfou8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm mt-1 leading-6 block hover:text-orange-400 transition cursor-pointer"
+                className="text-md font-semibold mt-1 leading-6 block hover:text-orange-400 transition cursor-pointer"
               >
                 Bharat Gas Plant, Opp. HP Petrol Pump Misripur, Kursi Rd.
                 Lucknow 226026
@@ -99,56 +118,46 @@ const Footer = () => {
             </div>
             <div>
               {/* PHONE */}
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 ">
                 <Phone size={25} className="text-orange-500" />
 
-                <div className="text-sm mt-1 flex flex-wrap gap-1">
+                <div className="text-sm mt-1 flex flex-wrap gap-1 text-md font-semibold">
                   <a
                     href="tel:+919956877786"
                     className="hover:text-orange-400 transition cursor-pointer"
                   >
-                    +91 99568 77786
+                    +91 99568 77786,
                   </a>
-                  <span>,</span>
                   <a
                     href="tel:+919026119669"
                     className="hover:text-orange-400 transition cursor-pointer"
                   >
-                    +91 90261 19669
+                  90261 19669,
                   </a>
-                  <span>,</span>
+                  {/* <span>,</span> */}
                   <a
                     href="tel:+918545045881"
                     className="hover:text-orange-400 transition cursor-pointer"
                   >
-                    +91 85450 45881
+                  85450 45881
+                  </a>,
+
+                   <a
+                    href="tel:052228331748"
+                    className="hover:text-orange-400 transition cursor-pointer"
+                  >
+                    0522 28331748
                   </a>
-                  ,
-                  <span>
-                    <a
-                      href="https://starmotor-admin.netlify.app"
-                      target="_blank"
-                      className="
-       cursor-pointer
-        text-white 
-        font-semibold 
-        hover:text-orange-600 
-        transition 
-        duration-300
-      "
-                    >
-                      Admin Login
-                    </a>
-                  </span>
+
                 </div>
               </div>
 
               {/* EMAIL */}
               <div className="flex gap-2 items-center">
-                <Mail size={14} className="text-orange-500" />
+                <Mail size={16} className="text-orange-500" />
                 <a
                   href="mailto:starmotorslucknow@gmail.com"
-                  className="text-sm mt-1 block hover:text-orange-400 transition cursor-pointer"
+                  className=" mt-1 block hover:text-orange-400 transition cursor-pointer text-md font-semibold"
                 >
                   starmotorslucknow@gmail.com
                 </a>

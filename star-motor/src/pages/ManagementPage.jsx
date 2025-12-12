@@ -233,9 +233,7 @@ export default function ManagementPage() {
         <div
           className="relative border border-gray-800  rounded-2xl p-12 text-center overflow-hidden
     bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
-    bg-cover bg-center bg-no-repeat
-  "
-        >
+    bg-cover bg-center bg-no-repeat">
           {/* DARK OVERLAY */}
           <div className="absolute inset-0 bg-black/70"></div>
                     <div className="relative z-10">

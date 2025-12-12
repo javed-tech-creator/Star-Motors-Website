@@ -109,35 +109,28 @@ export default function Navbar() {
                   to="service/service1"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-                  CAR SERVICE/REPARING
-                </Link>
-
-                <Link
-                  to="service/service2"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  CAR, BIKE FOAM WASH
-                </Link>
-
-                <Link
-                  to="service/single1"
-                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
-                >
-                  INTERIOR CLEANING
+                  CAR REPAIRING SERVICE
                 </Link>
 
                 <Link
                   to="service/single2"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-                  DENTING PAINTING
+                  DENTING & PAINTING
                 </Link>
 
                 <Link
-                  to="service/single3"
+                  to="service/single6"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-                  CAR MODIFICATION
+                  AC & Electrical Services
+                </Link>
+
+                <Link
+                  to="service/service2"
+                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
+                >
+                   CAR FOAM WASH
                 </Link>
 
                 <Link
@@ -155,10 +148,17 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                  to="service/single6"
+                  to="service/single1"
                   className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
                 >
-                  TYRE WITH TYRE CHANGING
+                  INTERIOR CLEANING
+                </Link>
+
+                <Link
+                  to="service/single3"
+                  className="block px-4 py-1.5 text-white hover:text-[#ff6b35]"
+                >
+                   CAR MODIFICATION
                 </Link>
               </div>
             </div>
@@ -314,35 +314,28 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
-              CAR SERVICE/REPARING
-            </Link>
-            <Link
-              to="service/service2"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-              CAR, BIKE FOAM WASH
-            </Link>
-            <Link
-              to="service/single1"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
-            >
-              INTERIOR CLEANING
+              CAR REPAIRING SERVICE 
             </Link>
             <Link
               to="service/single2"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
-              DENTING PAINTING
+               DENTING & PAINTING
             </Link>
             <Link
-              to="service/single3"
+              to="service/single6"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
-              CAR MODIFICATION
+               AC & Electrical Services
+            </Link>
+            <Link
+              to="service/service2"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
+              CAR FOAM WASH
             </Link>
             <Link
               to="service/single4"
@@ -350,20 +343,28 @@ export default function Navbar() {
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
               WHEEL ALIGNMENT
+
             </Link>
             <Link
               to="service/single5"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
-              WHEEL BALANCING
+             WHEEL BALANCING
             </Link>
             <Link
-              to="service/single6"
+              to="service/single1"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-gray-300 hover:text-[#ff6b35]"
             >
-              TYRE WITH TYRE CHANGING
+               INTERIOR CLEANING
+            </Link>
+            <Link
+              to="service/single3"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-gray-300 hover:text-[#ff6b35]"
+            >
+              CAR MODIFICATION
             </Link>
           </MobileDropdown>
 

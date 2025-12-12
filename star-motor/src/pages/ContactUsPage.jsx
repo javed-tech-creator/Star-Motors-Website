@@ -212,8 +212,7 @@ const ContactUsPage = () => {
           <h1 className="hero-animate text-2xl md:text-3xl lg:text-4xl font-black mb-3">
             Get In <span className="text-orange-500">Touch</span> With Us
           </h1>
-                  <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
-
+          <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
         </div>
 
         <div className="flex justify-center mb-6">
@@ -249,21 +248,36 @@ const ContactUsPage = () => {
                   {info.title}
                 </h3>
                 <div className="space-y-1">
-                  {info.details.map((line, i) =>
-                    info.title === "Call Us" ? (
-                      <a
-                        key={i}
-                         href={`tel:${line.replace(/^\+91/, "").replace(/[^0-9]/g, "")}`}
-                        className="text-gray-300 text-sm hover:text-orange-400 transition"
-                      >
-                        {line} <br />
-                      </a>
+                  {info.details.map((line, i) => {
+                    const number = line
+                      .replace(/^\+91/, "")
+                      .replace(/[^0-9]/g, "");
+                    const isLast = i === info.details.length - 1;
+
+                    return info.title === "Call Us" ? (
+                      <span key={i}>
+                        {/* Last item → new line before it */}
+                        {isLast && <br />}
+
+                        <a
+                          href={`tel:+91${number}`}
+                          className="text-gray-300 text-sm hover:text-orange-400 transition"
+                        >
+                          {line}
+                        </a>
+
+                        {/* Only add comma for first two items */}
+                        {!isLast && ", "}
+                      </span>
                     ) : (
-                      <p key={i} className="text-gray-400 hover:text-orange-400 text-sm">
+                      <p
+                        key={i}
+                        className="text-gray-400 hover:text-orange-400 text-sm"
+                      >
                         {line}
                       </p>
-                    )
-                  )}
+                    );
+                  })}
                 </div>
               </a>
             ))}
