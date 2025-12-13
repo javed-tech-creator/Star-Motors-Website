@@ -12,6 +12,8 @@ import ClientTestimonialsHeader from "../components/ClientTestimonialsHeader";
 import LatestArticlesHeader from "../components/LatestArticlesHeader";
 import LatestArticlesSection from "../components/LatestArticlesSection";
 import ChooseUS from "../components/ChooseUS";
+import OurWorksHeading from "../components/OurWorksHeading";
+import OurWorksSection from "../components/OurWorksSection";
 
 const MainPage = () => {
   return (
@@ -51,6 +53,10 @@ const MainPage = () => {
       {/*  CTA HEADING ADDED HERE  */}
       <ChooseUS />
       <CTASection />
+
+         {/* Our Works  */}
+      <OurWorksHeading />
+      <OurWorksSection />
 
       {/*  client tail HEADING ADDED HERE  */}
       <OurClientsHeading />
