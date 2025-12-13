@@ -9,13 +9,21 @@ import {
   ShoppingCart,
 } from "lucide-react";
 
+import ser1 from "../assets/services/service1.jpg";
+import ser2 from "../assets/services/service2.jpg";
+import ser3 from "../assets/services/service3.jpg";
+import ser4 from "../assets/services/service4.jpg";
+import ser5 from "../assets/services/service5.jpg";
+import ser6 from "../assets/services/service6.jpg";
+import ser7 from "../assets/services/service7.jpg";
+import ser8 from "../assets/services/service8.jpg";
+
 const servicesData = [
   {
     title: "CAR REPARING SERVICE",
     slug: "car-reparing-service",
     icon: Wrench,
-    heroImage:
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200",
+    heroImage: ser1,
     description: (
       <p>
         At our *Car Service and Repairing Center*, we provide comprehensive care
@@ -101,212 +109,11 @@ const servicesData = [
     ],
   },
   {
-    title: "CAR FOAM WASH",
-    slug: "car-foam-wash",
-
-    icon: Droplets,
-    heroImage:
-      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1200",
-
-    description: (
-      <p>
-        Our <strong>Car Foam Wash</strong> service is designed to give your
-        vehicle a deep, gentle, and premium cleaning experience. Using advanced
-        foam technology, we safely remove dirt, grime, and contaminants without
-        harming the paint surface. The thick foam layer loosens stubborn
-        particles, ensuring a spotless exterior while preserving your car’s
-        shine and paint quality. High-pressure rinsing and microfiber finishing
-        provide a refreshed, glossy, and showroom-like appearance.
-      </p>
-    ),
-
-    features: [
-      {
-        title: "Advanced Foam Technology",
-        description:
-          "Soft foam gently lifts dirt and grime without scratching the paint, ensuring safe and effective cleaning.",
-      },
-      {
-        title: "High-Pressure Rinse",
-        description:
-          "Controlled pressure removes all foam, dust, and residue from hidden and hard-to-reach areas.",
-      },
-      {
-        title: "Premium Shampoo & Products",
-        description:
-          "We use pH-neutral, high-quality foam shampoos that protect your car’s paint and enhance shine.",
-      },
-      {
-        title: "Microfiber Finishing",
-        description:
-          "Soft microfiber towels ensure streak-free drying and a polished, glossy finish.",
-      },
-      {
-        title: "Paint-Safe & Eco-Friendly",
-        description:
-          "Gentle on paint, seals, and trims while using eco-friendly cleaning solutions.",
-      },
-      {
-        title: "Quick & Professional Service",
-        description:
-          "Fast turnaround time with expert cleaning delivered by trained professionals.",
-      },
-    ],
-
-    highlights: [
-      { text: "Safe pH-Balanced Foam", icon: "🧼" },
-      { text: "Scratch-Free Cleaning", icon: "✨" },
-      { text: "Premium Drying & Finishing", icon: "🧽" },
-      { text: "Fast Turnaround Service", icon: "⚡" },
-    ],
-
-    faqs: [
-      {
-        q: "What is the difference between normal washing and foam washing?",
-        a: "Foam washing uses thick foam that loosens dirt gently, reducing scratches—unlike regular pressure or bucket washes.",
-      },
-      {
-        q: "How often should I get a foam wash?",
-        a: "Every 1–2 weeks depending on driving conditions and car usage.",
-      },
-      {
-        q: "Is foam washing safe for the paint?",
-        a: "Yes, our foam is pH-balanced and paint-safe, protecting the clear coat and shine.",
-      },
-      {
-        q: "Do you clean underbody during foam wash?",
-        a: "Underbody wash is available as an add-on service.",
-      },
-      {
-        q: "Does foam wash remove scratches?",
-        a: "No. It removes dirt and stains. Scratch removal requires polishing or rubbing.",
-      },
-      {
-        q: "How long does a foam wash take?",
-        a: "Usually 20–30 minutes depending on car size and condition.",
-      },
-      {
-        q: "What products do you use?",
-        a: "Premium foam shampoos, wax-based cleaners, microfiber cloths, and professional-grade equipment.",
-      },
-      {
-        q: "Is interior cleaning included?",
-        a: "Interior cleaning is not included but can be added separately.",
-      },
-    ],
-  },
-  {
-    title: "INTERIOR CLEANING",
-    slug: "car-interior-cleaning",
-    icon: Sparkles,
-    heroImage:
-      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1920&q=80",
-    description: (
-      <p>
-        Our Interior Cleaning service is designed to give your vehicle a fresh,
-        hygienic, and spotless cabin environment. Using premium cleaning
-        solutions, vacuuming tools, steam sanitization, and microfiber
-        detailing, we deep-clean every corner of your car’s interior. From seats
-        and carpets to dashboard, door panels, and roof lining — we ensure your
-        car feels new, smells fresh, and looks perfectly maintained. This
-        service removes dust, stains, bacteria, and bad odors to improve overall
-        comfort and hygiene.
-      </p>
-    ),
-
-    features: [
-      {
-        title: "Deep Interior Cleaning",
-        description:
-          "Complete cleaning of seats, mats, carpets, dashboard, door trims, and boot space using professional tools.",
-      },
-      {
-        title: "Premium Products & Sanitization",
-        description:
-          "Safe, high-quality cleaners and steam sanitization to eliminate germs, stains, and odors.",
-      },
-      {
-        title: "Upholstery & Fabric Care",
-        description:
-          "Special treatment for fabric, leather, and vinyl surfaces to restore shine and freshness without damage.",
-      },
-      {
-        title: "Professional Vacuuming & Detailing",
-        description:
-          "High-suction vacuuming with fine detailing ensures dust-free and spotless interiors.",
-      },
-      {
-        title: "Odor Removal",
-        description:
-          "We treat unpleasant smells caused by moisture, food spills, and bacteria to leave a fresh fragrance.",
-      },
-      {
-        title: "Safe & Eco-Friendly",
-        description: "Non-toxic, eco-friendly products safe for kids and pets.",
-      },
-    ],
-
-    highlights: [
-      {
-        text: "Complete interior cleaning and detailing",
-        icon: "✨",
-      },
-      {
-        text: "Steam sanitization for germs and bacteria",
-        icon: "🧼",
-      },
-      {
-        text: "Premium care for fabric, leather, and vinyl",
-        icon: "🛋️",
-      },
-      {
-        text: "High-suction vacuum and microfiber finishing",
-        icon: "🧹",
-      },
-    ],
-
-    faqs: [
-      {
-        q: "What is included in interior cleaning?",
-        a: "Vacuuming, dashboard cleaning, seat cleaning, mat washing, door panel cleaning, glass cleaning, and boot area cleaning.",
-      },
-      {
-        q: "Do you clean leather seats?",
-        a: "Yes, we use specialized leather cleaners and conditioners that remove dirt and restore shine without harming the material.",
-      },
-      {
-        q: "How long does interior cleaning take?",
-        a: "A standard interior cleaning takes 45–90 minutes, depending on the car size and condition.",
-      },
-      {
-        q: "Will interior cleaning remove stains?",
-        a: "Light to moderate stains can be removed. Deep stains may require interior shampooing or detailing.",
-      },
-      {
-        q: "Do you provide sanitization?",
-        a: "Yes, we offer steam sanitization that kills germs, bacteria, and removes bad odors.",
-      },
-      {
-        q: "How often should I get interior cleaning done?",
-        a: "Every 2–4 weeks depending on usage, kids, pets, and overall vehicle cleanliness.",
-      },
-      {
-        q: "Does interior cleaning include AC vent cleaning?",
-        a: "Basic interior cleaning includes outer vent cleaning. Deep AC duct cleaning is available as an add-on service.",
-      },
-      {
-        q: "Do you clean the roof lining?",
-        a: "Yes, roof lining is cleaned carefully using non-moisture techniques to avoid sagging or damage.",
-      },
-    ],
-  },
-  {
     title: "DENTING & PAINTING",
     slug: "car-denting-painting",
 
     icon: Car,
-    heroImage:
-      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=80",
+    heroImage: ser2,
 
     description: (
       <p>
@@ -414,97 +221,194 @@ const servicesData = [
     ],
   },
   {
-    title: "CAR MODIFICATION",
-    slug: "car-modification",
-    icon: Settings,
-    heroImage:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200",
+    title: "AC & Electrical Services",
+    slug: "car-ac-electrical-services",
+    icon: ShoppingCart,
+    heroImage: ser3,
+
     description: (
       <p>
-        At our workshop, we transform ordinary vehicles into extraordinary
-        machines. Our car modification services cover performance upgrades,
-        aesthetic enhancements, and customizations tailored to your style and
-        needs. From body kits, alloy wheels, and LED lighting to engine tuning
-        and exhaust upgrades, our skilled technicians combine expertise with
-        precision, delivering quality modifications that stand out on the road.
+        Our <strong>AC & Electrical Services</strong> ensure your vehicle
+        remains comfortable, efficient, and safe in every driving condition.
+        From restoring cooling performance to fixing electrical faults, our
+        certified technicians use advanced diagnostic tools and high-quality
+        components to deliver precise, long-lasting solutions. Whether it’s AC
+        gas leakage, compressor issues, blower malfunction, battery problems,
+        wiring faults, or sensor failures—we provide complete inspection,
+        repair, and optimization to keep your car running smoothly.
       </p>
     ),
 
     features: [
       {
-        title: "Expert Technicians",
+        title: "Expert AC & Electrical Technicians",
         description:
-          "Certified professionals with years of experience ensuring top-notch workmanship.",
+          "Certified professionals skilled in handling complex AC systems, wiring, circuits, and electrical diagnostics.",
       },
       {
-        title: "Customized Solutions",
+        title: "Advanced Diagnostic Tools",
         description:
-          "Personalized modifications tailored to your taste, for performance, aesthetics, or both.",
+          "Computerized scanners, multimeters, AC gauges, and leak detectors for accurate fault identification.",
       },
       {
-        title: "Quality Parts",
+        title: "High-Quality Components",
         description:
-          "Premium-quality components for durability, safety, and long-lasting performance.",
+          "100% genuine compressors, condensers, relays, sensors, wiring, and electrical parts for long-term reliability.",
       },
       {
-        title: "Latest Technology",
+        title: "Complete AC Performance Optimization",
         description:
-          "Advanced tools and diagnostic equipment for precise modifications.",
+          "Cooling efficiency tests, airflow checks, compressor inspection, and full-system tuning.",
       },
       {
-        title: "Affordable Pricing",
-        description: "Competitive pricing without compromising on quality.",
+        title: "Transparent Pricing",
+        description:
+          "Clear estimates, fair pricing, and complete explanations with no hidden charges.",
       },
       {
-        title: "Customer Satisfaction",
+        title: "Quick & Reliable Solutions",
         description:
-          "We prioritize your vision, delivering results that exceed expectations.",
+          "Fast, efficient repairs that minimize downtime without compromising service quality.",
       },
     ],
 
     highlights: [
-      {
-        text: "Performance Upgrades",
-        icon: "⚡",
-      },
-      {
-        text: "Aesthetic Enhancements",
-        icon: "🎨",
-      },
-      {
-        text: "Custom Designs & Colors",
-        icon: "🖌️",
-      },
-      {
-        text: "Engine & Exhaust Tuning",
-        icon: "🔧",
-      },
+      { text: "Accurate Computerized AC Diagnostics", icon: "🧊" },
+      { text: "Genuine Electrical Components", icon: "🔌" },
+      { text: "Advanced Leak Detection Tools", icon: "🛠️" },
+      { text: "Warranty on AC & Electrical Repairs", icon: "⭐" },
     ],
 
     faqs: [
       {
-        q: "Can you modify any car model?",
-        a: "Yes, we cater to a wide range of car brands and models, ensuring every modification is compatible and safe.",
+        q: "Why is my car AC not cooling properly?",
+        a: "Low refrigerant, compressor issues, cooling coil blockage, or gas leakage may be the reason. We perform a full AC pressure test to identify the issue.",
       },
       {
-        q: "How long does a car modification take?",
-        a: "Minor aesthetic upgrades may take a few hours, while full performance modifications could take several days depending on the extent of the work.",
+        q: "How often should I get my car AC serviced?",
+        a: "A complete AC service is recommended every 12 months or if cooling decreases.",
       },
       {
-        q: "Will modifications affect my car’s warranty?",
-        a: "We recommend checking with your car manufacturer. Our modifications are designed to minimize warranty risks and ensure safety.",
+        q: "Do you check for AC gas leaks?",
+        a: "Yes. We use leak-detection tools to identify leaks in the compressor, hose, condenser, or cooling coil.",
       },
       {
-        q: "Do you offer performance tuning?",
-        a: "Yes, we provide engine tuning, exhaust upgrades, suspension enhancements, and more to improve your car’s performance.",
+        q: "What electrical problems do you repair?",
+        a: "Battery, alternator, fuses, relays, wiring faults, sensors, lighting issues, and ECU/electrical system faults.",
       },
       {
-        q: "Can I choose custom designs or colors?",
-        a: "Absolutely. Options include paint jobs, decals, wraps, lighting, interiors, and more to reflect your unique style.",
+        q: "Why does my car battery drain quickly?",
+        a: "Weak battery, alternator malfunction, wiring short circuits, or accessories drawing excess power. We perform a full charging system test.",
       },
       {
-        q: "Is financing available for modifications?",
-        a: "Yes, we offer flexible payment plans to make your dream modifications more accessible.",
+        q: "Do you use genuine electrical parts?",
+        a: "Yes. Only high-quality, manufacturer-approved electrical components are used.",
+      },
+      {
+        q: "How do I know if my car’s compressor needs replacement?",
+        a: "Weak cooling, unusual noise, or high-pressure readings indicate compressor failure. We perform a compressor performance test.",
+      },
+      {
+        q: "How long does an AC service take?",
+        a: "Basic AC service takes 1–2 hours. Major repairs like compressor or wiring may take longer.",
+      },
+      {
+        q: "Do you offer warranty on AC & electrical repairs?",
+        a: "Yes. Warranty is provided on major AC and electrical repair work.",
+      },
+    ],
+  },
+  {
+    title: "CAR FOAM WASH",
+    slug: "car-foam-wash",
+
+    icon: Droplets,
+    heroImage: ser4,
+
+    description: (
+      <p>
+        Our <strong>Car Foam Wash</strong> service is designed to give your
+        vehicle a deep, gentle, and premium cleaning experience. Using advanced
+        foam technology, we safely remove dirt, grime, and contaminants without
+        harming the paint surface. The thick foam layer loosens stubborn
+        particles, ensuring a spotless exterior while preserving your car’s
+        shine and paint quality. High-pressure rinsing and microfiber finishing
+        provide a refreshed, glossy, and showroom-like appearance.
+      </p>
+    ),
+
+    features: [
+      {
+        title: "Advanced Foam Technology",
+        description:
+          "Soft foam gently lifts dirt and grime without scratching the paint, ensuring safe and effective cleaning.",
+      },
+      {
+        title: "High-Pressure Rinse",
+        description:
+          "Controlled pressure removes all foam, dust, and residue from hidden and hard-to-reach areas.",
+      },
+      {
+        title: "Premium Shampoo & Products",
+        description:
+          "We use pH-neutral, high-quality foam shampoos that protect your car’s paint and enhance shine.",
+      },
+      {
+        title: "Microfiber Finishing",
+        description:
+          "Soft microfiber towels ensure streak-free drying and a polished, glossy finish.",
+      },
+      {
+        title: "Paint-Safe & Eco-Friendly",
+        description:
+          "Gentle on paint, seals, and trims while using eco-friendly cleaning solutions.",
+      },
+      {
+        title: "Quick & Professional Service",
+        description:
+          "Fast turnaround time with expert cleaning delivered by trained professionals.",
+      },
+    ],
+
+    highlights: [
+      { text: "Safe pH-Balanced Foam", icon: "🧼" },
+      { text: "Scratch-Free Cleaning", icon: "✨" },
+      { text: "Premium Drying & Finishing", icon: "🧽" },
+      { text: "Fast Turnaround Service", icon: "⚡" },
+    ],
+
+    faqs: [
+      {
+        q: "What is the difference between normal washing and foam washing?",
+        a: "Foam washing uses thick foam that loosens dirt gently, reducing scratches—unlike regular pressure or bucket washes.",
+      },
+      {
+        q: "How often should I get a foam wash?",
+        a: "Every 1–2 weeks depending on driving conditions and car usage.",
+      },
+      {
+        q: "Is foam washing safe for the paint?",
+        a: "Yes, our foam is pH-balanced and paint-safe, protecting the clear coat and shine.",
+      },
+      {
+        q: "Do you clean underbody during foam wash?",
+        a: "Underbody wash is available as an add-on service.",
+      },
+      {
+        q: "Does foam wash remove scratches?",
+        a: "No. It removes dirt and stains. Scratch removal requires polishing or rubbing.",
+      },
+      {
+        q: "How long does a foam wash take?",
+        a: "Usually 20–30 minutes depending on car size and condition.",
+      },
+      {
+        q: "What products do you use?",
+        a: "Premium foam shampoos, wax-based cleaners, microfiber cloths, and professional-grade equipment.",
+      },
+      {
+        q: "Is interior cleaning included?",
+        a: "Interior cleaning is not included but can be added separately.",
       },
     ],
   },
@@ -512,8 +416,7 @@ const servicesData = [
     title: "WHEEL ALIGNMENT",
     slug: "car-wheel-alignment",
     icon: Target,
-    heroImage:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200",
+    heroImage: ser5,
 
     description: (
       <p>
@@ -609,8 +512,7 @@ const servicesData = [
     title: "WHEEL BALANCING",
     slug: "car-wheel-balancing",
     icon: Scale,
-    heroImage:
-      "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=1200",
+    heroImage: ser6,
 
     description: (
       <p>
@@ -708,101 +610,200 @@ const servicesData = [
     ],
   },
   {
-    title: "AC & Electrical Services",
-    slug: "car-ac-electrical-services",
-    icon: ShoppingCart,
-    heroImage:
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200",
-
+    title: "INTERIOR CLEANING",
+    slug: "car-interior-cleaning",
+    icon: Sparkles,
+    heroImage: ser7,
     description: (
       <p>
-        Our <strong>AC & Electrical Services</strong> ensure your vehicle
-        remains comfortable, efficient, and safe in every driving condition.
-        From restoring cooling performance to fixing electrical faults, our
-        certified technicians use advanced diagnostic tools and high-quality
-        components to deliver precise, long-lasting solutions. Whether it’s AC
-        gas leakage, compressor issues, blower malfunction, battery problems,
-        wiring faults, or sensor failures—we provide complete inspection,
-        repair, and optimization to keep your car running smoothly.
+        Our Interior Cleaning service is designed to give your vehicle a fresh,
+        hygienic, and spotless cabin environment. Using premium cleaning
+        solutions, vacuuming tools, steam sanitization, and microfiber
+        detailing, we deep-clean every corner of your car’s interior. From seats
+        and carpets to dashboard, door panels, and roof lining — we ensure your
+        car feels new, smells fresh, and looks perfectly maintained. This
+        service removes dust, stains, bacteria, and bad odors to improve overall
+        comfort and hygiene.
       </p>
     ),
 
     features: [
       {
-        title: "Expert AC & Electrical Technicians",
+        title: "Deep Interior Cleaning",
         description:
-          "Certified professionals skilled in handling complex AC systems, wiring, circuits, and electrical diagnostics.",
+          "Complete cleaning of seats, mats, carpets, dashboard, door trims, and boot space using professional tools.",
       },
       {
-        title: "Advanced Diagnostic Tools",
+        title: "Premium Products & Sanitization",
         description:
-          "Computerized scanners, multimeters, AC gauges, and leak detectors for accurate fault identification.",
+          "Safe, high-quality cleaners and steam sanitization to eliminate germs, stains, and odors.",
       },
       {
-        title: "High-Quality Components",
+        title: "Upholstery & Fabric Care",
         description:
-          "100% genuine compressors, condensers, relays, sensors, wiring, and electrical parts for long-term reliability.",
+          "Special treatment for fabric, leather, and vinyl surfaces to restore shine and freshness without damage.",
       },
       {
-        title: "Complete AC Performance Optimization",
+        title: "Professional Vacuuming & Detailing",
         description:
-          "Cooling efficiency tests, airflow checks, compressor inspection, and full-system tuning.",
+          "High-suction vacuuming with fine detailing ensures dust-free and spotless interiors.",
       },
       {
-        title: "Transparent Pricing",
+        title: "Odor Removal",
         description:
-          "Clear estimates, fair pricing, and complete explanations with no hidden charges.",
+          "We treat unpleasant smells caused by moisture, food spills, and bacteria to leave a fresh fragrance.",
       },
       {
-        title: "Quick & Reliable Solutions",
-        description:
-          "Fast, efficient repairs that minimize downtime without compromising service quality.",
+        title: "Safe & Eco-Friendly",
+        description: "Non-toxic, eco-friendly products safe for kids and pets.",
       },
     ],
 
     highlights: [
-      { text: "Accurate Computerized AC Diagnostics", icon: "🧊" },
-      { text: "Genuine Electrical Components", icon: "🔌" },
-      { text: "Advanced Leak Detection Tools", icon: "🛠️" },
-      { text: "Warranty on AC & Electrical Repairs", icon: "⭐" },
+      {
+        text: "Complete interior cleaning and detailing",
+        icon: "✨",
+      },
+      {
+        text: "Steam sanitization for germs and bacteria",
+        icon: "🧼",
+      },
+      {
+        text: "Premium care for fabric, leather, and vinyl",
+        icon: "🛋️",
+      },
+      {
+        text: "High-suction vacuum and microfiber finishing",
+        icon: "🧹",
+      },
     ],
 
     faqs: [
       {
-        q: "Why is my car AC not cooling properly?",
-        a: "Low refrigerant, compressor issues, cooling coil blockage, or gas leakage may be the reason. We perform a full AC pressure test to identify the issue.",
+        q: "What is included in interior cleaning?",
+        a: "Vacuuming, dashboard cleaning, seat cleaning, mat washing, door panel cleaning, glass cleaning, and boot area cleaning.",
       },
       {
-        q: "How often should I get my car AC serviced?",
-        a: "A complete AC service is recommended every 12 months or if cooling decreases.",
+        q: "Do you clean leather seats?",
+        a: "Yes, we use specialized leather cleaners and conditioners that remove dirt and restore shine without harming the material.",
       },
       {
-        q: "Do you check for AC gas leaks?",
-        a: "Yes. We use leak-detection tools to identify leaks in the compressor, hose, condenser, or cooling coil.",
+        q: "How long does interior cleaning take?",
+        a: "A standard interior cleaning takes 45–90 minutes, depending on the car size and condition.",
       },
       {
-        q: "What electrical problems do you repair?",
-        a: "Battery, alternator, fuses, relays, wiring faults, sensors, lighting issues, and ECU/electrical system faults.",
+        q: "Will interior cleaning remove stains?",
+        a: "Light to moderate stains can be removed. Deep stains may require interior shampooing or detailing.",
       },
       {
-        q: "Why does my car battery drain quickly?",
-        a: "Weak battery, alternator malfunction, wiring short circuits, or accessories drawing excess power. We perform a full charging system test.",
+        q: "Do you provide sanitization?",
+        a: "Yes, we offer steam sanitization that kills germs, bacteria, and removes bad odors.",
       },
       {
-        q: "Do you use genuine electrical parts?",
-        a: "Yes. Only high-quality, manufacturer-approved electrical components are used.",
+        q: "How often should I get interior cleaning done?",
+        a: "Every 2–4 weeks depending on usage, kids, pets, and overall vehicle cleanliness.",
       },
       {
-        q: "How do I know if my car’s compressor needs replacement?",
-        a: "Weak cooling, unusual noise, or high-pressure readings indicate compressor failure. We perform a compressor performance test.",
+        q: "Does interior cleaning include AC vent cleaning?",
+        a: "Basic interior cleaning includes outer vent cleaning. Deep AC duct cleaning is available as an add-on service.",
       },
       {
-        q: "How long does an AC service take?",
-        a: "Basic AC service takes 1–2 hours. Major repairs like compressor or wiring may take longer.",
+        q: "Do you clean the roof lining?",
+        a: "Yes, roof lining is cleaned carefully using non-moisture techniques to avoid sagging or damage.",
+      },
+    ],
+  },
+  {
+    title: "CAR MODIFICATION",
+    slug: "car-modification",
+    icon: Settings,
+    heroImage: ser8,
+    description: (
+      <p>
+        At our workshop, we transform ordinary vehicles into extraordinary
+        machines. Our car modification services cover performance upgrades,
+        aesthetic enhancements, and customizations tailored to your style and
+        needs. From body kits, alloy wheels, and LED lighting to engine tuning
+        and exhaust upgrades, our skilled technicians combine expertise with
+        precision, delivering quality modifications that stand out on the road.
+      </p>
+    ),
+
+    features: [
+      {
+        title: "Expert Technicians",
+        description:
+          "Certified professionals with years of experience ensuring top-notch workmanship.",
       },
       {
-        q: "Do you offer warranty on AC & electrical repairs?",
-        a: "Yes. Warranty is provided on major AC and electrical repair work.",
+        title: "Customized Solutions",
+        description:
+          "Personalized modifications tailored to your taste, for performance, aesthetics, or both.",
+      },
+      {
+        title: "Quality Parts",
+        description:
+          "Premium-quality components for durability, safety, and long-lasting performance.",
+      },
+      {
+        title: "Latest Technology",
+        description:
+          "Advanced tools and diagnostic equipment for precise modifications.",
+      },
+      {
+        title: "Affordable Pricing",
+        description: "Competitive pricing without compromising on quality.",
+      },
+      {
+        title: "Customer Satisfaction",
+        description:
+          "We prioritize your vision, delivering results that exceed expectations.",
+      },
+    ],
+
+    highlights: [
+      {
+        text: "Performance Upgrades",
+        icon: "⚡",
+      },
+      {
+        text: "Aesthetic Enhancements",
+        icon: "🎨",
+      },
+      {
+        text: "Custom Designs & Colors",
+        icon: "🖌️",
+      },
+      {
+        text: "Engine & Exhaust Tuning",
+        icon: "🔧",
+      },
+    ],
+
+    faqs: [
+      {
+        q: "Can you modify any car model?",
+        a: "Yes, we cater to a wide range of car brands and models, ensuring every modification is compatible and safe.",
+      },
+      {
+        q: "How long does a car modification take?",
+        a: "Minor aesthetic upgrades may take a few hours, while full performance modifications could take several days depending on the extent of the work.",
+      },
+      {
+        q: "Will modifications affect my car’s warranty?",
+        a: "We recommend checking with your car manufacturer. Our modifications are designed to minimize warranty risks and ensure safety.",
+      },
+      {
+        q: "Do you offer performance tuning?",
+        a: "Yes, we provide engine tuning, exhaust upgrades, suspension enhancements, and more to improve your car’s performance.",
+      },
+      {
+        q: "Can I choose custom designs or colors?",
+        a: "Absolutely. Options include paint jobs, decals, wraps, lighting, interiors, and more to reflect your unique style.",
+      },
+      {
+        q: "Is financing available for modifications?",
+        a: "Yes, we offer flexible payment plans to make your dream modifications more accessible.",
       },
     ],
   },

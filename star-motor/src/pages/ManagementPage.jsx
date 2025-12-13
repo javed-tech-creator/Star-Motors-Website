@@ -13,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import { useGetAllTeamQuery } from "../api/team.api";
 import Loader from "../utils/Loader";
+import ctaImage from "../assets/pagesimage/ctaimage.jpeg";
 
 export default function ManagementPage() {
   const { data, error, isLoading, isFetching, isSuccess } =
@@ -87,7 +88,7 @@ export default function ManagementPage() {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
             Meet Our <span className="text-[#ff6b35]">Leadership Team</span>
           </h1>
-         
+
           <div className="h-1 w-32 bg-[#ff6b35] mx-auto"></div>
 
           <nav className="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-400 hover:border-white/20 transition-all  font-chakra mt-5">
@@ -129,49 +130,47 @@ export default function ManagementPage() {
       </div> */}
 
       {/* Management Team */}
-   <div className="px-4 sm:px-6 lg:px-20 pb-10 mt-10">
-
-  {/* LOADER — show until API loads */}
-  {isLoading ? (
-    <div className="flex justify-center items-center h-[60vh]">
-      <Loader />
-    </div>
-  ) : (
-    <div className="grid md:grid-cols-4 lg:grid-cols-3 gap-8">
-      {managementTeam?.map((member) => (
-        <div
-          key={member._id}
-          className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2 "
-        >
-          {/* IMAGE */}
-          <div className=" overflow-hidden ">
-            <img
-              src={member?.image?.public_url}
-              alt={member?.name}
-              className="w-full h-full wobject-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            {/* <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div> */}
+      <div className="px-4 sm:px-6 lg:px-20 pb-10 mt-10">
+        {/* LOADER — show until API loads */}
+        {isLoading ? (
+          <div className="flex justify-center items-center h-[60vh]">
+            <Loader />
           </div>
+        ) : (
+          <div className="grid md:grid-cols-4 lg:grid-cols-3 gap-8">
+            {managementTeam?.map((member) => (
+              <div
+                key={member._id}
+                className="group bg-linear-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden hover:border-[#ff6b35] transition-all duration-500 hover:shadow-2xl hover:shadow-[#ff6b35]/20 hover:-translate-y-2 "
+              >
+                {/* IMAGE */}
+                <div className=" overflow-hidden ">
+                  <img
+                    src={member?.image?.public_url}
+                    alt={member?.name}
+                    className="w-full h-full wobject-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* <div className="absolute inset-0 bg-linear-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60"></div> */}
+                </div>
 
-          {/* CONTENT */}
-          <div className="p-4">
-            <h3 className="text-2xl text-center font-bold mb-1 group-hover:text-[#ff6b35] transition-colors">
-              {member?.name}
-            </h3>
+                {/* CONTENT */}
+                <div className="p-4">
+                  <h3 className="text-2xl text-center font-bold mb-1 group-hover:text-[#ff6b35] transition-colors">
+                    {member?.name}
+                  </h3>
 
-            <p className="text-[#ff6b35] text-center font-semibold mb-1 text-lg">
-              {member?.designation}
-            </p>
-             <p className=" text-center font-semibold mb-2 text-lg">
-              {member?.description}
-            </p>
+                  <p className="text-[#ff6b35] text-center font-semibold mb-1 text-lg">
+                    {member?.designation}
+                  </p>
+                  <p className=" text-center font-semibold mb-2 text-lg">
+                    {member?.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      ))}
-    </div>
-  )}
-</div>
-
+        )}
+      </div>
 
       {/* Core Values
       <div className="bg-[#111111] py-10">
@@ -231,27 +230,24 @@ export default function ManagementPage() {
       {/* CTA Section */}
       <div className=" px-4 sm:px-6 lg:px-20 pb-10">
         <div
-          className="relative border border-gray-800  rounded-2xl p-12 text-center overflow-hidden
-    bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
-    bg-cover bg-center bg-no-repeat">
+          className="relative border border-gray-800  rounded-2xl p-12 text-center overflow-hidden bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${ctaImage})` }}
+        >
           {/* DARK OVERLAY */}
           <div className="absolute inset-0 bg-black/70"></div>
-                    <div className="relative z-10">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6  ">
-            Ready to{" "}
-            <span className="text-orange-500">
-              Experience
-            </span>{" "}
-            Excellence?
-          </h2>
-          <p className="text-md lg:text-lg mb-8 max-w-2xl mx-auto ">
-            Get in touch with our management team to discuss how we can serve
-            you better
-          </p>
-          <div className="flex justify-center gap-2">
-            <a
-              href="tel:9956877786"
-              className="
+          <div className="relative z-10">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6  ">
+              Ready to <span className="text-orange-500">Experience</span>{" "}
+              Excellence?
+            </h2>
+            <p className="text-md lg:text-lg mb-8 max-w-2xl mx-auto ">
+              Get in touch with our management team to discuss how we can serve
+              you better
+            </p>
+            <div className="flex justify-center gap-2">
+              <a
+                href="tel:9956877786"
+                className="
     group
     relative
     overflow-hidden
@@ -269,38 +265,38 @@ export default function ManagementPage() {
     transition-all duration-300
     hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
   "
-            >
-              {/* Background hover fill animation */}
-              <span
-                className="
+              >
+                {/* Background hover fill animation */}
+                <span
+                  className="
       absolute inset-0 bg-[#ff6b35]
       scale-x-0 origin-center
       transition-transform duration-300 ease-out
       group-hover:scale-x-100
       z-0
     "
-              ></span>
+                ></span>
 
-              {/* Icon + text (stay on top of background) */}
-              <span className="relative z-10 flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 group-hover:rotate-12 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
-                  />
-                </svg>
-                Call NOW
-              </span>
-            </a>
-          </div>
+                {/* Icon + text (stay on top of background) */}
+                <span className="relative z-10 flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 group-hover:rotate-12 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 5a2 2 0 012-2h2l2 5-1.5 1.5a11.1 11.1 0 005 5L14 14l5 2v2a2 2 0 01-2 2h-1C9.82 20 4 14.18 4 7V6a2 2 0 012-2z"
+                    />
+                  </svg>
+                  Call NOW
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

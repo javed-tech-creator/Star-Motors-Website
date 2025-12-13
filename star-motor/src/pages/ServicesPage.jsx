@@ -3,7 +3,7 @@ import { Home, ChevronRight } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
 import servicesData from "../data/ServiceData";
 // import FAQ from "../components/FAQ";
-
+import ctaImage from "../assets/pagesimage/ctaimage.jpeg"
 // Service Detail Page Component
 export default function ServicePage() {
   // Params se service nikalo - tumhara actual code me useParams() use karna
@@ -145,9 +145,8 @@ export default function ServicePage() {
 
         {/* Call To Action */}
         <div
-          className=" border border-gray-800 rounded-2xl p-12 text-center relative overflow-hidden
-    bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
-    bg-cover bg-center bg-no-repeat "
+          className=" border border-gray-800 rounded-2xl p-12 text-center relative overflow-hidden bg-cover bg-center bg-no-repeat "
+          style={{ backgroundImage: `url(${ctaImage})` }}
         >
           {/* DARK OVERLAY */}
           <div className="absolute inset-0 bg-black/70"></div>

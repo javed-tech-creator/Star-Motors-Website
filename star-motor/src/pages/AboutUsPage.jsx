@@ -7,15 +7,14 @@ import {
   Target,
   Lightbulb,
   Heart,
-  TrendingUp,
-  CheckCircle,
-  Star,
   Home,
   ChevronRight,
   MessageCircleMore,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import AnimatedButton from "../components/AnimatedButton";
+import heroImage from "../assets/pagesimage/aboutpagahero.jpeg";
+import ctaImage from "../assets/pagesimage/ctaimage.jpeg";
 
 export default function AboutUsPage() {
   const navigate = useNavigate();
@@ -109,7 +108,10 @@ export default function AboutUsPage() {
       {/* Hero Section */}
       <div className="relative h-76 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-[#ff6b35]/30 via-[#ff6b35]/10 to-transparent"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200')] bg-cover bg-center opacity-50"></div>
+        <div
+          className="absolute inset-0  bg-cover bg-center opacity-50"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        ></div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           {/* <div className="inline-flex items-center gap-2 mb-6">
@@ -324,9 +326,9 @@ export default function AboutUsPage() {
           className="
     border border-gray-800 rounded-2xl p-12 text-center
     relative overflow-hidden
-    bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')]
     bg-cover bg-center bg-no-repeat
   "
+          style={{ backgroundImage: `url(${ctaImage})` }}
         >
           {/* DARK OVERLAY */}
           <div className="absolute inset-0 bg-black/70"></div>
